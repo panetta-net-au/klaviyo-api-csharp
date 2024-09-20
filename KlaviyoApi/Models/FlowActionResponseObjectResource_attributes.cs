@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace ApiSdk.Models
+namespace Klaviyo.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
     #pragma warning disable CS1591
@@ -27,26 +27,26 @@ namespace ApiSdk.Models
         /// <summary>The render_options property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::ApiSdk.Models.SMSRenderOptions? RenderOptions { get; set; }
+        public global::Klaviyo.Models.SMSRenderOptions? RenderOptions { get; set; }
 #nullable restore
 #else
-        public global::ApiSdk.Models.SMSRenderOptions RenderOptions { get; set; }
+        public global::Klaviyo.Models.SMSRenderOptions RenderOptions { get; set; }
 #endif
         /// <summary>The send_options property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::ApiSdk.Models.SendOptions? SendOptions { get; set; }
+        public global::Klaviyo.Models.SendOptions? SendOptions { get; set; }
 #nullable restore
 #else
-        public global::ApiSdk.Models.SendOptions SendOptions { get; set; }
+        public global::Klaviyo.Models.SendOptions SendOptions { get; set; }
 #endif
         /// <summary>The settings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::ApiSdk.Models.FlowActionResponseObjectResource_attributes_settings? Settings { get; set; }
+        public global::Klaviyo.Models.FlowActionResponseObjectResource_attributes_settings? Settings { get; set; }
 #nullable restore
 #else
-        public global::ApiSdk.Models.FlowActionResponseObjectResource_attributes_settings Settings { get; set; }
+        public global::Klaviyo.Models.FlowActionResponseObjectResource_attributes_settings Settings { get; set; }
 #endif
         /// <summary>The status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -59,15 +59,15 @@ namespace ApiSdk.Models
         /// <summary>The tracking_options property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::ApiSdk.Models.FlowActionResponseObjectResource_attributes.FlowActionResponseObjectResource_attributes_tracking_options? TrackingOptions { get; set; }
+        public global::Klaviyo.Models.FlowActionResponseObjectResource_attributes.FlowActionResponseObjectResource_attributes_tracking_options? TrackingOptions { get; set; }
 #nullable restore
 #else
-        public global::ApiSdk.Models.FlowActionResponseObjectResource_attributes.FlowActionResponseObjectResource_attributes_tracking_options TrackingOptions { get; set; }
+        public global::Klaviyo.Models.FlowActionResponseObjectResource_attributes.FlowActionResponseObjectResource_attributes_tracking_options TrackingOptions { get; set; }
 #endif
         /// <summary>The updated property</summary>
         public DateTimeOffset? Updated { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::ApiSdk.Models.FlowActionResponseObjectResource_attributes"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Klaviyo.Models.FlowActionResponseObjectResource_attributes"/> and sets the default values.
         /// </summary>
         public FlowActionResponseObjectResource_attributes()
         {
@@ -76,12 +76,12 @@ namespace ApiSdk.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::ApiSdk.Models.FlowActionResponseObjectResource_attributes"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.FlowActionResponseObjectResource_attributes"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::ApiSdk.Models.FlowActionResponseObjectResource_attributes CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Klaviyo.Models.FlowActionResponseObjectResource_attributes CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::ApiSdk.Models.FlowActionResponseObjectResource_attributes();
+            return new global::Klaviyo.Models.FlowActionResponseObjectResource_attributes();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -93,11 +93,11 @@ namespace ApiSdk.Models
             {
                 { "action_type", n => { ActionType = n.GetStringValue(); } },
                 { "created", n => { Created = n.GetDateTimeOffsetValue(); } },
-                { "render_options", n => { RenderOptions = n.GetObjectValue<global::ApiSdk.Models.SMSRenderOptions>(global::ApiSdk.Models.SMSRenderOptions.CreateFromDiscriminatorValue); } },
-                { "send_options", n => { SendOptions = n.GetObjectValue<global::ApiSdk.Models.SendOptions>(global::ApiSdk.Models.SendOptions.CreateFromDiscriminatorValue); } },
-                { "settings", n => { Settings = n.GetObjectValue<global::ApiSdk.Models.FlowActionResponseObjectResource_attributes_settings>(global::ApiSdk.Models.FlowActionResponseObjectResource_attributes_settings.CreateFromDiscriminatorValue); } },
+                { "render_options", n => { RenderOptions = n.GetObjectValue<global::Klaviyo.Models.SMSRenderOptions>(global::Klaviyo.Models.SMSRenderOptions.CreateFromDiscriminatorValue); } },
+                { "send_options", n => { SendOptions = n.GetObjectValue<global::Klaviyo.Models.SendOptions>(global::Klaviyo.Models.SendOptions.CreateFromDiscriminatorValue); } },
+                { "settings", n => { Settings = n.GetObjectValue<global::Klaviyo.Models.FlowActionResponseObjectResource_attributes_settings>(global::Klaviyo.Models.FlowActionResponseObjectResource_attributes_settings.CreateFromDiscriminatorValue); } },
                 { "status", n => { Status = n.GetStringValue(); } },
-                { "tracking_options", n => { TrackingOptions = n.GetObjectValue<global::ApiSdk.Models.FlowActionResponseObjectResource_attributes.FlowActionResponseObjectResource_attributes_tracking_options>(global::ApiSdk.Models.FlowActionResponseObjectResource_attributes.FlowActionResponseObjectResource_attributes_tracking_options.CreateFromDiscriminatorValue); } },
+                { "tracking_options", n => { TrackingOptions = n.GetObjectValue<global::Klaviyo.Models.FlowActionResponseObjectResource_attributes.FlowActionResponseObjectResource_attributes_tracking_options>(global::Klaviyo.Models.FlowActionResponseObjectResource_attributes.FlowActionResponseObjectResource_attributes_tracking_options.CreateFromDiscriminatorValue); } },
                 { "updated", n => { Updated = n.GetDateTimeOffsetValue(); } },
             };
         }
@@ -110,53 +110,53 @@ namespace ApiSdk.Models
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("action_type", ActionType);
             writer.WriteDateTimeOffsetValue("created", Created);
-            writer.WriteObjectValue<global::ApiSdk.Models.SMSRenderOptions>("render_options", RenderOptions);
-            writer.WriteObjectValue<global::ApiSdk.Models.SendOptions>("send_options", SendOptions);
-            writer.WriteObjectValue<global::ApiSdk.Models.FlowActionResponseObjectResource_attributes_settings>("settings", Settings);
+            writer.WriteObjectValue<global::Klaviyo.Models.SMSRenderOptions>("render_options", RenderOptions);
+            writer.WriteObjectValue<global::Klaviyo.Models.SendOptions>("send_options", SendOptions);
+            writer.WriteObjectValue<global::Klaviyo.Models.FlowActionResponseObjectResource_attributes_settings>("settings", Settings);
             writer.WriteStringValue("status", Status);
-            writer.WriteObjectValue<global::ApiSdk.Models.FlowActionResponseObjectResource_attributes.FlowActionResponseObjectResource_attributes_tracking_options>("tracking_options", TrackingOptions);
+            writer.WriteObjectValue<global::Klaviyo.Models.FlowActionResponseObjectResource_attributes.FlowActionResponseObjectResource_attributes_tracking_options>("tracking_options", TrackingOptions);
             writer.WriteDateTimeOffsetValue("updated", Updated);
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::ApiSdk.Models.EmailTrackingOptions"/>, <see cref="global::ApiSdk.Models.SMSTrackingOptions"/>
+        /// Composed type wrapper for classes <see cref="global::Klaviyo.Models.EmailTrackingOptions"/>, <see cref="global::Klaviyo.Models.SMSTrackingOptions"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
         public partial class FlowActionResponseObjectResource_attributes_tracking_options : IComposedTypeWrapper, IParsable
         {
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.EmailTrackingOptions"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.EmailTrackingOptions"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.EmailTrackingOptions? EmailTrackingOptions { get; set; }
+            public global::Klaviyo.Models.EmailTrackingOptions? EmailTrackingOptions { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.EmailTrackingOptions EmailTrackingOptions { get; set; }
+            public global::Klaviyo.Models.EmailTrackingOptions EmailTrackingOptions { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.SMSTrackingOptions"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.SMSTrackingOptions"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.SMSTrackingOptions? SMSTrackingOptions { get; set; }
+            public global::Klaviyo.Models.SMSTrackingOptions? SMSTrackingOptions { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.SMSTrackingOptions SMSTrackingOptions { get; set; }
+            public global::Klaviyo.Models.SMSTrackingOptions SMSTrackingOptions { get; set; }
 #endif
             /// <summary>
             /// Creates a new instance of the appropriate class based on discriminator value
             /// </summary>
-            /// <returns>A <see cref="global::ApiSdk.Models.FlowActionResponseObjectResource_attributes.FlowActionResponseObjectResource_attributes_tracking_options"/></returns>
+            /// <returns>A <see cref="global::Klaviyo.Models.FlowActionResponseObjectResource_attributes.FlowActionResponseObjectResource_attributes_tracking_options"/></returns>
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::ApiSdk.Models.FlowActionResponseObjectResource_attributes.FlowActionResponseObjectResource_attributes_tracking_options CreateFromDiscriminatorValue(IParseNode parseNode)
+            public static global::Klaviyo.Models.FlowActionResponseObjectResource_attributes.FlowActionResponseObjectResource_attributes_tracking_options CreateFromDiscriminatorValue(IParseNode parseNode)
             {
                 _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
                 var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::ApiSdk.Models.FlowActionResponseObjectResource_attributes.FlowActionResponseObjectResource_attributes_tracking_options();
+                var result = new global::Klaviyo.Models.FlowActionResponseObjectResource_attributes.FlowActionResponseObjectResource_attributes_tracking_options();
                 if("EmailTrackingOptions".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.EmailTrackingOptions = new global::ApiSdk.Models.EmailTrackingOptions();
+                    result.EmailTrackingOptions = new global::Klaviyo.Models.EmailTrackingOptions();
                 }
                 else if("SMSTrackingOptions".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.SMSTrackingOptions = new global::ApiSdk.Models.SMSTrackingOptions();
+                    result.SMSTrackingOptions = new global::Klaviyo.Models.SMSTrackingOptions();
                 }
                 return result;
             }
@@ -185,11 +185,11 @@ namespace ApiSdk.Models
                 _ = writer ?? throw new ArgumentNullException(nameof(writer));
                 if(EmailTrackingOptions != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.EmailTrackingOptions>(null, EmailTrackingOptions);
+                    writer.WriteObjectValue<global::Klaviyo.Models.EmailTrackingOptions>(null, EmailTrackingOptions);
                 }
                 else if(SMSTrackingOptions != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.SMSTrackingOptions>(null, SMSTrackingOptions);
+                    writer.WriteObjectValue<global::Klaviyo.Models.SMSTrackingOptions>(null, SMSTrackingOptions);
                 }
             }
         }

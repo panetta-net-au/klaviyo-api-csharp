@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace ApiSdk.Models
+namespace Klaviyo.Models
 {
     /// <summary>
     /// Properties of this event. Any top level property (that are not objects) can beused to create segments. The $extra property is a special property. This records anynon-segmentable values that can be referenced later. For example, HTML templates areuseful on a segment but are not used to create a segment. There are limitsplaced onto the size of the data present. This must not exceed 5 MB. This must notexceed 300 event properties. A single string cannot be larger than 100 KB. Each arraymust not exceed 4000 elements. The properties cannot contain more than 10 nested levels.
@@ -16,7 +16,7 @@ namespace ApiSdk.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::ApiSdk.Models.BaseEventCreateQueryResourceObject_attributes_properties"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Klaviyo.Models.BaseEventCreateQueryResourceObject_attributes_properties"/> and sets the default values.
         /// </summary>
         public BaseEventCreateQueryResourceObject_attributes_properties()
         {
@@ -25,12 +25,12 @@ namespace ApiSdk.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::ApiSdk.Models.BaseEventCreateQueryResourceObject_attributes_properties"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.BaseEventCreateQueryResourceObject_attributes_properties"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::ApiSdk.Models.BaseEventCreateQueryResourceObject_attributes_properties CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Klaviyo.Models.BaseEventCreateQueryResourceObject_attributes_properties CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::ApiSdk.Models.BaseEventCreateQueryResourceObject_attributes_properties();
+            return new global::Klaviyo.Models.BaseEventCreateQueryResourceObject_attributes_properties();
         }
         /// <summary>
         /// The deserialization information for the current model

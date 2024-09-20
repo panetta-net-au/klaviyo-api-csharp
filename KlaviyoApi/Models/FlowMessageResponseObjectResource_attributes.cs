@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace ApiSdk.Models
+namespace Klaviyo.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
     #pragma warning disable CS1591
@@ -25,10 +25,10 @@ namespace ApiSdk.Models
         /// <summary>The content property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::ApiSdk.Models.FlowMessageResponseObjectResource_attributes.FlowMessageResponseObjectResource_attributes_content? Content { get; set; }
+        public global::Klaviyo.Models.FlowMessageResponseObjectResource_attributes.FlowMessageResponseObjectResource_attributes_content? Content { get; set; }
 #nullable restore
 #else
-        public global::ApiSdk.Models.FlowMessageResponseObjectResource_attributes.FlowMessageResponseObjectResource_attributes_content Content { get; set; }
+        public global::Klaviyo.Models.FlowMessageResponseObjectResource_attributes.FlowMessageResponseObjectResource_attributes_content Content { get; set; }
 #endif
         /// <summary>The created property</summary>
         public DateTimeOffset? Created { get; set; }
@@ -43,7 +43,7 @@ namespace ApiSdk.Models
         /// <summary>The updated property</summary>
         public DateTimeOffset? Updated { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::ApiSdk.Models.FlowMessageResponseObjectResource_attributes"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Klaviyo.Models.FlowMessageResponseObjectResource_attributes"/> and sets the default values.
         /// </summary>
         public FlowMessageResponseObjectResource_attributes()
         {
@@ -52,12 +52,12 @@ namespace ApiSdk.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::ApiSdk.Models.FlowMessageResponseObjectResource_attributes"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.FlowMessageResponseObjectResource_attributes"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::ApiSdk.Models.FlowMessageResponseObjectResource_attributes CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Klaviyo.Models.FlowMessageResponseObjectResource_attributes CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::ApiSdk.Models.FlowMessageResponseObjectResource_attributes();
+            return new global::Klaviyo.Models.FlowMessageResponseObjectResource_attributes();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,7 +68,7 @@ namespace ApiSdk.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "channel", n => { Channel = n.GetStringValue(); } },
-                { "content", n => { Content = n.GetObjectValue<global::ApiSdk.Models.FlowMessageResponseObjectResource_attributes.FlowMessageResponseObjectResource_attributes_content>(global::ApiSdk.Models.FlowMessageResponseObjectResource_attributes.FlowMessageResponseObjectResource_attributes_content.CreateFromDiscriminatorValue); } },
+                { "content", n => { Content = n.GetObjectValue<global::Klaviyo.Models.FlowMessageResponseObjectResource_attributes.FlowMessageResponseObjectResource_attributes_content>(global::Klaviyo.Models.FlowMessageResponseObjectResource_attributes.FlowMessageResponseObjectResource_attributes_content.CreateFromDiscriminatorValue); } },
                 { "created", n => { Created = n.GetDateTimeOffsetValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "updated", n => { Updated = n.GetDateTimeOffsetValue(); } },
@@ -82,63 +82,63 @@ namespace ApiSdk.Models
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("channel", Channel);
-            writer.WriteObjectValue<global::ApiSdk.Models.FlowMessageResponseObjectResource_attributes.FlowMessageResponseObjectResource_attributes_content>("content", Content);
+            writer.WriteObjectValue<global::Klaviyo.Models.FlowMessageResponseObjectResource_attributes.FlowMessageResponseObjectResource_attributes_content>("content", Content);
             writer.WriteDateTimeOffsetValue("created", Created);
             writer.WriteStringValue("name", Name);
             writer.WriteDateTimeOffsetValue("updated", Updated);
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::ApiSdk.Models.EmailMessageContent"/>, <see cref="global::ApiSdk.Models.MobilePushMessageContent"/>, <see cref="global::ApiSdk.Models.SMSMessageContent"/>
+        /// Composed type wrapper for classes <see cref="global::Klaviyo.Models.EmailMessageContent"/>, <see cref="global::Klaviyo.Models.MobilePushMessageContent"/>, <see cref="global::Klaviyo.Models.SMSMessageContent"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
         public partial class FlowMessageResponseObjectResource_attributes_content : IComposedTypeWrapper, IParsable
         {
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.EmailMessageContent"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.EmailMessageContent"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.EmailMessageContent? EmailMessageContent { get; set; }
+            public global::Klaviyo.Models.EmailMessageContent? EmailMessageContent { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.EmailMessageContent EmailMessageContent { get; set; }
+            public global::Klaviyo.Models.EmailMessageContent EmailMessageContent { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.MobilePushMessageContent"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.MobilePushMessageContent"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.MobilePushMessageContent? MobilePushMessageContent { get; set; }
+            public global::Klaviyo.Models.MobilePushMessageContent? MobilePushMessageContent { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.MobilePushMessageContent MobilePushMessageContent { get; set; }
+            public global::Klaviyo.Models.MobilePushMessageContent MobilePushMessageContent { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.SMSMessageContent"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.SMSMessageContent"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.SMSMessageContent? SMSMessageContent { get; set; }
+            public global::Klaviyo.Models.SMSMessageContent? SMSMessageContent { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.SMSMessageContent SMSMessageContent { get; set; }
+            public global::Klaviyo.Models.SMSMessageContent SMSMessageContent { get; set; }
 #endif
             /// <summary>
             /// Creates a new instance of the appropriate class based on discriminator value
             /// </summary>
-            /// <returns>A <see cref="global::ApiSdk.Models.FlowMessageResponseObjectResource_attributes.FlowMessageResponseObjectResource_attributes_content"/></returns>
+            /// <returns>A <see cref="global::Klaviyo.Models.FlowMessageResponseObjectResource_attributes.FlowMessageResponseObjectResource_attributes_content"/></returns>
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::ApiSdk.Models.FlowMessageResponseObjectResource_attributes.FlowMessageResponseObjectResource_attributes_content CreateFromDiscriminatorValue(IParseNode parseNode)
+            public static global::Klaviyo.Models.FlowMessageResponseObjectResource_attributes.FlowMessageResponseObjectResource_attributes_content CreateFromDiscriminatorValue(IParseNode parseNode)
             {
                 _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
                 var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::ApiSdk.Models.FlowMessageResponseObjectResource_attributes.FlowMessageResponseObjectResource_attributes_content();
+                var result = new global::Klaviyo.Models.FlowMessageResponseObjectResource_attributes.FlowMessageResponseObjectResource_attributes_content();
                 if("EmailMessageContent".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.EmailMessageContent = new global::ApiSdk.Models.EmailMessageContent();
+                    result.EmailMessageContent = new global::Klaviyo.Models.EmailMessageContent();
                 }
                 else if("MobilePushMessageContent".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.MobilePushMessageContent = new global::ApiSdk.Models.MobilePushMessageContent();
+                    result.MobilePushMessageContent = new global::Klaviyo.Models.MobilePushMessageContent();
                 }
                 else if("SMSMessageContent".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.SMSMessageContent = new global::ApiSdk.Models.SMSMessageContent();
+                    result.SMSMessageContent = new global::Klaviyo.Models.SMSMessageContent();
                 }
                 return result;
             }
@@ -171,15 +171,15 @@ namespace ApiSdk.Models
                 _ = writer ?? throw new ArgumentNullException(nameof(writer));
                 if(EmailMessageContent != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.EmailMessageContent>(null, EmailMessageContent);
+                    writer.WriteObjectValue<global::Klaviyo.Models.EmailMessageContent>(null, EmailMessageContent);
                 }
                 else if(MobilePushMessageContent != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.MobilePushMessageContent>(null, MobilePushMessageContent);
+                    writer.WriteObjectValue<global::Klaviyo.Models.MobilePushMessageContent>(null, MobilePushMessageContent);
                 }
                 else if(SMSMessageContent != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.SMSMessageContent>(null, SMSMessageContent);
+                    writer.WriteObjectValue<global::Klaviyo.Models.SMSMessageContent>(null, SMSMessageContent);
                 }
             }
         }

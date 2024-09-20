@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace ApiSdk.Models
+namespace Klaviyo.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
     #pragma warning disable CS1591
@@ -25,15 +25,15 @@ namespace ApiSdk.Models
         /// <summary>The links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::ApiSdk.Models.ObjectLinks? Links { get; set; }
+        public global::Klaviyo.Models.ObjectLinks? Links { get; set; }
 #nullable restore
 #else
-        public global::ApiSdk.Models.ObjectLinks Links { get; set; }
+        public global::Klaviyo.Models.ObjectLinks Links { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public global::ApiSdk.Models.WebhookTopicEnum? Type { get; set; }
+        public global::Klaviyo.Models.WebhookTopicEnum? Type { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::ApiSdk.Models.WebhookTopicResponseObjectResource"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Klaviyo.Models.WebhookTopicResponseObjectResource"/> and sets the default values.
         /// </summary>
         public WebhookTopicResponseObjectResource()
         {
@@ -42,12 +42,12 @@ namespace ApiSdk.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::ApiSdk.Models.WebhookTopicResponseObjectResource"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.WebhookTopicResponseObjectResource"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::ApiSdk.Models.WebhookTopicResponseObjectResource CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Klaviyo.Models.WebhookTopicResponseObjectResource CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::ApiSdk.Models.WebhookTopicResponseObjectResource();
+            return new global::Klaviyo.Models.WebhookTopicResponseObjectResource();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -58,8 +58,8 @@ namespace ApiSdk.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::ApiSdk.Models.ObjectLinks>(global::ApiSdk.Models.ObjectLinks.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::ApiSdk.Models.WebhookTopicEnum>(); } },
+                { "links", n => { Links = n.GetObjectValue<global::Klaviyo.Models.ObjectLinks>(global::Klaviyo.Models.ObjectLinks.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetEnumValue<global::Klaviyo.Models.WebhookTopicEnum>(); } },
             };
         }
         /// <summary>
@@ -70,8 +70,8 @@ namespace ApiSdk.Models
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::ApiSdk.Models.ObjectLinks>("links", Links);
-            writer.WriteEnumValue<global::ApiSdk.Models.WebhookTopicEnum>("type", Type);
+            writer.WriteObjectValue<global::Klaviyo.Models.ObjectLinks>("links", Links);
+            writer.WriteEnumValue<global::Klaviyo.Models.WebhookTopicEnum>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

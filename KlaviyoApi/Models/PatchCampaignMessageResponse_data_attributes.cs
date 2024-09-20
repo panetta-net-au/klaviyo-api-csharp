@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace ApiSdk.Models
+namespace Klaviyo.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
     #pragma warning disable CS1591
@@ -25,10 +25,10 @@ namespace ApiSdk.Models
         /// <summary>Additional attributes relating to the content of the message</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::ApiSdk.Models.PatchCampaignMessageResponse_data_attributes.PatchCampaignMessageResponse_data_attributes_content? Content { get; set; }
+        public global::Klaviyo.Models.PatchCampaignMessageResponse_data_attributes.PatchCampaignMessageResponse_data_attributes_content? Content { get; set; }
 #nullable restore
 #else
-        public global::ApiSdk.Models.PatchCampaignMessageResponse_data_attributes.PatchCampaignMessageResponse_data_attributes_content Content { get; set; }
+        public global::Klaviyo.Models.PatchCampaignMessageResponse_data_attributes.PatchCampaignMessageResponse_data_attributes_content Content { get; set; }
 #endif
         /// <summary>The datetime when the message was created</summary>
         public DateTimeOffset? CreatedAt { get; set; }
@@ -43,23 +43,23 @@ namespace ApiSdk.Models
         /// <summary>The render_options property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::ApiSdk.Models.RenderOptionsSubObject? RenderOptions { get; set; }
+        public global::Klaviyo.Models.RenderOptionsSubObject? RenderOptions { get; set; }
 #nullable restore
 #else
-        public global::ApiSdk.Models.RenderOptionsSubObject RenderOptions { get; set; }
+        public global::Klaviyo.Models.RenderOptionsSubObject RenderOptions { get; set; }
 #endif
         /// <summary>The list of appropriate Send Time Sub-objects associated with the message</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::ApiSdk.Models.SendTimeSubObject>? SendTimes { get; set; }
+        public List<global::Klaviyo.Models.SendTimeSubObject>? SendTimes { get; set; }
 #nullable restore
 #else
-        public List<global::ApiSdk.Models.SendTimeSubObject> SendTimes { get; set; }
+        public List<global::Klaviyo.Models.SendTimeSubObject> SendTimes { get; set; }
 #endif
         /// <summary>The datetime when the message was last updated</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::ApiSdk.Models.PatchCampaignMessageResponse_data_attributes"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Klaviyo.Models.PatchCampaignMessageResponse_data_attributes"/> and sets the default values.
         /// </summary>
         public PatchCampaignMessageResponse_data_attributes()
         {
@@ -68,12 +68,12 @@ namespace ApiSdk.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::ApiSdk.Models.PatchCampaignMessageResponse_data_attributes"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.PatchCampaignMessageResponse_data_attributes"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::ApiSdk.Models.PatchCampaignMessageResponse_data_attributes CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Klaviyo.Models.PatchCampaignMessageResponse_data_attributes CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::ApiSdk.Models.PatchCampaignMessageResponse_data_attributes();
+            return new global::Klaviyo.Models.PatchCampaignMessageResponse_data_attributes();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -84,11 +84,11 @@ namespace ApiSdk.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "channel", n => { Channel = n.GetStringValue(); } },
-                { "content", n => { Content = n.GetObjectValue<global::ApiSdk.Models.PatchCampaignMessageResponse_data_attributes.PatchCampaignMessageResponse_data_attributes_content>(global::ApiSdk.Models.PatchCampaignMessageResponse_data_attributes.PatchCampaignMessageResponse_data_attributes_content.CreateFromDiscriminatorValue); } },
+                { "content", n => { Content = n.GetObjectValue<global::Klaviyo.Models.PatchCampaignMessageResponse_data_attributes.PatchCampaignMessageResponse_data_attributes_content>(global::Klaviyo.Models.PatchCampaignMessageResponse_data_attributes.PatchCampaignMessageResponse_data_attributes_content.CreateFromDiscriminatorValue); } },
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "label", n => { Label = n.GetStringValue(); } },
-                { "render_options", n => { RenderOptions = n.GetObjectValue<global::ApiSdk.Models.RenderOptionsSubObject>(global::ApiSdk.Models.RenderOptionsSubObject.CreateFromDiscriminatorValue); } },
-                { "send_times", n => { SendTimes = n.GetCollectionOfObjectValues<global::ApiSdk.Models.SendTimeSubObject>(global::ApiSdk.Models.SendTimeSubObject.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "render_options", n => { RenderOptions = n.GetObjectValue<global::Klaviyo.Models.RenderOptionsSubObject>(global::Klaviyo.Models.RenderOptionsSubObject.CreateFromDiscriminatorValue); } },
+                { "send_times", n => { SendTimes = n.GetCollectionOfObjectValues<global::Klaviyo.Models.SendTimeSubObject>(global::Klaviyo.Models.SendTimeSubObject.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "updated_at", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
             };
         }
@@ -100,53 +100,53 @@ namespace ApiSdk.Models
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("channel", Channel);
-            writer.WriteObjectValue<global::ApiSdk.Models.PatchCampaignMessageResponse_data_attributes.PatchCampaignMessageResponse_data_attributes_content>("content", Content);
+            writer.WriteObjectValue<global::Klaviyo.Models.PatchCampaignMessageResponse_data_attributes.PatchCampaignMessageResponse_data_attributes_content>("content", Content);
             writer.WriteDateTimeOffsetValue("created_at", CreatedAt);
             writer.WriteStringValue("label", Label);
-            writer.WriteObjectValue<global::ApiSdk.Models.RenderOptionsSubObject>("render_options", RenderOptions);
-            writer.WriteCollectionOfObjectValues<global::ApiSdk.Models.SendTimeSubObject>("send_times", SendTimes);
+            writer.WriteObjectValue<global::Klaviyo.Models.RenderOptionsSubObject>("render_options", RenderOptions);
+            writer.WriteCollectionOfObjectValues<global::Klaviyo.Models.SendTimeSubObject>("send_times", SendTimes);
             writer.WriteDateTimeOffsetValue("updated_at", UpdatedAt);
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::ApiSdk.Models.EmailContentSubObject"/>, <see cref="global::ApiSdk.Models.SMSContentSubObject"/>
+        /// Composed type wrapper for classes <see cref="global::Klaviyo.Models.EmailContentSubObject"/>, <see cref="global::Klaviyo.Models.SMSContentSubObject"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
         public partial class PatchCampaignMessageResponse_data_attributes_content : IComposedTypeWrapper, IParsable
         {
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.EmailContentSubObject"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.EmailContentSubObject"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.EmailContentSubObject? EmailContentSubObject { get; set; }
+            public global::Klaviyo.Models.EmailContentSubObject? EmailContentSubObject { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.EmailContentSubObject EmailContentSubObject { get; set; }
+            public global::Klaviyo.Models.EmailContentSubObject EmailContentSubObject { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.SMSContentSubObject"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.SMSContentSubObject"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.SMSContentSubObject? SMSContentSubObject { get; set; }
+            public global::Klaviyo.Models.SMSContentSubObject? SMSContentSubObject { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.SMSContentSubObject SMSContentSubObject { get; set; }
+            public global::Klaviyo.Models.SMSContentSubObject SMSContentSubObject { get; set; }
 #endif
             /// <summary>
             /// Creates a new instance of the appropriate class based on discriminator value
             /// </summary>
-            /// <returns>A <see cref="global::ApiSdk.Models.PatchCampaignMessageResponse_data_attributes.PatchCampaignMessageResponse_data_attributes_content"/></returns>
+            /// <returns>A <see cref="global::Klaviyo.Models.PatchCampaignMessageResponse_data_attributes.PatchCampaignMessageResponse_data_attributes_content"/></returns>
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::ApiSdk.Models.PatchCampaignMessageResponse_data_attributes.PatchCampaignMessageResponse_data_attributes_content CreateFromDiscriminatorValue(IParseNode parseNode)
+            public static global::Klaviyo.Models.PatchCampaignMessageResponse_data_attributes.PatchCampaignMessageResponse_data_attributes_content CreateFromDiscriminatorValue(IParseNode parseNode)
             {
                 _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
                 var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::ApiSdk.Models.PatchCampaignMessageResponse_data_attributes.PatchCampaignMessageResponse_data_attributes_content();
+                var result = new global::Klaviyo.Models.PatchCampaignMessageResponse_data_attributes.PatchCampaignMessageResponse_data_attributes_content();
                 if("EmailContentSubObject".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.EmailContentSubObject = new global::ApiSdk.Models.EmailContentSubObject();
+                    result.EmailContentSubObject = new global::Klaviyo.Models.EmailContentSubObject();
                 }
                 else if("SMSContentSubObject".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.SMSContentSubObject = new global::ApiSdk.Models.SMSContentSubObject();
+                    result.SMSContentSubObject = new global::Klaviyo.Models.SMSContentSubObject();
                 }
                 return result;
             }
@@ -175,11 +175,11 @@ namespace ApiSdk.Models
                 _ = writer ?? throw new ArgumentNullException(nameof(writer));
                 if(EmailContentSubObject != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.EmailContentSubObject>(null, EmailContentSubObject);
+                    writer.WriteObjectValue<global::Klaviyo.Models.EmailContentSubObject>(null, EmailContentSubObject);
                 }
                 else if(SMSContentSubObject != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.SMSContentSubObject>(null, SMSContentSubObject);
+                    writer.WriteObjectValue<global::Klaviyo.Models.SMSContentSubObject>(null, SMSContentSubObject);
                 }
             }
         }

@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace ApiSdk.Models
+namespace Klaviyo.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
     #pragma warning disable CS1591
@@ -15,13 +15,13 @@ namespace ApiSdk.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Operators for boolean filters.</summary>
-        public global::ApiSdk.Models.BooleanFilter_operator? Operator { get; set; }
+        public global::Klaviyo.Models.BooleanFilter_operator? Operator { get; set; }
         /// <summary>The type property</summary>
-        public global::ApiSdk.Models.BooleanEnum? Type { get; set; }
+        public global::Klaviyo.Models.BooleanEnum? Type { get; set; }
         /// <summary>The value property</summary>
         public bool? Value { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::ApiSdk.Models.BooleanFilter"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Klaviyo.Models.BooleanFilter"/> and sets the default values.
         /// </summary>
         public BooleanFilter()
         {
@@ -30,12 +30,12 @@ namespace ApiSdk.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::ApiSdk.Models.BooleanFilter"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.BooleanFilter"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::ApiSdk.Models.BooleanFilter CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Klaviyo.Models.BooleanFilter CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::ApiSdk.Models.BooleanFilter();
+            return new global::Klaviyo.Models.BooleanFilter();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -45,8 +45,8 @@ namespace ApiSdk.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "operator", n => { Operator = n.GetEnumValue<global::ApiSdk.Models.BooleanFilter_operator>(); } },
-                { "type", n => { Type = n.GetEnumValue<global::ApiSdk.Models.BooleanEnum>(); } },
+                { "operator", n => { Operator = n.GetEnumValue<global::Klaviyo.Models.BooleanFilter_operator>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Klaviyo.Models.BooleanEnum>(); } },
                 { "value", n => { Value = n.GetBoolValue(); } },
             };
         }
@@ -57,8 +57,8 @@ namespace ApiSdk.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::ApiSdk.Models.BooleanFilter_operator>("operator", Operator);
-            writer.WriteEnumValue<global::ApiSdk.Models.BooleanEnum>("type", Type);
+            writer.WriteEnumValue<global::Klaviyo.Models.BooleanFilter_operator>("operator", Operator);
+            writer.WriteEnumValue<global::Klaviyo.Models.BooleanEnum>("type", Type);
             writer.WriteBoolValue("value", Value);
             writer.WriteAdditionalData(AdditionalData);
         }

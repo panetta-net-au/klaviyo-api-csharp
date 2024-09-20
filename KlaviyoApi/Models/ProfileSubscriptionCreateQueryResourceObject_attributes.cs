@@ -6,7 +6,7 @@ using Microsoft.Kiota.Abstractions;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace ApiSdk.Models
+namespace Klaviyo.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
     #pragma warning disable CS1591
@@ -36,13 +36,13 @@ namespace ApiSdk.Models
         /// <summary>The subscriptions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::ApiSdk.Models.SubscriptionChannels? Subscriptions { get; set; }
+        public global::Klaviyo.Models.SubscriptionChannels? Subscriptions { get; set; }
 #nullable restore
 #else
-        public global::ApiSdk.Models.SubscriptionChannels Subscriptions { get; set; }
+        public global::Klaviyo.Models.SubscriptionChannels Subscriptions { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::ApiSdk.Models.ProfileSubscriptionCreateQueryResourceObject_attributes"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Klaviyo.Models.ProfileSubscriptionCreateQueryResourceObject_attributes"/> and sets the default values.
         /// </summary>
         public ProfileSubscriptionCreateQueryResourceObject_attributes()
         {
@@ -51,12 +51,12 @@ namespace ApiSdk.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::ApiSdk.Models.ProfileSubscriptionCreateQueryResourceObject_attributes"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.ProfileSubscriptionCreateQueryResourceObject_attributes"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::ApiSdk.Models.ProfileSubscriptionCreateQueryResourceObject_attributes CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Klaviyo.Models.ProfileSubscriptionCreateQueryResourceObject_attributes CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::ApiSdk.Models.ProfileSubscriptionCreateQueryResourceObject_attributes();
+            return new global::Klaviyo.Models.ProfileSubscriptionCreateQueryResourceObject_attributes();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,7 +69,7 @@ namespace ApiSdk.Models
                 { "age_gated_date_of_birth", n => { AgeGatedDateOfBirth = n.GetDateValue(); } },
                 { "email", n => { Email = n.GetStringValue(); } },
                 { "phone_number", n => { PhoneNumber = n.GetStringValue(); } },
-                { "subscriptions", n => { Subscriptions = n.GetObjectValue<global::ApiSdk.Models.SubscriptionChannels>(global::ApiSdk.Models.SubscriptionChannels.CreateFromDiscriminatorValue); } },
+                { "subscriptions", n => { Subscriptions = n.GetObjectValue<global::Klaviyo.Models.SubscriptionChannels>(global::Klaviyo.Models.SubscriptionChannels.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -82,7 +82,7 @@ namespace ApiSdk.Models
             writer.WriteDateValue("age_gated_date_of_birth", AgeGatedDateOfBirth);
             writer.WriteStringValue("email", Email);
             writer.WriteStringValue("phone_number", PhoneNumber);
-            writer.WriteObjectValue<global::ApiSdk.Models.SubscriptionChannels>("subscriptions", Subscriptions);
+            writer.WriteObjectValue<global::Klaviyo.Models.SubscriptionChannels>("subscriptions", Subscriptions);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

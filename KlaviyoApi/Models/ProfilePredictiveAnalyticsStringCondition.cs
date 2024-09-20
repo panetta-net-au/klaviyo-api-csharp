@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace ApiSdk.Models
+namespace Klaviyo.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
     #pragma warning disable CS1591
@@ -15,19 +15,19 @@ namespace ApiSdk.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Dimension for string profile predictive analytics conditions.</summary>
-        public global::ApiSdk.Models.ProfilePredictiveAnalyticsStringCondition_dimension? Dimension { get; set; }
+        public global::Klaviyo.Models.ProfilePredictiveAnalyticsStringCondition_dimension? Dimension { get; set; }
         /// <summary>The filter property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::ApiSdk.Models.ProfilePredictiveAnalyticsStringFilter? Filter { get; set; }
+        public global::Klaviyo.Models.ProfilePredictiveAnalyticsStringFilter? Filter { get; set; }
 #nullable restore
 #else
-        public global::ApiSdk.Models.ProfilePredictiveAnalyticsStringFilter Filter { get; set; }
+        public global::Klaviyo.Models.ProfilePredictiveAnalyticsStringFilter Filter { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public global::ApiSdk.Models.ProfilePredictiveAnalyticsEnum? Type { get; set; }
+        public global::Klaviyo.Models.ProfilePredictiveAnalyticsEnum? Type { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::ApiSdk.Models.ProfilePredictiveAnalyticsStringCondition"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Klaviyo.Models.ProfilePredictiveAnalyticsStringCondition"/> and sets the default values.
         /// </summary>
         public ProfilePredictiveAnalyticsStringCondition()
         {
@@ -36,12 +36,12 @@ namespace ApiSdk.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::ApiSdk.Models.ProfilePredictiveAnalyticsStringCondition"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.ProfilePredictiveAnalyticsStringCondition"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::ApiSdk.Models.ProfilePredictiveAnalyticsStringCondition CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Klaviyo.Models.ProfilePredictiveAnalyticsStringCondition CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::ApiSdk.Models.ProfilePredictiveAnalyticsStringCondition();
+            return new global::Klaviyo.Models.ProfilePredictiveAnalyticsStringCondition();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -51,9 +51,9 @@ namespace ApiSdk.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "dimension", n => { Dimension = n.GetEnumValue<global::ApiSdk.Models.ProfilePredictiveAnalyticsStringCondition_dimension>(); } },
-                { "filter", n => { Filter = n.GetObjectValue<global::ApiSdk.Models.ProfilePredictiveAnalyticsStringFilter>(global::ApiSdk.Models.ProfilePredictiveAnalyticsStringFilter.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::ApiSdk.Models.ProfilePredictiveAnalyticsEnum>(); } },
+                { "dimension", n => { Dimension = n.GetEnumValue<global::Klaviyo.Models.ProfilePredictiveAnalyticsStringCondition_dimension>(); } },
+                { "filter", n => { Filter = n.GetObjectValue<global::Klaviyo.Models.ProfilePredictiveAnalyticsStringFilter>(global::Klaviyo.Models.ProfilePredictiveAnalyticsStringFilter.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetEnumValue<global::Klaviyo.Models.ProfilePredictiveAnalyticsEnum>(); } },
             };
         }
         /// <summary>
@@ -63,9 +63,9 @@ namespace ApiSdk.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::ApiSdk.Models.ProfilePredictiveAnalyticsStringCondition_dimension>("dimension", Dimension);
-            writer.WriteObjectValue<global::ApiSdk.Models.ProfilePredictiveAnalyticsStringFilter>("filter", Filter);
-            writer.WriteEnumValue<global::ApiSdk.Models.ProfilePredictiveAnalyticsEnum>("type", Type);
+            writer.WriteEnumValue<global::Klaviyo.Models.ProfilePredictiveAnalyticsStringCondition_dimension>("dimension", Dimension);
+            writer.WriteObjectValue<global::Klaviyo.Models.ProfilePredictiveAnalyticsStringFilter>("filter", Filter);
+            writer.WriteEnumValue<global::Klaviyo.Models.ProfilePredictiveAnalyticsEnum>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

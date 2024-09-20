@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace ApiSdk.Models
+namespace Klaviyo.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
     #pragma warning disable CS1591
@@ -17,21 +17,21 @@ namespace ApiSdk.Models
         /// <summary>The data property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::ApiSdk.Models.CampaignResponseObjectResource? Data { get; set; }
+        public global::Klaviyo.Models.CampaignResponseObjectResource? Data { get; set; }
 #nullable restore
 #else
-        public global::ApiSdk.Models.CampaignResponseObjectResource Data { get; set; }
+        public global::Klaviyo.Models.CampaignResponseObjectResource Data { get; set; }
 #endif
         /// <summary>The included property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::ApiSdk.Models.GetCampaignResponseCompoundDocument.GetCampaignResponseCompoundDocument_included>? Included { get; set; }
+        public List<global::Klaviyo.Models.GetCampaignResponseCompoundDocument.GetCampaignResponseCompoundDocument_included>? Included { get; set; }
 #nullable restore
 #else
-        public List<global::ApiSdk.Models.GetCampaignResponseCompoundDocument.GetCampaignResponseCompoundDocument_included> Included { get; set; }
+        public List<global::Klaviyo.Models.GetCampaignResponseCompoundDocument.GetCampaignResponseCompoundDocument_included> Included { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::ApiSdk.Models.GetCampaignResponseCompoundDocument"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Klaviyo.Models.GetCampaignResponseCompoundDocument"/> and sets the default values.
         /// </summary>
         public GetCampaignResponseCompoundDocument()
         {
@@ -40,12 +40,12 @@ namespace ApiSdk.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::ApiSdk.Models.GetCampaignResponseCompoundDocument"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.GetCampaignResponseCompoundDocument"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::ApiSdk.Models.GetCampaignResponseCompoundDocument CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Klaviyo.Models.GetCampaignResponseCompoundDocument CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::ApiSdk.Models.GetCampaignResponseCompoundDocument();
+            return new global::Klaviyo.Models.GetCampaignResponseCompoundDocument();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -55,8 +55,8 @@ namespace ApiSdk.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "data", n => { Data = n.GetObjectValue<global::ApiSdk.Models.CampaignResponseObjectResource>(global::ApiSdk.Models.CampaignResponseObjectResource.CreateFromDiscriminatorValue); } },
-                { "included", n => { Included = n.GetCollectionOfObjectValues<global::ApiSdk.Models.GetCampaignResponseCompoundDocument.GetCampaignResponseCompoundDocument_included>(global::ApiSdk.Models.GetCampaignResponseCompoundDocument.GetCampaignResponseCompoundDocument_included.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "data", n => { Data = n.GetObjectValue<global::Klaviyo.Models.CampaignResponseObjectResource>(global::Klaviyo.Models.CampaignResponseObjectResource.CreateFromDiscriminatorValue); } },
+                { "included", n => { Included = n.GetCollectionOfObjectValues<global::Klaviyo.Models.GetCampaignResponseCompoundDocument.GetCampaignResponseCompoundDocument_included>(global::Klaviyo.Models.GetCampaignResponseCompoundDocument.GetCampaignResponseCompoundDocument_included.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -66,49 +66,49 @@ namespace ApiSdk.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::ApiSdk.Models.CampaignResponseObjectResource>("data", Data);
-            writer.WriteCollectionOfObjectValues<global::ApiSdk.Models.GetCampaignResponseCompoundDocument.GetCampaignResponseCompoundDocument_included>("included", Included);
+            writer.WriteObjectValue<global::Klaviyo.Models.CampaignResponseObjectResource>("data", Data);
+            writer.WriteCollectionOfObjectValues<global::Klaviyo.Models.GetCampaignResponseCompoundDocument.GetCampaignResponseCompoundDocument_included>("included", Included);
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::ApiSdk.Models.CampaignMessageResponseObjectResource"/>, <see cref="global::ApiSdk.Models.TagResponseObjectResource"/>
+        /// Composed type wrapper for classes <see cref="global::Klaviyo.Models.CampaignMessageResponseObjectResource"/>, <see cref="global::Klaviyo.Models.TagResponseObjectResource"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
         public partial class GetCampaignResponseCompoundDocument_included : IComposedTypeWrapper, IParsable
         {
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.CampaignMessageResponseObjectResource"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.CampaignMessageResponseObjectResource"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.CampaignMessageResponseObjectResource? CampaignMessageResponseObjectResource { get; set; }
+            public global::Klaviyo.Models.CampaignMessageResponseObjectResource? CampaignMessageResponseObjectResource { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.CampaignMessageResponseObjectResource CampaignMessageResponseObjectResource { get; set; }
+            public global::Klaviyo.Models.CampaignMessageResponseObjectResource CampaignMessageResponseObjectResource { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.TagResponseObjectResource"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.TagResponseObjectResource"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.TagResponseObjectResource? TagResponseObjectResource { get; set; }
+            public global::Klaviyo.Models.TagResponseObjectResource? TagResponseObjectResource { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.TagResponseObjectResource TagResponseObjectResource { get; set; }
+            public global::Klaviyo.Models.TagResponseObjectResource TagResponseObjectResource { get; set; }
 #endif
             /// <summary>
             /// Creates a new instance of the appropriate class based on discriminator value
             /// </summary>
-            /// <returns>A <see cref="global::ApiSdk.Models.GetCampaignResponseCompoundDocument.GetCampaignResponseCompoundDocument_included"/></returns>
+            /// <returns>A <see cref="global::Klaviyo.Models.GetCampaignResponseCompoundDocument.GetCampaignResponseCompoundDocument_included"/></returns>
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::ApiSdk.Models.GetCampaignResponseCompoundDocument.GetCampaignResponseCompoundDocument_included CreateFromDiscriminatorValue(IParseNode parseNode)
+            public static global::Klaviyo.Models.GetCampaignResponseCompoundDocument.GetCampaignResponseCompoundDocument_included CreateFromDiscriminatorValue(IParseNode parseNode)
             {
                 _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
                 var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::ApiSdk.Models.GetCampaignResponseCompoundDocument.GetCampaignResponseCompoundDocument_included();
+                var result = new global::Klaviyo.Models.GetCampaignResponseCompoundDocument.GetCampaignResponseCompoundDocument_included();
                 if("CampaignMessageResponseObjectResource".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.CampaignMessageResponseObjectResource = new global::ApiSdk.Models.CampaignMessageResponseObjectResource();
+                    result.CampaignMessageResponseObjectResource = new global::Klaviyo.Models.CampaignMessageResponseObjectResource();
                 }
                 else if("TagResponseObjectResource".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.TagResponseObjectResource = new global::ApiSdk.Models.TagResponseObjectResource();
+                    result.TagResponseObjectResource = new global::Klaviyo.Models.TagResponseObjectResource();
                 }
                 return result;
             }
@@ -137,11 +137,11 @@ namespace ApiSdk.Models
                 _ = writer ?? throw new ArgumentNullException(nameof(writer));
                 if(CampaignMessageResponseObjectResource != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.CampaignMessageResponseObjectResource>(null, CampaignMessageResponseObjectResource);
+                    writer.WriteObjectValue<global::Klaviyo.Models.CampaignMessageResponseObjectResource>(null, CampaignMessageResponseObjectResource);
                 }
                 else if(TagResponseObjectResource != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.TagResponseObjectResource>(null, TagResponseObjectResource);
+                    writer.WriteObjectValue<global::Klaviyo.Models.TagResponseObjectResource>(null, TagResponseObjectResource);
                 }
             }
         }

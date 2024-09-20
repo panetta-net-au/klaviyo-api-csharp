@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace ApiSdk.Models
+namespace Klaviyo.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
     #pragma warning disable CS1591
@@ -25,15 +25,15 @@ namespace ApiSdk.Models
         /// <summary>The links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::ApiSdk.Models.ObjectLinks? Links { get; set; }
+        public global::Klaviyo.Models.ObjectLinks? Links { get; set; }
 #nullable restore
 #else
-        public global::ApiSdk.Models.ObjectLinks Links { get; set; }
+        public global::Klaviyo.Models.ObjectLinks Links { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public global::ApiSdk.Models.ProfileEnum? Type { get; set; }
+        public global::Klaviyo.Models.ProfileEnum? Type { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::ApiSdk.Models.PostProfileMergeResponse_data"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Klaviyo.Models.PostProfileMergeResponse_data"/> and sets the default values.
         /// </summary>
         public PostProfileMergeResponse_data()
         {
@@ -42,12 +42,12 @@ namespace ApiSdk.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::ApiSdk.Models.PostProfileMergeResponse_data"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.PostProfileMergeResponse_data"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::ApiSdk.Models.PostProfileMergeResponse_data CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Klaviyo.Models.PostProfileMergeResponse_data CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::ApiSdk.Models.PostProfileMergeResponse_data();
+            return new global::Klaviyo.Models.PostProfileMergeResponse_data();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -58,8 +58,8 @@ namespace ApiSdk.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::ApiSdk.Models.ObjectLinks>(global::ApiSdk.Models.ObjectLinks.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::ApiSdk.Models.ProfileEnum>(); } },
+                { "links", n => { Links = n.GetObjectValue<global::Klaviyo.Models.ObjectLinks>(global::Klaviyo.Models.ObjectLinks.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetEnumValue<global::Klaviyo.Models.ProfileEnum>(); } },
             };
         }
         /// <summary>
@@ -70,8 +70,8 @@ namespace ApiSdk.Models
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::ApiSdk.Models.ObjectLinks>("links", Links);
-            writer.WriteEnumValue<global::ApiSdk.Models.ProfileEnum>("type", Type);
+            writer.WriteObjectValue<global::Klaviyo.Models.ObjectLinks>("links", Links);
+            writer.WriteEnumValue<global::Klaviyo.Models.ProfileEnum>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

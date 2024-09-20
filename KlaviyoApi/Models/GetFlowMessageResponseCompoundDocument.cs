@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace ApiSdk.Models
+namespace Klaviyo.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
     #pragma warning disable CS1591
@@ -17,21 +17,21 @@ namespace ApiSdk.Models
         /// <summary>The data property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::ApiSdk.Models.FlowMessageResponseObjectResource? Data { get; set; }
+        public global::Klaviyo.Models.FlowMessageResponseObjectResource? Data { get; set; }
 #nullable restore
 #else
-        public global::ApiSdk.Models.FlowMessageResponseObjectResource Data { get; set; }
+        public global::Klaviyo.Models.FlowMessageResponseObjectResource Data { get; set; }
 #endif
         /// <summary>The included property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::ApiSdk.Models.GetFlowMessageResponseCompoundDocument.GetFlowMessageResponseCompoundDocument_included>? Included { get; set; }
+        public List<global::Klaviyo.Models.GetFlowMessageResponseCompoundDocument.GetFlowMessageResponseCompoundDocument_included>? Included { get; set; }
 #nullable restore
 #else
-        public List<global::ApiSdk.Models.GetFlowMessageResponseCompoundDocument.GetFlowMessageResponseCompoundDocument_included> Included { get; set; }
+        public List<global::Klaviyo.Models.GetFlowMessageResponseCompoundDocument.GetFlowMessageResponseCompoundDocument_included> Included { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::ApiSdk.Models.GetFlowMessageResponseCompoundDocument"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Klaviyo.Models.GetFlowMessageResponseCompoundDocument"/> and sets the default values.
         /// </summary>
         public GetFlowMessageResponseCompoundDocument()
         {
@@ -40,12 +40,12 @@ namespace ApiSdk.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::ApiSdk.Models.GetFlowMessageResponseCompoundDocument"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.GetFlowMessageResponseCompoundDocument"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::ApiSdk.Models.GetFlowMessageResponseCompoundDocument CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Klaviyo.Models.GetFlowMessageResponseCompoundDocument CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::ApiSdk.Models.GetFlowMessageResponseCompoundDocument();
+            return new global::Klaviyo.Models.GetFlowMessageResponseCompoundDocument();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -55,8 +55,8 @@ namespace ApiSdk.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "data", n => { Data = n.GetObjectValue<global::ApiSdk.Models.FlowMessageResponseObjectResource>(global::ApiSdk.Models.FlowMessageResponseObjectResource.CreateFromDiscriminatorValue); } },
-                { "included", n => { Included = n.GetCollectionOfObjectValues<global::ApiSdk.Models.GetFlowMessageResponseCompoundDocument.GetFlowMessageResponseCompoundDocument_included>(global::ApiSdk.Models.GetFlowMessageResponseCompoundDocument.GetFlowMessageResponseCompoundDocument_included.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "data", n => { Data = n.GetObjectValue<global::Klaviyo.Models.FlowMessageResponseObjectResource>(global::Klaviyo.Models.FlowMessageResponseObjectResource.CreateFromDiscriminatorValue); } },
+                { "included", n => { Included = n.GetCollectionOfObjectValues<global::Klaviyo.Models.GetFlowMessageResponseCompoundDocument.GetFlowMessageResponseCompoundDocument_included>(global::Klaviyo.Models.GetFlowMessageResponseCompoundDocument.GetFlowMessageResponseCompoundDocument_included.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -66,49 +66,49 @@ namespace ApiSdk.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::ApiSdk.Models.FlowMessageResponseObjectResource>("data", Data);
-            writer.WriteCollectionOfObjectValues<global::ApiSdk.Models.GetFlowMessageResponseCompoundDocument.GetFlowMessageResponseCompoundDocument_included>("included", Included);
+            writer.WriteObjectValue<global::Klaviyo.Models.FlowMessageResponseObjectResource>("data", Data);
+            writer.WriteCollectionOfObjectValues<global::Klaviyo.Models.GetFlowMessageResponseCompoundDocument.GetFlowMessageResponseCompoundDocument_included>("included", Included);
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::ApiSdk.Models.FlowActionResponseObjectResource"/>, <see cref="global::ApiSdk.Models.TemplateResponseObjectResource"/>
+        /// Composed type wrapper for classes <see cref="global::Klaviyo.Models.FlowActionResponseObjectResource"/>, <see cref="global::Klaviyo.Models.TemplateResponseObjectResource"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
         public partial class GetFlowMessageResponseCompoundDocument_included : IComposedTypeWrapper, IParsable
         {
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.FlowActionResponseObjectResource"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.FlowActionResponseObjectResource"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.FlowActionResponseObjectResource? FlowActionResponseObjectResource { get; set; }
+            public global::Klaviyo.Models.FlowActionResponseObjectResource? FlowActionResponseObjectResource { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.FlowActionResponseObjectResource FlowActionResponseObjectResource { get; set; }
+            public global::Klaviyo.Models.FlowActionResponseObjectResource FlowActionResponseObjectResource { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.TemplateResponseObjectResource"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.TemplateResponseObjectResource"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.TemplateResponseObjectResource? TemplateResponseObjectResource { get; set; }
+            public global::Klaviyo.Models.TemplateResponseObjectResource? TemplateResponseObjectResource { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.TemplateResponseObjectResource TemplateResponseObjectResource { get; set; }
+            public global::Klaviyo.Models.TemplateResponseObjectResource TemplateResponseObjectResource { get; set; }
 #endif
             /// <summary>
             /// Creates a new instance of the appropriate class based on discriminator value
             /// </summary>
-            /// <returns>A <see cref="global::ApiSdk.Models.GetFlowMessageResponseCompoundDocument.GetFlowMessageResponseCompoundDocument_included"/></returns>
+            /// <returns>A <see cref="global::Klaviyo.Models.GetFlowMessageResponseCompoundDocument.GetFlowMessageResponseCompoundDocument_included"/></returns>
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::ApiSdk.Models.GetFlowMessageResponseCompoundDocument.GetFlowMessageResponseCompoundDocument_included CreateFromDiscriminatorValue(IParseNode parseNode)
+            public static global::Klaviyo.Models.GetFlowMessageResponseCompoundDocument.GetFlowMessageResponseCompoundDocument_included CreateFromDiscriminatorValue(IParseNode parseNode)
             {
                 _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
                 var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::ApiSdk.Models.GetFlowMessageResponseCompoundDocument.GetFlowMessageResponseCompoundDocument_included();
+                var result = new global::Klaviyo.Models.GetFlowMessageResponseCompoundDocument.GetFlowMessageResponseCompoundDocument_included();
                 if("FlowActionResponseObjectResource".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.FlowActionResponseObjectResource = new global::ApiSdk.Models.FlowActionResponseObjectResource();
+                    result.FlowActionResponseObjectResource = new global::Klaviyo.Models.FlowActionResponseObjectResource();
                 }
                 else if("TemplateResponseObjectResource".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.TemplateResponseObjectResource = new global::ApiSdk.Models.TemplateResponseObjectResource();
+                    result.TemplateResponseObjectResource = new global::Klaviyo.Models.TemplateResponseObjectResource();
                 }
                 return result;
             }
@@ -137,11 +137,11 @@ namespace ApiSdk.Models
                 _ = writer ?? throw new ArgumentNullException(nameof(writer));
                 if(FlowActionResponseObjectResource != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.FlowActionResponseObjectResource>(null, FlowActionResponseObjectResource);
+                    writer.WriteObjectValue<global::Klaviyo.Models.FlowActionResponseObjectResource>(null, FlowActionResponseObjectResource);
                 }
                 else if(TemplateResponseObjectResource != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.TemplateResponseObjectResource>(null, TemplateResponseObjectResource);
+                    writer.WriteObjectValue<global::Klaviyo.Models.TemplateResponseObjectResource>(null, TemplateResponseObjectResource);
                 }
             }
         }

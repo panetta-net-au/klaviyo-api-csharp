@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace ApiSdk.Models
+namespace Klaviyo.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
     #pragma warning disable CS1591
@@ -15,11 +15,11 @@ namespace ApiSdk.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Operators for anniversary date filters.</summary>
-        public global::ApiSdk.Models.AnniversaryDateFilter_operator? Operator { get; set; }
+        public global::Klaviyo.Models.AnniversaryDateFilter_operator? Operator { get; set; }
         /// <summary>The type property</summary>
-        public global::ApiSdk.Models.DateEnum? Type { get; set; }
+        public global::Klaviyo.Models.DateEnum? Type { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::ApiSdk.Models.AnniversaryDateFilter"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Klaviyo.Models.AnniversaryDateFilter"/> and sets the default values.
         /// </summary>
         public AnniversaryDateFilter()
         {
@@ -28,12 +28,12 @@ namespace ApiSdk.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::ApiSdk.Models.AnniversaryDateFilter"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.AnniversaryDateFilter"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::ApiSdk.Models.AnniversaryDateFilter CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Klaviyo.Models.AnniversaryDateFilter CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::ApiSdk.Models.AnniversaryDateFilter();
+            return new global::Klaviyo.Models.AnniversaryDateFilter();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -43,8 +43,8 @@ namespace ApiSdk.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "operator", n => { Operator = n.GetEnumValue<global::ApiSdk.Models.AnniversaryDateFilter_operator>(); } },
-                { "type", n => { Type = n.GetEnumValue<global::ApiSdk.Models.DateEnum>(); } },
+                { "operator", n => { Operator = n.GetEnumValue<global::Klaviyo.Models.AnniversaryDateFilter_operator>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Klaviyo.Models.DateEnum>(); } },
             };
         }
         /// <summary>
@@ -54,8 +54,8 @@ namespace ApiSdk.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::ApiSdk.Models.AnniversaryDateFilter_operator>("operator", Operator);
-            writer.WriteEnumValue<global::ApiSdk.Models.DateEnum>("type", Type);
+            writer.WriteEnumValue<global::Klaviyo.Models.AnniversaryDateFilter_operator>("operator", Operator);
+            writer.WriteEnumValue<global::Klaviyo.Models.DateEnum>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace ApiSdk.Models
+namespace Klaviyo.Models
 {
     /// <summary>
     /// Array of catalog categories to create.
@@ -18,13 +18,13 @@ namespace ApiSdk.Models
         /// <summary>The data property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::ApiSdk.Models.CatalogCategoryCreateQueryResourceObject>? Data { get; set; }
+        public List<global::Klaviyo.Models.CatalogCategoryCreateQueryResourceObject>? Data { get; set; }
 #nullable restore
 #else
-        public List<global::ApiSdk.Models.CatalogCategoryCreateQueryResourceObject> Data { get; set; }
+        public List<global::Klaviyo.Models.CatalogCategoryCreateQueryResourceObject> Data { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::ApiSdk.Models.CatalogCategoryCreateJobCreateQueryResourceObject_attributes_categories"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Klaviyo.Models.CatalogCategoryCreateJobCreateQueryResourceObject_attributes_categories"/> and sets the default values.
         /// </summary>
         public CatalogCategoryCreateJobCreateQueryResourceObject_attributes_categories()
         {
@@ -33,12 +33,12 @@ namespace ApiSdk.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::ApiSdk.Models.CatalogCategoryCreateJobCreateQueryResourceObject_attributes_categories"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.CatalogCategoryCreateJobCreateQueryResourceObject_attributes_categories"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::ApiSdk.Models.CatalogCategoryCreateJobCreateQueryResourceObject_attributes_categories CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Klaviyo.Models.CatalogCategoryCreateJobCreateQueryResourceObject_attributes_categories CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::ApiSdk.Models.CatalogCategoryCreateJobCreateQueryResourceObject_attributes_categories();
+            return new global::Klaviyo.Models.CatalogCategoryCreateJobCreateQueryResourceObject_attributes_categories();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -48,7 +48,7 @@ namespace ApiSdk.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "data", n => { Data = n.GetCollectionOfObjectValues<global::ApiSdk.Models.CatalogCategoryCreateQueryResourceObject>(global::ApiSdk.Models.CatalogCategoryCreateQueryResourceObject.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "data", n => { Data = n.GetCollectionOfObjectValues<global::Klaviyo.Models.CatalogCategoryCreateQueryResourceObject>(global::Klaviyo.Models.CatalogCategoryCreateQueryResourceObject.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -58,7 +58,7 @@ namespace ApiSdk.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::ApiSdk.Models.CatalogCategoryCreateQueryResourceObject>("data", Data);
+            writer.WriteCollectionOfObjectValues<global::Klaviyo.Models.CatalogCategoryCreateQueryResourceObject>("data", Data);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

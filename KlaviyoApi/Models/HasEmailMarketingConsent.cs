@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace ApiSdk.Models
+namespace Klaviyo.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
     #pragma warning disable CS1591
@@ -23,17 +23,17 @@ namespace ApiSdk.Models
         public UntypedNode CanReceiveMarketing { get; set; }
 #endif
         /// <summary>The channel property</summary>
-        public global::ApiSdk.Models.EmailEnum? Channel { get; set; }
+        public global::Klaviyo.Models.EmailEnum? Channel { get; set; }
         /// <summary>The consent_status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::ApiSdk.Models.HasEmailMarketingConsent.HasEmailMarketingConsent_consent_status? ConsentStatus { get; set; }
+        public global::Klaviyo.Models.HasEmailMarketingConsent.HasEmailMarketingConsent_consent_status? ConsentStatus { get; set; }
 #nullable restore
 #else
-        public global::ApiSdk.Models.HasEmailMarketingConsent.HasEmailMarketingConsent_consent_status ConsentStatus { get; set; }
+        public global::Klaviyo.Models.HasEmailMarketingConsent.HasEmailMarketingConsent_consent_status ConsentStatus { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::ApiSdk.Models.HasEmailMarketingConsent"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Klaviyo.Models.HasEmailMarketingConsent"/> and sets the default values.
         /// </summary>
         public HasEmailMarketingConsent()
         {
@@ -42,12 +42,12 @@ namespace ApiSdk.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::ApiSdk.Models.HasEmailMarketingConsent"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.HasEmailMarketingConsent"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::ApiSdk.Models.HasEmailMarketingConsent CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Klaviyo.Models.HasEmailMarketingConsent CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::ApiSdk.Models.HasEmailMarketingConsent();
+            return new global::Klaviyo.Models.HasEmailMarketingConsent();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -58,8 +58,8 @@ namespace ApiSdk.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "can_receive_marketing", n => { CanReceiveMarketing = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "channel", n => { Channel = n.GetEnumValue<global::ApiSdk.Models.EmailEnum>(); } },
-                { "consent_status", n => { ConsentStatus = n.GetObjectValue<global::ApiSdk.Models.HasEmailMarketingConsent.HasEmailMarketingConsent_consent_status>(global::ApiSdk.Models.HasEmailMarketingConsent.HasEmailMarketingConsent_consent_status.CreateFromDiscriminatorValue); } },
+                { "channel", n => { Channel = n.GetEnumValue<global::Klaviyo.Models.EmailEnum>(); } },
+                { "consent_status", n => { ConsentStatus = n.GetObjectValue<global::Klaviyo.Models.HasEmailMarketingConsent.HasEmailMarketingConsent_consent_status>(global::Klaviyo.Models.HasEmailMarketingConsent.HasEmailMarketingConsent_consent_status.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -70,61 +70,61 @@ namespace ApiSdk.Models
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<UntypedNode>("can_receive_marketing", CanReceiveMarketing);
-            writer.WriteEnumValue<global::ApiSdk.Models.EmailEnum>("channel", Channel);
-            writer.WriteObjectValue<global::ApiSdk.Models.HasEmailMarketingConsent.HasEmailMarketingConsent_consent_status>("consent_status", ConsentStatus);
+            writer.WriteEnumValue<global::Klaviyo.Models.EmailEnum>("channel", Channel);
+            writer.WriteObjectValue<global::Klaviyo.Models.HasEmailMarketingConsent.HasEmailMarketingConsent_consent_status>("consent_status", ConsentStatus);
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::ApiSdk.Models.HasEmailMarketing"/>, <see cref="global::ApiSdk.Models.HasEmailMarketingNeverSubscribed"/>, <see cref="global::ApiSdk.Models.HasEmailMarketingSubscribed"/>
+        /// Composed type wrapper for classes <see cref="global::Klaviyo.Models.HasEmailMarketing"/>, <see cref="global::Klaviyo.Models.HasEmailMarketingNeverSubscribed"/>, <see cref="global::Klaviyo.Models.HasEmailMarketingSubscribed"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
         public partial class HasEmailMarketingConsent_consent_status : IComposedTypeWrapper, IParsable
         {
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.HasEmailMarketing"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.HasEmailMarketing"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.HasEmailMarketing? HasEmailMarketing { get; set; }
+            public global::Klaviyo.Models.HasEmailMarketing? HasEmailMarketing { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.HasEmailMarketing HasEmailMarketing { get; set; }
+            public global::Klaviyo.Models.HasEmailMarketing HasEmailMarketing { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.HasEmailMarketingNeverSubscribed"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.HasEmailMarketingNeverSubscribed"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.HasEmailMarketingNeverSubscribed? HasEmailMarketingNeverSubscribed { get; set; }
+            public global::Klaviyo.Models.HasEmailMarketingNeverSubscribed? HasEmailMarketingNeverSubscribed { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.HasEmailMarketingNeverSubscribed HasEmailMarketingNeverSubscribed { get; set; }
+            public global::Klaviyo.Models.HasEmailMarketingNeverSubscribed HasEmailMarketingNeverSubscribed { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.HasEmailMarketingSubscribed"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.HasEmailMarketingSubscribed"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.HasEmailMarketingSubscribed? HasEmailMarketingSubscribed { get; set; }
+            public global::Klaviyo.Models.HasEmailMarketingSubscribed? HasEmailMarketingSubscribed { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.HasEmailMarketingSubscribed HasEmailMarketingSubscribed { get; set; }
+            public global::Klaviyo.Models.HasEmailMarketingSubscribed HasEmailMarketingSubscribed { get; set; }
 #endif
             /// <summary>
             /// Creates a new instance of the appropriate class based on discriminator value
             /// </summary>
-            /// <returns>A <see cref="global::ApiSdk.Models.HasEmailMarketingConsent.HasEmailMarketingConsent_consent_status"/></returns>
+            /// <returns>A <see cref="global::Klaviyo.Models.HasEmailMarketingConsent.HasEmailMarketingConsent_consent_status"/></returns>
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::ApiSdk.Models.HasEmailMarketingConsent.HasEmailMarketingConsent_consent_status CreateFromDiscriminatorValue(IParseNode parseNode)
+            public static global::Klaviyo.Models.HasEmailMarketingConsent.HasEmailMarketingConsent_consent_status CreateFromDiscriminatorValue(IParseNode parseNode)
             {
                 _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
                 var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::ApiSdk.Models.HasEmailMarketingConsent.HasEmailMarketingConsent_consent_status();
+                var result = new global::Klaviyo.Models.HasEmailMarketingConsent.HasEmailMarketingConsent_consent_status();
                 if("HasEmailMarketing".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.HasEmailMarketing = new global::ApiSdk.Models.HasEmailMarketing();
+                    result.HasEmailMarketing = new global::Klaviyo.Models.HasEmailMarketing();
                 }
                 else if("HasEmailMarketingNeverSubscribed".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.HasEmailMarketingNeverSubscribed = new global::ApiSdk.Models.HasEmailMarketingNeverSubscribed();
+                    result.HasEmailMarketingNeverSubscribed = new global::Klaviyo.Models.HasEmailMarketingNeverSubscribed();
                 }
                 else if("HasEmailMarketingSubscribed".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.HasEmailMarketingSubscribed = new global::ApiSdk.Models.HasEmailMarketingSubscribed();
+                    result.HasEmailMarketingSubscribed = new global::Klaviyo.Models.HasEmailMarketingSubscribed();
                 }
                 return result;
             }
@@ -157,15 +157,15 @@ namespace ApiSdk.Models
                 _ = writer ?? throw new ArgumentNullException(nameof(writer));
                 if(HasEmailMarketing != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.HasEmailMarketing>(null, HasEmailMarketing);
+                    writer.WriteObjectValue<global::Klaviyo.Models.HasEmailMarketing>(null, HasEmailMarketing);
                 }
                 else if(HasEmailMarketingNeverSubscribed != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.HasEmailMarketingNeverSubscribed>(null, HasEmailMarketingNeverSubscribed);
+                    writer.WriteObjectValue<global::Klaviyo.Models.HasEmailMarketingNeverSubscribed>(null, HasEmailMarketingNeverSubscribed);
                 }
                 else if(HasEmailMarketingSubscribed != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.HasEmailMarketingSubscribed>(null, HasEmailMarketingSubscribed);
+                    writer.WriteObjectValue<global::Klaviyo.Models.HasEmailMarketingSubscribed>(null, HasEmailMarketingSubscribed);
                 }
             }
         }

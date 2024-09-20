@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace ApiSdk.Models
+namespace Klaviyo.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
     #pragma warning disable CS1591
@@ -17,26 +17,26 @@ namespace ApiSdk.Models
         /// <summary>The metric property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::ApiSdk.Models.EventCreateQueryV2ResourceObject_attributes_metric? Metric { get; set; }
+        public global::Klaviyo.Models.EventCreateQueryV2ResourceObject_attributes_metric? Metric { get; set; }
 #nullable restore
 #else
-        public global::ApiSdk.Models.EventCreateQueryV2ResourceObject_attributes_metric Metric { get; set; }
+        public global::Klaviyo.Models.EventCreateQueryV2ResourceObject_attributes_metric Metric { get; set; }
 #endif
         /// <summary>The profile property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::ApiSdk.Models.EventCreateQueryV2ResourceObject_attributes_profile? Profile { get; set; }
+        public global::Klaviyo.Models.EventCreateQueryV2ResourceObject_attributes_profile? Profile { get; set; }
 #nullable restore
 #else
-        public global::ApiSdk.Models.EventCreateQueryV2ResourceObject_attributes_profile Profile { get; set; }
+        public global::Klaviyo.Models.EventCreateQueryV2ResourceObject_attributes_profile Profile { get; set; }
 #endif
         /// <summary>Properties of this event. Any top level property (that are not objects) can beused to create segments. The $extra property is a special property. This records anynon-segmentable values that can be referenced later. For example, HTML templates areuseful on a segment but are not used to create a segment. There are limitsplaced onto the size of the data present. This must not exceed 5 MB. This must notexceed 300 event properties. A single string cannot be larger than 100 KB. Each arraymust not exceed 4000 elements. The properties cannot contain more than 10 nested levels.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::ApiSdk.Models.EventCreateQueryV2ResourceObject_attributes_properties? Properties { get; set; }
+        public global::Klaviyo.Models.EventCreateQueryV2ResourceObject_attributes_properties? Properties { get; set; }
 #nullable restore
 #else
-        public global::ApiSdk.Models.EventCreateQueryV2ResourceObject_attributes_properties Properties { get; set; }
+        public global::Klaviyo.Models.EventCreateQueryV2ResourceObject_attributes_properties Properties { get; set; }
 #endif
         /// <summary>When this event occurred. By default, the time the request was received will be used.The time is truncated to the second. The time must be after the year 2000 and can onlybe up to 1 year in the future.</summary>
         public DateTimeOffset? Time { get; set; }
@@ -59,7 +59,7 @@ namespace ApiSdk.Models
         public string ValueCurrency { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::ApiSdk.Models.EventCreateQueryV2ResourceObject_attributes"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Klaviyo.Models.EventCreateQueryV2ResourceObject_attributes"/> and sets the default values.
         /// </summary>
         public EventCreateQueryV2ResourceObject_attributes()
         {
@@ -68,12 +68,12 @@ namespace ApiSdk.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::ApiSdk.Models.EventCreateQueryV2ResourceObject_attributes"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.EventCreateQueryV2ResourceObject_attributes"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::ApiSdk.Models.EventCreateQueryV2ResourceObject_attributes CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Klaviyo.Models.EventCreateQueryV2ResourceObject_attributes CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::ApiSdk.Models.EventCreateQueryV2ResourceObject_attributes();
+            return new global::Klaviyo.Models.EventCreateQueryV2ResourceObject_attributes();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -83,9 +83,9 @@ namespace ApiSdk.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "metric", n => { Metric = n.GetObjectValue<global::ApiSdk.Models.EventCreateQueryV2ResourceObject_attributes_metric>(global::ApiSdk.Models.EventCreateQueryV2ResourceObject_attributes_metric.CreateFromDiscriminatorValue); } },
-                { "profile", n => { Profile = n.GetObjectValue<global::ApiSdk.Models.EventCreateQueryV2ResourceObject_attributes_profile>(global::ApiSdk.Models.EventCreateQueryV2ResourceObject_attributes_profile.CreateFromDiscriminatorValue); } },
-                { "properties", n => { Properties = n.GetObjectValue<global::ApiSdk.Models.EventCreateQueryV2ResourceObject_attributes_properties>(global::ApiSdk.Models.EventCreateQueryV2ResourceObject_attributes_properties.CreateFromDiscriminatorValue); } },
+                { "metric", n => { Metric = n.GetObjectValue<global::Klaviyo.Models.EventCreateQueryV2ResourceObject_attributes_metric>(global::Klaviyo.Models.EventCreateQueryV2ResourceObject_attributes_metric.CreateFromDiscriminatorValue); } },
+                { "profile", n => { Profile = n.GetObjectValue<global::Klaviyo.Models.EventCreateQueryV2ResourceObject_attributes_profile>(global::Klaviyo.Models.EventCreateQueryV2ResourceObject_attributes_profile.CreateFromDiscriminatorValue); } },
+                { "properties", n => { Properties = n.GetObjectValue<global::Klaviyo.Models.EventCreateQueryV2ResourceObject_attributes_properties>(global::Klaviyo.Models.EventCreateQueryV2ResourceObject_attributes_properties.CreateFromDiscriminatorValue); } },
                 { "time", n => { Time = n.GetDateTimeOffsetValue(); } },
                 { "unique_id", n => { UniqueId = n.GetStringValue(); } },
                 { "value", n => { Value = n.GetDoubleValue(); } },
@@ -99,9 +99,9 @@ namespace ApiSdk.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::ApiSdk.Models.EventCreateQueryV2ResourceObject_attributes_metric>("metric", Metric);
-            writer.WriteObjectValue<global::ApiSdk.Models.EventCreateQueryV2ResourceObject_attributes_profile>("profile", Profile);
-            writer.WriteObjectValue<global::ApiSdk.Models.EventCreateQueryV2ResourceObject_attributes_properties>("properties", Properties);
+            writer.WriteObjectValue<global::Klaviyo.Models.EventCreateQueryV2ResourceObject_attributes_metric>("metric", Metric);
+            writer.WriteObjectValue<global::Klaviyo.Models.EventCreateQueryV2ResourceObject_attributes_profile>("profile", Profile);
+            writer.WriteObjectValue<global::Klaviyo.Models.EventCreateQueryV2ResourceObject_attributes_properties>("properties", Properties);
             writer.WriteDateTimeOffsetValue("time", Time);
             writer.WriteStringValue("unique_id", UniqueId);
             writer.WriteDoubleValue("value", Value);

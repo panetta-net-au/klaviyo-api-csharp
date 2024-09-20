@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace ApiSdk.Models
+namespace Klaviyo.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
     #pragma warning disable CS1591
@@ -17,13 +17,13 @@ namespace ApiSdk.Models
         /// <summary>The conditions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::ApiSdk.Models.ConditionGroup.ConditionGroup_conditions>? Conditions { get; set; }
+        public List<global::Klaviyo.Models.ConditionGroup.ConditionGroup_conditions>? Conditions { get; set; }
 #nullable restore
 #else
-        public List<global::ApiSdk.Models.ConditionGroup.ConditionGroup_conditions> Conditions { get; set; }
+        public List<global::Klaviyo.Models.ConditionGroup.ConditionGroup_conditions> Conditions { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::ApiSdk.Models.ConditionGroup"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Klaviyo.Models.ConditionGroup"/> and sets the default values.
         /// </summary>
         public ConditionGroup()
         {
@@ -32,12 +32,12 @@ namespace ApiSdk.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::ApiSdk.Models.ConditionGroup"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.ConditionGroup"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::ApiSdk.Models.ConditionGroup CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Klaviyo.Models.ConditionGroup CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::ApiSdk.Models.ConditionGroup();
+            return new global::Klaviyo.Models.ConditionGroup();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -47,7 +47,7 @@ namespace ApiSdk.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "conditions", n => { Conditions = n.GetCollectionOfObjectValues<global::ApiSdk.Models.ConditionGroup.ConditionGroup_conditions>(global::ApiSdk.Models.ConditionGroup.ConditionGroup_conditions.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "conditions", n => { Conditions = n.GetCollectionOfObjectValues<global::Klaviyo.Models.ConditionGroup.ConditionGroup_conditions>(global::Klaviyo.Models.ConditionGroup.ConditionGroup_conditions.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -57,132 +57,132 @@ namespace ApiSdk.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::ApiSdk.Models.ConditionGroup.ConditionGroup_conditions>("conditions", Conditions);
+            writer.WriteCollectionOfObjectValues<global::Klaviyo.Models.ConditionGroup.ConditionGroup_conditions>("conditions", Conditions);
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::ApiSdk.Models.ProfileHasGroupMembershipCondition"/>, <see cref="global::ApiSdk.Models.ProfileMarketingConsentCondition"/>, <see cref="global::ApiSdk.Models.ProfileMetricCondition"/>, <see cref="global::ApiSdk.Models.ProfileNoGroupMembershipCondition"/>, <see cref="global::ApiSdk.Models.ProfilePostalCodeDistanceCondition"/>, <see cref="global::ApiSdk.Models.ProfilePredictiveAnalyticsNumericCondition"/>, <see cref="global::ApiSdk.Models.ProfilePredictiveAnalyticsStringCondition"/>, <see cref="global::ApiSdk.Models.ProfilePropertyCondition"/>, <see cref="global::ApiSdk.Models.ProfileRegionCondition"/>
+        /// Composed type wrapper for classes <see cref="global::Klaviyo.Models.ProfileHasGroupMembershipCondition"/>, <see cref="global::Klaviyo.Models.ProfileMarketingConsentCondition"/>, <see cref="global::Klaviyo.Models.ProfileMetricCondition"/>, <see cref="global::Klaviyo.Models.ProfileNoGroupMembershipCondition"/>, <see cref="global::Klaviyo.Models.ProfilePostalCodeDistanceCondition"/>, <see cref="global::Klaviyo.Models.ProfilePredictiveAnalyticsNumericCondition"/>, <see cref="global::Klaviyo.Models.ProfilePredictiveAnalyticsStringCondition"/>, <see cref="global::Klaviyo.Models.ProfilePropertyCondition"/>, <see cref="global::Klaviyo.Models.ProfileRegionCondition"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
         public partial class ConditionGroup_conditions : IComposedTypeWrapper, IParsable
         {
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.ProfileHasGroupMembershipCondition"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.ProfileHasGroupMembershipCondition"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.ProfileHasGroupMembershipCondition? ProfileHasGroupMembershipCondition { get; set; }
+            public global::Klaviyo.Models.ProfileHasGroupMembershipCondition? ProfileHasGroupMembershipCondition { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.ProfileHasGroupMembershipCondition ProfileHasGroupMembershipCondition { get; set; }
+            public global::Klaviyo.Models.ProfileHasGroupMembershipCondition ProfileHasGroupMembershipCondition { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.ProfileMarketingConsentCondition"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.ProfileMarketingConsentCondition"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.ProfileMarketingConsentCondition? ProfileMarketingConsentCondition { get; set; }
+            public global::Klaviyo.Models.ProfileMarketingConsentCondition? ProfileMarketingConsentCondition { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.ProfileMarketingConsentCondition ProfileMarketingConsentCondition { get; set; }
+            public global::Klaviyo.Models.ProfileMarketingConsentCondition ProfileMarketingConsentCondition { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.ProfileMetricCondition"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.ProfileMetricCondition"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.ProfileMetricCondition? ProfileMetricCondition { get; set; }
+            public global::Klaviyo.Models.ProfileMetricCondition? ProfileMetricCondition { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.ProfileMetricCondition ProfileMetricCondition { get; set; }
+            public global::Klaviyo.Models.ProfileMetricCondition ProfileMetricCondition { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.ProfileNoGroupMembershipCondition"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.ProfileNoGroupMembershipCondition"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.ProfileNoGroupMembershipCondition? ProfileNoGroupMembershipCondition { get; set; }
+            public global::Klaviyo.Models.ProfileNoGroupMembershipCondition? ProfileNoGroupMembershipCondition { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.ProfileNoGroupMembershipCondition ProfileNoGroupMembershipCondition { get; set; }
+            public global::Klaviyo.Models.ProfileNoGroupMembershipCondition ProfileNoGroupMembershipCondition { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.ProfilePostalCodeDistanceCondition"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.ProfilePostalCodeDistanceCondition"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.ProfilePostalCodeDistanceCondition? ProfilePostalCodeDistanceCondition { get; set; }
+            public global::Klaviyo.Models.ProfilePostalCodeDistanceCondition? ProfilePostalCodeDistanceCondition { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.ProfilePostalCodeDistanceCondition ProfilePostalCodeDistanceCondition { get; set; }
+            public global::Klaviyo.Models.ProfilePostalCodeDistanceCondition ProfilePostalCodeDistanceCondition { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.ProfilePredictiveAnalyticsNumericCondition"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.ProfilePredictiveAnalyticsNumericCondition"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.ProfilePredictiveAnalyticsNumericCondition? ProfilePredictiveAnalyticsNumericCondition { get; set; }
+            public global::Klaviyo.Models.ProfilePredictiveAnalyticsNumericCondition? ProfilePredictiveAnalyticsNumericCondition { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.ProfilePredictiveAnalyticsNumericCondition ProfilePredictiveAnalyticsNumericCondition { get; set; }
+            public global::Klaviyo.Models.ProfilePredictiveAnalyticsNumericCondition ProfilePredictiveAnalyticsNumericCondition { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.ProfilePredictiveAnalyticsStringCondition"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.ProfilePredictiveAnalyticsStringCondition"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.ProfilePredictiveAnalyticsStringCondition? ProfilePredictiveAnalyticsStringCondition { get; set; }
+            public global::Klaviyo.Models.ProfilePredictiveAnalyticsStringCondition? ProfilePredictiveAnalyticsStringCondition { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.ProfilePredictiveAnalyticsStringCondition ProfilePredictiveAnalyticsStringCondition { get; set; }
+            public global::Klaviyo.Models.ProfilePredictiveAnalyticsStringCondition ProfilePredictiveAnalyticsStringCondition { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.ProfilePropertyCondition"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.ProfilePropertyCondition"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.ProfilePropertyCondition? ProfilePropertyCondition { get; set; }
+            public global::Klaviyo.Models.ProfilePropertyCondition? ProfilePropertyCondition { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.ProfilePropertyCondition ProfilePropertyCondition { get; set; }
+            public global::Klaviyo.Models.ProfilePropertyCondition ProfilePropertyCondition { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.ProfileRegionCondition"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.ProfileRegionCondition"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.ProfileRegionCondition? ProfileRegionCondition { get; set; }
+            public global::Klaviyo.Models.ProfileRegionCondition? ProfileRegionCondition { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.ProfileRegionCondition ProfileRegionCondition { get; set; }
+            public global::Klaviyo.Models.ProfileRegionCondition ProfileRegionCondition { get; set; }
 #endif
             /// <summary>
             /// Creates a new instance of the appropriate class based on discriminator value
             /// </summary>
-            /// <returns>A <see cref="global::ApiSdk.Models.ConditionGroup.ConditionGroup_conditions"/></returns>
+            /// <returns>A <see cref="global::Klaviyo.Models.ConditionGroup.ConditionGroup_conditions"/></returns>
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::ApiSdk.Models.ConditionGroup.ConditionGroup_conditions CreateFromDiscriminatorValue(IParseNode parseNode)
+            public static global::Klaviyo.Models.ConditionGroup.ConditionGroup_conditions CreateFromDiscriminatorValue(IParseNode parseNode)
             {
                 _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
                 var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::ApiSdk.Models.ConditionGroup.ConditionGroup_conditions();
+                var result = new global::Klaviyo.Models.ConditionGroup.ConditionGroup_conditions();
                 if("ProfileHasGroupMembershipCondition".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.ProfileHasGroupMembershipCondition = new global::ApiSdk.Models.ProfileHasGroupMembershipCondition();
+                    result.ProfileHasGroupMembershipCondition = new global::Klaviyo.Models.ProfileHasGroupMembershipCondition();
                 }
                 else if("ProfileMarketingConsentCondition".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.ProfileMarketingConsentCondition = new global::ApiSdk.Models.ProfileMarketingConsentCondition();
+                    result.ProfileMarketingConsentCondition = new global::Klaviyo.Models.ProfileMarketingConsentCondition();
                 }
                 else if("ProfileMetricCondition".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.ProfileMetricCondition = new global::ApiSdk.Models.ProfileMetricCondition();
+                    result.ProfileMetricCondition = new global::Klaviyo.Models.ProfileMetricCondition();
                 }
                 else if("ProfileNoGroupMembershipCondition".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.ProfileNoGroupMembershipCondition = new global::ApiSdk.Models.ProfileNoGroupMembershipCondition();
+                    result.ProfileNoGroupMembershipCondition = new global::Klaviyo.Models.ProfileNoGroupMembershipCondition();
                 }
                 else if("ProfilePostalCodeDistanceCondition".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.ProfilePostalCodeDistanceCondition = new global::ApiSdk.Models.ProfilePostalCodeDistanceCondition();
+                    result.ProfilePostalCodeDistanceCondition = new global::Klaviyo.Models.ProfilePostalCodeDistanceCondition();
                 }
                 else if("ProfilePredictiveAnalyticsNumericCondition".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.ProfilePredictiveAnalyticsNumericCondition = new global::ApiSdk.Models.ProfilePredictiveAnalyticsNumericCondition();
+                    result.ProfilePredictiveAnalyticsNumericCondition = new global::Klaviyo.Models.ProfilePredictiveAnalyticsNumericCondition();
                 }
                 else if("ProfilePredictiveAnalyticsStringCondition".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.ProfilePredictiveAnalyticsStringCondition = new global::ApiSdk.Models.ProfilePredictiveAnalyticsStringCondition();
+                    result.ProfilePredictiveAnalyticsStringCondition = new global::Klaviyo.Models.ProfilePredictiveAnalyticsStringCondition();
                 }
                 else if("ProfilePropertyCondition".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.ProfilePropertyCondition = new global::ApiSdk.Models.ProfilePropertyCondition();
+                    result.ProfilePropertyCondition = new global::Klaviyo.Models.ProfilePropertyCondition();
                 }
                 else if("ProfileRegionCondition".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.ProfileRegionCondition = new global::ApiSdk.Models.ProfileRegionCondition();
+                    result.ProfileRegionCondition = new global::Klaviyo.Models.ProfileRegionCondition();
                 }
                 return result;
             }
@@ -239,39 +239,39 @@ namespace ApiSdk.Models
                 _ = writer ?? throw new ArgumentNullException(nameof(writer));
                 if(ProfileHasGroupMembershipCondition != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.ProfileHasGroupMembershipCondition>(null, ProfileHasGroupMembershipCondition);
+                    writer.WriteObjectValue<global::Klaviyo.Models.ProfileHasGroupMembershipCondition>(null, ProfileHasGroupMembershipCondition);
                 }
                 else if(ProfileMarketingConsentCondition != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.ProfileMarketingConsentCondition>(null, ProfileMarketingConsentCondition);
+                    writer.WriteObjectValue<global::Klaviyo.Models.ProfileMarketingConsentCondition>(null, ProfileMarketingConsentCondition);
                 }
                 else if(ProfileMetricCondition != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.ProfileMetricCondition>(null, ProfileMetricCondition);
+                    writer.WriteObjectValue<global::Klaviyo.Models.ProfileMetricCondition>(null, ProfileMetricCondition);
                 }
                 else if(ProfileNoGroupMembershipCondition != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.ProfileNoGroupMembershipCondition>(null, ProfileNoGroupMembershipCondition);
+                    writer.WriteObjectValue<global::Klaviyo.Models.ProfileNoGroupMembershipCondition>(null, ProfileNoGroupMembershipCondition);
                 }
                 else if(ProfilePostalCodeDistanceCondition != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.ProfilePostalCodeDistanceCondition>(null, ProfilePostalCodeDistanceCondition);
+                    writer.WriteObjectValue<global::Klaviyo.Models.ProfilePostalCodeDistanceCondition>(null, ProfilePostalCodeDistanceCondition);
                 }
                 else if(ProfilePredictiveAnalyticsNumericCondition != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.ProfilePredictiveAnalyticsNumericCondition>(null, ProfilePredictiveAnalyticsNumericCondition);
+                    writer.WriteObjectValue<global::Klaviyo.Models.ProfilePredictiveAnalyticsNumericCondition>(null, ProfilePredictiveAnalyticsNumericCondition);
                 }
                 else if(ProfilePredictiveAnalyticsStringCondition != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.ProfilePredictiveAnalyticsStringCondition>(null, ProfilePredictiveAnalyticsStringCondition);
+                    writer.WriteObjectValue<global::Klaviyo.Models.ProfilePredictiveAnalyticsStringCondition>(null, ProfilePredictiveAnalyticsStringCondition);
                 }
                 else if(ProfilePropertyCondition != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.ProfilePropertyCondition>(null, ProfilePropertyCondition);
+                    writer.WriteObjectValue<global::Klaviyo.Models.ProfilePropertyCondition>(null, ProfilePropertyCondition);
                 }
                 else if(ProfileRegionCondition != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.ProfileRegionCondition>(null, ProfileRegionCondition);
+                    writer.WriteObjectValue<global::Klaviyo.Models.ProfileRegionCondition>(null, ProfileRegionCondition);
                 }
             }
         }

@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace ApiSdk.Models
+namespace Klaviyo.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
     #pragma warning disable CS1591
@@ -17,29 +17,29 @@ namespace ApiSdk.Models
         /// <summary>Append a simple value or values to this property array</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::ApiSdk.Models.ProfileMetaPatchProperties_append? Append { get; set; }
+        public global::Klaviyo.Models.ProfileMetaPatchProperties_append? Append { get; set; }
 #nullable restore
 #else
-        public global::ApiSdk.Models.ProfileMetaPatchProperties_append Append { get; set; }
+        public global::Klaviyo.Models.ProfileMetaPatchProperties_append Append { get; set; }
 #endif
         /// <summary>Remove a simple value or values from this property array</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::ApiSdk.Models.ProfileMetaPatchProperties_unappend? Unappend { get; set; }
+        public global::Klaviyo.Models.ProfileMetaPatchProperties_unappend? Unappend { get; set; }
 #nullable restore
 #else
-        public global::ApiSdk.Models.ProfileMetaPatchProperties_unappend Unappend { get; set; }
+        public global::Klaviyo.Models.ProfileMetaPatchProperties_unappend Unappend { get; set; }
 #endif
         /// <summary>Remove a key or keys (and their values) completely from properties</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::ApiSdk.Models.ProfileMetaPatchProperties.ProfileMetaPatchProperties_unset? Unset { get; set; }
+        public global::Klaviyo.Models.ProfileMetaPatchProperties.ProfileMetaPatchProperties_unset? Unset { get; set; }
 #nullable restore
 #else
-        public global::ApiSdk.Models.ProfileMetaPatchProperties.ProfileMetaPatchProperties_unset Unset { get; set; }
+        public global::Klaviyo.Models.ProfileMetaPatchProperties.ProfileMetaPatchProperties_unset Unset { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::ApiSdk.Models.ProfileMetaPatchProperties"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Klaviyo.Models.ProfileMetaPatchProperties"/> and sets the default values.
         /// </summary>
         public ProfileMetaPatchProperties()
         {
@@ -48,12 +48,12 @@ namespace ApiSdk.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::ApiSdk.Models.ProfileMetaPatchProperties"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.ProfileMetaPatchProperties"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::ApiSdk.Models.ProfileMetaPatchProperties CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Klaviyo.Models.ProfileMetaPatchProperties CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::ApiSdk.Models.ProfileMetaPatchProperties();
+            return new global::Klaviyo.Models.ProfileMetaPatchProperties();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -63,9 +63,9 @@ namespace ApiSdk.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "append", n => { Append = n.GetObjectValue<global::ApiSdk.Models.ProfileMetaPatchProperties_append>(global::ApiSdk.Models.ProfileMetaPatchProperties_append.CreateFromDiscriminatorValue); } },
-                { "unappend", n => { Unappend = n.GetObjectValue<global::ApiSdk.Models.ProfileMetaPatchProperties_unappend>(global::ApiSdk.Models.ProfileMetaPatchProperties_unappend.CreateFromDiscriminatorValue); } },
-                { "unset", n => { Unset = n.GetObjectValue<global::ApiSdk.Models.ProfileMetaPatchProperties.ProfileMetaPatchProperties_unset>(global::ApiSdk.Models.ProfileMetaPatchProperties.ProfileMetaPatchProperties_unset.CreateFromDiscriminatorValue); } },
+                { "append", n => { Append = n.GetObjectValue<global::Klaviyo.Models.ProfileMetaPatchProperties_append>(global::Klaviyo.Models.ProfileMetaPatchProperties_append.CreateFromDiscriminatorValue); } },
+                { "unappend", n => { Unappend = n.GetObjectValue<global::Klaviyo.Models.ProfileMetaPatchProperties_unappend>(global::Klaviyo.Models.ProfileMetaPatchProperties_unappend.CreateFromDiscriminatorValue); } },
+                { "unset", n => { Unset = n.GetObjectValue<global::Klaviyo.Models.ProfileMetaPatchProperties.ProfileMetaPatchProperties_unset>(global::Klaviyo.Models.ProfileMetaPatchProperties.ProfileMetaPatchProperties_unset.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -75,9 +75,9 @@ namespace ApiSdk.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::ApiSdk.Models.ProfileMetaPatchProperties_append>("append", Append);
-            writer.WriteObjectValue<global::ApiSdk.Models.ProfileMetaPatchProperties_unappend>("unappend", Unappend);
-            writer.WriteObjectValue<global::ApiSdk.Models.ProfileMetaPatchProperties.ProfileMetaPatchProperties_unset>("unset", Unset);
+            writer.WriteObjectValue<global::Klaviyo.Models.ProfileMetaPatchProperties_append>("append", Append);
+            writer.WriteObjectValue<global::Klaviyo.Models.ProfileMetaPatchProperties_unappend>("unappend", Unappend);
+            writer.WriteObjectValue<global::Klaviyo.Models.ProfileMetaPatchProperties.ProfileMetaPatchProperties_unset>("unset", Unset);
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
@@ -97,13 +97,13 @@ namespace ApiSdk.Models
             /// <summary>
             /// Creates a new instance of the appropriate class based on discriminator value
             /// </summary>
-            /// <returns>A <see cref="global::ApiSdk.Models.ProfileMetaPatchProperties.ProfileMetaPatchProperties_unset"/></returns>
+            /// <returns>A <see cref="global::Klaviyo.Models.ProfileMetaPatchProperties.ProfileMetaPatchProperties_unset"/></returns>
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::ApiSdk.Models.ProfileMetaPatchProperties.ProfileMetaPatchProperties_unset CreateFromDiscriminatorValue(IParseNode parseNode)
+            public static global::Klaviyo.Models.ProfileMetaPatchProperties.ProfileMetaPatchProperties_unset CreateFromDiscriminatorValue(IParseNode parseNode)
             {
                 _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
                 var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::ApiSdk.Models.ProfileMetaPatchProperties.ProfileMetaPatchProperties_unset();
+                var result = new global::Klaviyo.Models.ProfileMetaPatchProperties.ProfileMetaPatchProperties_unset();
                 if(parseNode.GetStringValue() is string stringValue)
                 {
                     result.String = stringValue;

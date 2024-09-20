@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace ApiSdk.Models
+namespace Klaviyo.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
     #pragma warning disable CS1591
@@ -17,29 +17,29 @@ namespace ApiSdk.Models
         /// <summary>The email property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::ApiSdk.Models.EmailChannel? Email { get; set; }
+        public global::Klaviyo.Models.EmailChannel? Email { get; set; }
 #nullable restore
 #else
-        public global::ApiSdk.Models.EmailChannel Email { get; set; }
+        public global::Klaviyo.Models.EmailChannel Email { get; set; }
 #endif
         /// <summary>The mobile_push property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::ApiSdk.Models.PushChannel? MobilePush { get; set; }
+        public global::Klaviyo.Models.PushChannel? MobilePush { get; set; }
 #nullable restore
 #else
-        public global::ApiSdk.Models.PushChannel MobilePush { get; set; }
+        public global::Klaviyo.Models.PushChannel MobilePush { get; set; }
 #endif
         /// <summary>The sms property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::ApiSdk.Models.SMSChannel? Sms { get; set; }
+        public global::Klaviyo.Models.SMSChannel? Sms { get; set; }
 #nullable restore
 #else
-        public global::ApiSdk.Models.SMSChannel Sms { get; set; }
+        public global::Klaviyo.Models.SMSChannel Sms { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::ApiSdk.Models.Subscriptions"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Klaviyo.Models.Subscriptions"/> and sets the default values.
         /// </summary>
         public Subscriptions()
         {
@@ -48,12 +48,12 @@ namespace ApiSdk.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::ApiSdk.Models.Subscriptions"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.Subscriptions"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::ApiSdk.Models.Subscriptions CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Klaviyo.Models.Subscriptions CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::ApiSdk.Models.Subscriptions();
+            return new global::Klaviyo.Models.Subscriptions();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -63,9 +63,9 @@ namespace ApiSdk.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "email", n => { Email = n.GetObjectValue<global::ApiSdk.Models.EmailChannel>(global::ApiSdk.Models.EmailChannel.CreateFromDiscriminatorValue); } },
-                { "mobile_push", n => { MobilePush = n.GetObjectValue<global::ApiSdk.Models.PushChannel>(global::ApiSdk.Models.PushChannel.CreateFromDiscriminatorValue); } },
-                { "sms", n => { Sms = n.GetObjectValue<global::ApiSdk.Models.SMSChannel>(global::ApiSdk.Models.SMSChannel.CreateFromDiscriminatorValue); } },
+                { "email", n => { Email = n.GetObjectValue<global::Klaviyo.Models.EmailChannel>(global::Klaviyo.Models.EmailChannel.CreateFromDiscriminatorValue); } },
+                { "mobile_push", n => { MobilePush = n.GetObjectValue<global::Klaviyo.Models.PushChannel>(global::Klaviyo.Models.PushChannel.CreateFromDiscriminatorValue); } },
+                { "sms", n => { Sms = n.GetObjectValue<global::Klaviyo.Models.SMSChannel>(global::Klaviyo.Models.SMSChannel.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -75,9 +75,9 @@ namespace ApiSdk.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::ApiSdk.Models.EmailChannel>("email", Email);
-            writer.WriteObjectValue<global::ApiSdk.Models.PushChannel>("mobile_push", MobilePush);
-            writer.WriteObjectValue<global::ApiSdk.Models.SMSChannel>("sms", Sms);
+            writer.WriteObjectValue<global::Klaviyo.Models.EmailChannel>("email", Email);
+            writer.WriteObjectValue<global::Klaviyo.Models.PushChannel>("mobile_push", MobilePush);
+            writer.WriteObjectValue<global::Klaviyo.Models.SMSChannel>("sms", Sms);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

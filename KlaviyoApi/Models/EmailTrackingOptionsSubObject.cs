@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace ApiSdk.Models
+namespace Klaviyo.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
     #pragma warning disable CS1591
@@ -23,13 +23,13 @@ namespace ApiSdk.Models
         /// <summary>A list of UTM parameters. If an empty list is given and is_add_utm is True, uses company defaults.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::ApiSdk.Models.UTMParamsSubObject>? UtmParams { get; set; }
+        public List<global::Klaviyo.Models.UTMParamsSubObject>? UtmParams { get; set; }
 #nullable restore
 #else
-        public List<global::ApiSdk.Models.UTMParamsSubObject> UtmParams { get; set; }
+        public List<global::Klaviyo.Models.UTMParamsSubObject> UtmParams { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::ApiSdk.Models.EmailTrackingOptionsSubObject"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Klaviyo.Models.EmailTrackingOptionsSubObject"/> and sets the default values.
         /// </summary>
         public EmailTrackingOptionsSubObject()
         {
@@ -38,12 +38,12 @@ namespace ApiSdk.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::ApiSdk.Models.EmailTrackingOptionsSubObject"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.EmailTrackingOptionsSubObject"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::ApiSdk.Models.EmailTrackingOptionsSubObject CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Klaviyo.Models.EmailTrackingOptionsSubObject CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::ApiSdk.Models.EmailTrackingOptionsSubObject();
+            return new global::Klaviyo.Models.EmailTrackingOptionsSubObject();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -56,7 +56,7 @@ namespace ApiSdk.Models
                 { "is_add_utm", n => { IsAddUtm = n.GetBoolValue(); } },
                 { "is_tracking_clicks", n => { IsTrackingClicks = n.GetBoolValue(); } },
                 { "is_tracking_opens", n => { IsTrackingOpens = n.GetBoolValue(); } },
-                { "utm_params", n => { UtmParams = n.GetCollectionOfObjectValues<global::ApiSdk.Models.UTMParamsSubObject>(global::ApiSdk.Models.UTMParamsSubObject.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "utm_params", n => { UtmParams = n.GetCollectionOfObjectValues<global::Klaviyo.Models.UTMParamsSubObject>(global::Klaviyo.Models.UTMParamsSubObject.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -69,7 +69,7 @@ namespace ApiSdk.Models
             writer.WriteBoolValue("is_add_utm", IsAddUtm);
             writer.WriteBoolValue("is_tracking_clicks", IsTrackingClicks);
             writer.WriteBoolValue("is_tracking_opens", IsTrackingOpens);
-            writer.WriteCollectionOfObjectValues<global::ApiSdk.Models.UTMParamsSubObject>("utm_params", UtmParams);
+            writer.WriteCollectionOfObjectValues<global::Klaviyo.Models.UTMParamsSubObject>("utm_params", UtmParams);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

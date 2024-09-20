@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace ApiSdk.Models
+namespace Klaviyo.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
     #pragma warning disable CS1591
@@ -17,18 +17,18 @@ namespace ApiSdk.Models
         /// <summary>The audiences property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::ApiSdk.Models.AudiencesSubObject? Audiences { get; set; }
+        public global::Klaviyo.Models.AudiencesSubObject? Audiences { get; set; }
 #nullable restore
 #else
-        public global::ApiSdk.Models.AudiencesSubObject Audiences { get; set; }
+        public global::Klaviyo.Models.AudiencesSubObject Audiences { get; set; }
 #endif
         /// <summary>The message(s) associated with the campaign</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::ApiSdk.Models.CampaignCreateQueryResourceObject_attributes_campaignMessages? CampaignMessages { get; set; }
+        public global::Klaviyo.Models.CampaignCreateQueryResourceObject_attributes_campaignMessages? CampaignMessages { get; set; }
 #nullable restore
 #else
-        public global::ApiSdk.Models.CampaignCreateQueryResourceObject_attributes_campaignMessages CampaignMessages { get; set; }
+        public global::Klaviyo.Models.CampaignCreateQueryResourceObject_attributes_campaignMessages CampaignMessages { get; set; }
 #endif
         /// <summary>The campaign name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -41,29 +41,29 @@ namespace ApiSdk.Models
         /// <summary>Options to use when sending a campaign</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::ApiSdk.Models.CampaignCreateQueryResourceObject_attributes.CampaignCreateQueryResourceObject_attributes_send_options? SendOptions { get; set; }
+        public global::Klaviyo.Models.CampaignCreateQueryResourceObject_attributes.CampaignCreateQueryResourceObject_attributes_send_options? SendOptions { get; set; }
 #nullable restore
 #else
-        public global::ApiSdk.Models.CampaignCreateQueryResourceObject_attributes.CampaignCreateQueryResourceObject_attributes_send_options SendOptions { get; set; }
+        public global::Klaviyo.Models.CampaignCreateQueryResourceObject_attributes.CampaignCreateQueryResourceObject_attributes_send_options SendOptions { get; set; }
 #endif
         /// <summary>The send_strategy property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::ApiSdk.Models.SendStrategySubObject? SendStrategy { get; set; }
+        public global::Klaviyo.Models.SendStrategySubObject? SendStrategy { get; set; }
 #nullable restore
 #else
-        public global::ApiSdk.Models.SendStrategySubObject SendStrategy { get; set; }
+        public global::Klaviyo.Models.SendStrategySubObject SendStrategy { get; set; }
 #endif
         /// <summary>The tracking options associated with the campaign</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::ApiSdk.Models.CampaignCreateQueryResourceObject_attributes.CampaignCreateQueryResourceObject_attributes_tracking_options? TrackingOptions { get; set; }
+        public global::Klaviyo.Models.CampaignCreateQueryResourceObject_attributes.CampaignCreateQueryResourceObject_attributes_tracking_options? TrackingOptions { get; set; }
 #nullable restore
 #else
-        public global::ApiSdk.Models.CampaignCreateQueryResourceObject_attributes.CampaignCreateQueryResourceObject_attributes_tracking_options TrackingOptions { get; set; }
+        public global::Klaviyo.Models.CampaignCreateQueryResourceObject_attributes.CampaignCreateQueryResourceObject_attributes_tracking_options TrackingOptions { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::ApiSdk.Models.CampaignCreateQueryResourceObject_attributes"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Klaviyo.Models.CampaignCreateQueryResourceObject_attributes"/> and sets the default values.
         /// </summary>
         public CampaignCreateQueryResourceObject_attributes()
         {
@@ -72,12 +72,12 @@ namespace ApiSdk.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::ApiSdk.Models.CampaignCreateQueryResourceObject_attributes"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.CampaignCreateQueryResourceObject_attributes"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::ApiSdk.Models.CampaignCreateQueryResourceObject_attributes CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Klaviyo.Models.CampaignCreateQueryResourceObject_attributes CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::ApiSdk.Models.CampaignCreateQueryResourceObject_attributes();
+            return new global::Klaviyo.Models.CampaignCreateQueryResourceObject_attributes();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -87,12 +87,12 @@ namespace ApiSdk.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "audiences", n => { Audiences = n.GetObjectValue<global::ApiSdk.Models.AudiencesSubObject>(global::ApiSdk.Models.AudiencesSubObject.CreateFromDiscriminatorValue); } },
-                { "campaign-messages", n => { CampaignMessages = n.GetObjectValue<global::ApiSdk.Models.CampaignCreateQueryResourceObject_attributes_campaignMessages>(global::ApiSdk.Models.CampaignCreateQueryResourceObject_attributes_campaignMessages.CreateFromDiscriminatorValue); } },
+                { "audiences", n => { Audiences = n.GetObjectValue<global::Klaviyo.Models.AudiencesSubObject>(global::Klaviyo.Models.AudiencesSubObject.CreateFromDiscriminatorValue); } },
+                { "campaign-messages", n => { CampaignMessages = n.GetObjectValue<global::Klaviyo.Models.CampaignCreateQueryResourceObject_attributes_campaignMessages>(global::Klaviyo.Models.CampaignCreateQueryResourceObject_attributes_campaignMessages.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "send_options", n => { SendOptions = n.GetObjectValue<global::ApiSdk.Models.CampaignCreateQueryResourceObject_attributes.CampaignCreateQueryResourceObject_attributes_send_options>(global::ApiSdk.Models.CampaignCreateQueryResourceObject_attributes.CampaignCreateQueryResourceObject_attributes_send_options.CreateFromDiscriminatorValue); } },
-                { "send_strategy", n => { SendStrategy = n.GetObjectValue<global::ApiSdk.Models.SendStrategySubObject>(global::ApiSdk.Models.SendStrategySubObject.CreateFromDiscriminatorValue); } },
-                { "tracking_options", n => { TrackingOptions = n.GetObjectValue<global::ApiSdk.Models.CampaignCreateQueryResourceObject_attributes.CampaignCreateQueryResourceObject_attributes_tracking_options>(global::ApiSdk.Models.CampaignCreateQueryResourceObject_attributes.CampaignCreateQueryResourceObject_attributes_tracking_options.CreateFromDiscriminatorValue); } },
+                { "send_options", n => { SendOptions = n.GetObjectValue<global::Klaviyo.Models.CampaignCreateQueryResourceObject_attributes.CampaignCreateQueryResourceObject_attributes_send_options>(global::Klaviyo.Models.CampaignCreateQueryResourceObject_attributes.CampaignCreateQueryResourceObject_attributes_send_options.CreateFromDiscriminatorValue); } },
+                { "send_strategy", n => { SendStrategy = n.GetObjectValue<global::Klaviyo.Models.SendStrategySubObject>(global::Klaviyo.Models.SendStrategySubObject.CreateFromDiscriminatorValue); } },
+                { "tracking_options", n => { TrackingOptions = n.GetObjectValue<global::Klaviyo.Models.CampaignCreateQueryResourceObject_attributes.CampaignCreateQueryResourceObject_attributes_tracking_options>(global::Klaviyo.Models.CampaignCreateQueryResourceObject_attributes.CampaignCreateQueryResourceObject_attributes_tracking_options.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -102,53 +102,53 @@ namespace ApiSdk.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::ApiSdk.Models.AudiencesSubObject>("audiences", Audiences);
-            writer.WriteObjectValue<global::ApiSdk.Models.CampaignCreateQueryResourceObject_attributes_campaignMessages>("campaign-messages", CampaignMessages);
+            writer.WriteObjectValue<global::Klaviyo.Models.AudiencesSubObject>("audiences", Audiences);
+            writer.WriteObjectValue<global::Klaviyo.Models.CampaignCreateQueryResourceObject_attributes_campaignMessages>("campaign-messages", CampaignMessages);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::ApiSdk.Models.CampaignCreateQueryResourceObject_attributes.CampaignCreateQueryResourceObject_attributes_send_options>("send_options", SendOptions);
-            writer.WriteObjectValue<global::ApiSdk.Models.SendStrategySubObject>("send_strategy", SendStrategy);
-            writer.WriteObjectValue<global::ApiSdk.Models.CampaignCreateQueryResourceObject_attributes.CampaignCreateQueryResourceObject_attributes_tracking_options>("tracking_options", TrackingOptions);
+            writer.WriteObjectValue<global::Klaviyo.Models.CampaignCreateQueryResourceObject_attributes.CampaignCreateQueryResourceObject_attributes_send_options>("send_options", SendOptions);
+            writer.WriteObjectValue<global::Klaviyo.Models.SendStrategySubObject>("send_strategy", SendStrategy);
+            writer.WriteObjectValue<global::Klaviyo.Models.CampaignCreateQueryResourceObject_attributes.CampaignCreateQueryResourceObject_attributes_tracking_options>("tracking_options", TrackingOptions);
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::ApiSdk.Models.EmailSendOptionsSubObject"/>, <see cref="global::ApiSdk.Models.SMSSendOptionsSubObject"/>
+        /// Composed type wrapper for classes <see cref="global::Klaviyo.Models.EmailSendOptionsSubObject"/>, <see cref="global::Klaviyo.Models.SMSSendOptionsSubObject"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
         public partial class CampaignCreateQueryResourceObject_attributes_send_options : IComposedTypeWrapper, IParsable
         {
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.EmailSendOptionsSubObject"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.EmailSendOptionsSubObject"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.EmailSendOptionsSubObject? EmailSendOptionsSubObject { get; set; }
+            public global::Klaviyo.Models.EmailSendOptionsSubObject? EmailSendOptionsSubObject { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.EmailSendOptionsSubObject EmailSendOptionsSubObject { get; set; }
+            public global::Klaviyo.Models.EmailSendOptionsSubObject EmailSendOptionsSubObject { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.SMSSendOptionsSubObject"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.SMSSendOptionsSubObject"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.SMSSendOptionsSubObject? SMSSendOptionsSubObject { get; set; }
+            public global::Klaviyo.Models.SMSSendOptionsSubObject? SMSSendOptionsSubObject { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.SMSSendOptionsSubObject SMSSendOptionsSubObject { get; set; }
+            public global::Klaviyo.Models.SMSSendOptionsSubObject SMSSendOptionsSubObject { get; set; }
 #endif
             /// <summary>
             /// Creates a new instance of the appropriate class based on discriminator value
             /// </summary>
-            /// <returns>A <see cref="global::ApiSdk.Models.CampaignCreateQueryResourceObject_attributes.CampaignCreateQueryResourceObject_attributes_send_options"/></returns>
+            /// <returns>A <see cref="global::Klaviyo.Models.CampaignCreateQueryResourceObject_attributes.CampaignCreateQueryResourceObject_attributes_send_options"/></returns>
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::ApiSdk.Models.CampaignCreateQueryResourceObject_attributes.CampaignCreateQueryResourceObject_attributes_send_options CreateFromDiscriminatorValue(IParseNode parseNode)
+            public static global::Klaviyo.Models.CampaignCreateQueryResourceObject_attributes.CampaignCreateQueryResourceObject_attributes_send_options CreateFromDiscriminatorValue(IParseNode parseNode)
             {
                 _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
                 var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::ApiSdk.Models.CampaignCreateQueryResourceObject_attributes.CampaignCreateQueryResourceObject_attributes_send_options();
+                var result = new global::Klaviyo.Models.CampaignCreateQueryResourceObject_attributes.CampaignCreateQueryResourceObject_attributes_send_options();
                 if("EmailSendOptionsSubObject".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.EmailSendOptionsSubObject = new global::ApiSdk.Models.EmailSendOptionsSubObject();
+                    result.EmailSendOptionsSubObject = new global::Klaviyo.Models.EmailSendOptionsSubObject();
                 }
                 else if("SMSSendOptionsSubObject".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.SMSSendOptionsSubObject = new global::ApiSdk.Models.SMSSendOptionsSubObject();
+                    result.SMSSendOptionsSubObject = new global::Klaviyo.Models.SMSSendOptionsSubObject();
                 }
                 return result;
             }
@@ -177,53 +177,53 @@ namespace ApiSdk.Models
                 _ = writer ?? throw new ArgumentNullException(nameof(writer));
                 if(EmailSendOptionsSubObject != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.EmailSendOptionsSubObject>(null, EmailSendOptionsSubObject);
+                    writer.WriteObjectValue<global::Klaviyo.Models.EmailSendOptionsSubObject>(null, EmailSendOptionsSubObject);
                 }
                 else if(SMSSendOptionsSubObject != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.SMSSendOptionsSubObject>(null, SMSSendOptionsSubObject);
+                    writer.WriteObjectValue<global::Klaviyo.Models.SMSSendOptionsSubObject>(null, SMSSendOptionsSubObject);
                 }
             }
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::ApiSdk.Models.EmailTrackingOptionsSubObject"/>, <see cref="global::ApiSdk.Models.SMSTrackingOptionsSubObject"/>
+        /// Composed type wrapper for classes <see cref="global::Klaviyo.Models.EmailTrackingOptionsSubObject"/>, <see cref="global::Klaviyo.Models.SMSTrackingOptionsSubObject"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
         public partial class CampaignCreateQueryResourceObject_attributes_tracking_options : IComposedTypeWrapper, IParsable
         {
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.EmailTrackingOptionsSubObject"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.EmailTrackingOptionsSubObject"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.EmailTrackingOptionsSubObject? EmailTrackingOptionsSubObject { get; set; }
+            public global::Klaviyo.Models.EmailTrackingOptionsSubObject? EmailTrackingOptionsSubObject { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.EmailTrackingOptionsSubObject EmailTrackingOptionsSubObject { get; set; }
+            public global::Klaviyo.Models.EmailTrackingOptionsSubObject EmailTrackingOptionsSubObject { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.SMSTrackingOptionsSubObject"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.SMSTrackingOptionsSubObject"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.SMSTrackingOptionsSubObject? SMSTrackingOptionsSubObject { get; set; }
+            public global::Klaviyo.Models.SMSTrackingOptionsSubObject? SMSTrackingOptionsSubObject { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.SMSTrackingOptionsSubObject SMSTrackingOptionsSubObject { get; set; }
+            public global::Klaviyo.Models.SMSTrackingOptionsSubObject SMSTrackingOptionsSubObject { get; set; }
 #endif
             /// <summary>
             /// Creates a new instance of the appropriate class based on discriminator value
             /// </summary>
-            /// <returns>A <see cref="global::ApiSdk.Models.CampaignCreateQueryResourceObject_attributes.CampaignCreateQueryResourceObject_attributes_tracking_options"/></returns>
+            /// <returns>A <see cref="global::Klaviyo.Models.CampaignCreateQueryResourceObject_attributes.CampaignCreateQueryResourceObject_attributes_tracking_options"/></returns>
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::ApiSdk.Models.CampaignCreateQueryResourceObject_attributes.CampaignCreateQueryResourceObject_attributes_tracking_options CreateFromDiscriminatorValue(IParseNode parseNode)
+            public static global::Klaviyo.Models.CampaignCreateQueryResourceObject_attributes.CampaignCreateQueryResourceObject_attributes_tracking_options CreateFromDiscriminatorValue(IParseNode parseNode)
             {
                 _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
                 var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::ApiSdk.Models.CampaignCreateQueryResourceObject_attributes.CampaignCreateQueryResourceObject_attributes_tracking_options();
+                var result = new global::Klaviyo.Models.CampaignCreateQueryResourceObject_attributes.CampaignCreateQueryResourceObject_attributes_tracking_options();
                 if("EmailTrackingOptionsSubObject".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.EmailTrackingOptionsSubObject = new global::ApiSdk.Models.EmailTrackingOptionsSubObject();
+                    result.EmailTrackingOptionsSubObject = new global::Klaviyo.Models.EmailTrackingOptionsSubObject();
                 }
                 else if("SMSTrackingOptionsSubObject".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.SMSTrackingOptionsSubObject = new global::ApiSdk.Models.SMSTrackingOptionsSubObject();
+                    result.SMSTrackingOptionsSubObject = new global::Klaviyo.Models.SMSTrackingOptionsSubObject();
                 }
                 return result;
             }
@@ -252,11 +252,11 @@ namespace ApiSdk.Models
                 _ = writer ?? throw new ArgumentNullException(nameof(writer));
                 if(EmailTrackingOptionsSubObject != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.EmailTrackingOptionsSubObject>(null, EmailTrackingOptionsSubObject);
+                    writer.WriteObjectValue<global::Klaviyo.Models.EmailTrackingOptionsSubObject>(null, EmailTrackingOptionsSubObject);
                 }
                 else if(SMSTrackingOptionsSubObject != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.SMSTrackingOptionsSubObject>(null, SMSTrackingOptionsSubObject);
+                    writer.WriteObjectValue<global::Klaviyo.Models.SMSTrackingOptionsSubObject>(null, SMSTrackingOptionsSubObject);
                 }
             }
         }

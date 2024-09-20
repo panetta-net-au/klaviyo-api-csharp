@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace ApiSdk.Models
+namespace Klaviyo.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
     #pragma warning disable CS1591
@@ -25,29 +25,29 @@ namespace ApiSdk.Models
         /// <summary>The options_static property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::ApiSdk.Models.StaticScheduleOptions? OptionsStatic { get; set; }
+        public global::Klaviyo.Models.StaticScheduleOptions? OptionsStatic { get; set; }
 #nullable restore
 #else
-        public global::ApiSdk.Models.StaticScheduleOptions OptionsStatic { get; set; }
+        public global::Klaviyo.Models.StaticScheduleOptions OptionsStatic { get; set; }
 #endif
         /// <summary>The options_sto property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::ApiSdk.Models.STOScheduleOptions? OptionsSto { get; set; }
+        public global::Klaviyo.Models.STOScheduleOptions? OptionsSto { get; set; }
 #nullable restore
 #else
-        public global::ApiSdk.Models.STOScheduleOptions OptionsSto { get; set; }
+        public global::Klaviyo.Models.STOScheduleOptions OptionsSto { get; set; }
 #endif
         /// <summary>The options_throttled property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::ApiSdk.Models.ThrottledScheduleOptions? OptionsThrottled { get; set; }
+        public global::Klaviyo.Models.ThrottledScheduleOptions? OptionsThrottled { get; set; }
 #nullable restore
 #else
-        public global::ApiSdk.Models.ThrottledScheduleOptions OptionsThrottled { get; set; }
+        public global::Klaviyo.Models.ThrottledScheduleOptions OptionsThrottled { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::ApiSdk.Models.SendStrategySubObject"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Klaviyo.Models.SendStrategySubObject"/> and sets the default values.
         /// </summary>
         public SendStrategySubObject()
         {
@@ -56,12 +56,12 @@ namespace ApiSdk.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::ApiSdk.Models.SendStrategySubObject"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.SendStrategySubObject"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::ApiSdk.Models.SendStrategySubObject CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Klaviyo.Models.SendStrategySubObject CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::ApiSdk.Models.SendStrategySubObject();
+            return new global::Klaviyo.Models.SendStrategySubObject();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -72,9 +72,9 @@ namespace ApiSdk.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "method", n => { Method = n.GetStringValue(); } },
-                { "options_static", n => { OptionsStatic = n.GetObjectValue<global::ApiSdk.Models.StaticScheduleOptions>(global::ApiSdk.Models.StaticScheduleOptions.CreateFromDiscriminatorValue); } },
-                { "options_sto", n => { OptionsSto = n.GetObjectValue<global::ApiSdk.Models.STOScheduleOptions>(global::ApiSdk.Models.STOScheduleOptions.CreateFromDiscriminatorValue); } },
-                { "options_throttled", n => { OptionsThrottled = n.GetObjectValue<global::ApiSdk.Models.ThrottledScheduleOptions>(global::ApiSdk.Models.ThrottledScheduleOptions.CreateFromDiscriminatorValue); } },
+                { "options_static", n => { OptionsStatic = n.GetObjectValue<global::Klaviyo.Models.StaticScheduleOptions>(global::Klaviyo.Models.StaticScheduleOptions.CreateFromDiscriminatorValue); } },
+                { "options_sto", n => { OptionsSto = n.GetObjectValue<global::Klaviyo.Models.STOScheduleOptions>(global::Klaviyo.Models.STOScheduleOptions.CreateFromDiscriminatorValue); } },
+                { "options_throttled", n => { OptionsThrottled = n.GetObjectValue<global::Klaviyo.Models.ThrottledScheduleOptions>(global::Klaviyo.Models.ThrottledScheduleOptions.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -85,9 +85,9 @@ namespace ApiSdk.Models
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("method", Method);
-            writer.WriteObjectValue<global::ApiSdk.Models.StaticScheduleOptions>("options_static", OptionsStatic);
-            writer.WriteObjectValue<global::ApiSdk.Models.STOScheduleOptions>("options_sto", OptionsSto);
-            writer.WriteObjectValue<global::ApiSdk.Models.ThrottledScheduleOptions>("options_throttled", OptionsThrottled);
+            writer.WriteObjectValue<global::Klaviyo.Models.StaticScheduleOptions>("options_static", OptionsStatic);
+            writer.WriteObjectValue<global::Klaviyo.Models.STOScheduleOptions>("options_sto", OptionsSto);
+            writer.WriteObjectValue<global::Klaviyo.Models.ThrottledScheduleOptions>("options_throttled", OptionsThrottled);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

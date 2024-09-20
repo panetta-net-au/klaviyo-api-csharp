@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace ApiSdk.Models
+namespace Klaviyo.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
     #pragma warning disable CS1591
@@ -23,7 +23,7 @@ namespace ApiSdk.Models
         public string Email { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::ApiSdk.Models.ProfileSuppressionCreateQueryResourceObject_attributes"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Klaviyo.Models.ProfileSuppressionCreateQueryResourceObject_attributes"/> and sets the default values.
         /// </summary>
         public ProfileSuppressionCreateQueryResourceObject_attributes()
         {
@@ -32,12 +32,12 @@ namespace ApiSdk.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::ApiSdk.Models.ProfileSuppressionCreateQueryResourceObject_attributes"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.ProfileSuppressionCreateQueryResourceObject_attributes"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::ApiSdk.Models.ProfileSuppressionCreateQueryResourceObject_attributes CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Klaviyo.Models.ProfileSuppressionCreateQueryResourceObject_attributes CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::ApiSdk.Models.ProfileSuppressionCreateQueryResourceObject_attributes();
+            return new global::Klaviyo.Models.ProfileSuppressionCreateQueryResourceObject_attributes();
         }
         /// <summary>
         /// The deserialization information for the current model

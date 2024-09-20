@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace ApiSdk.Models
+namespace Klaviyo.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
     #pragma warning disable CS1591
@@ -25,10 +25,10 @@ namespace ApiSdk.Models
         /// <summary>Flat JSON blob to provide custom metadata about the catalog item variant. May not exceed 100kb.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::ApiSdk.Models.CatalogVariantCreateQueryResourceObject_attributes_custom_metadata? CustomMetadata { get; set; }
+        public global::Klaviyo.Models.CatalogVariantCreateQueryResourceObject_attributes_custom_metadata? CustomMetadata { get; set; }
 #nullable restore
 #else
-        public global::ApiSdk.Models.CatalogVariantCreateQueryResourceObject_attributes_custom_metadata CustomMetadata { get; set; }
+        public global::Klaviyo.Models.CatalogVariantCreateQueryResourceObject_attributes_custom_metadata CustomMetadata { get; set; }
 #endif
         /// <summary>A description of the catalog item variant.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -71,7 +71,7 @@ namespace ApiSdk.Models
         public string ImageThumbnailUrl { get; set; }
 #endif
         /// <summary>The integration type. Currently only &quot;$custom&quot; is supported.</summary>
-        public global::ApiSdk.Models.CatalogVariantCreateQueryResourceObject_attributes_integration_type? IntegrationType { get; set; }
+        public global::Klaviyo.Models.CatalogVariantCreateQueryResourceObject_attributes_integration_type? IntegrationType { get; set; }
         /// <summary>This field controls the visibility of this catalog item variant in product feeds/blocks. This field supports the following values:`1`: a product will not appear in dynamic product recommendation feeds and blocks if it is out of stock.`0` or `2`: a product can appear in dynamic product recommendation feeds and blocks regardless of inventory quantity.</summary>
         public int? InventoryPolicy { get; set; }
         /// <summary>The quantity of the catalog item variant currently in stock.</summary>
@@ -105,23 +105,23 @@ namespace ApiSdk.Models
         public string Url { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::ApiSdk.Models.CatalogVariantCreateQueryResourceObject_attributes"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Klaviyo.Models.CatalogVariantCreateQueryResourceObject_attributes"/> and sets the default values.
         /// </summary>
         public CatalogVariantCreateQueryResourceObject_attributes()
         {
             AdditionalData = new Dictionary<string, object>();
             CatalogType = "$default";
-            IntegrationType = global::ApiSdk.Models.CatalogVariantCreateQueryResourceObject_attributes_integration_type.Custom;
+            IntegrationType = global::Klaviyo.Models.CatalogVariantCreateQueryResourceObject_attributes_integration_type.Custom;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::ApiSdk.Models.CatalogVariantCreateQueryResourceObject_attributes"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.CatalogVariantCreateQueryResourceObject_attributes"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::ApiSdk.Models.CatalogVariantCreateQueryResourceObject_attributes CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Klaviyo.Models.CatalogVariantCreateQueryResourceObject_attributes CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::ApiSdk.Models.CatalogVariantCreateQueryResourceObject_attributes();
+            return new global::Klaviyo.Models.CatalogVariantCreateQueryResourceObject_attributes();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -132,13 +132,13 @@ namespace ApiSdk.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "catalog_type", n => { CatalogType = n.GetStringValue(); } },
-                { "custom_metadata", n => { CustomMetadata = n.GetObjectValue<global::ApiSdk.Models.CatalogVariantCreateQueryResourceObject_attributes_custom_metadata>(global::ApiSdk.Models.CatalogVariantCreateQueryResourceObject_attributes_custom_metadata.CreateFromDiscriminatorValue); } },
+                { "custom_metadata", n => { CustomMetadata = n.GetObjectValue<global::Klaviyo.Models.CatalogVariantCreateQueryResourceObject_attributes_custom_metadata>(global::Klaviyo.Models.CatalogVariantCreateQueryResourceObject_attributes_custom_metadata.CreateFromDiscriminatorValue); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "external_id", n => { ExternalId = n.GetStringValue(); } },
                 { "image_full_url", n => { ImageFullUrl = n.GetStringValue(); } },
                 { "image_thumbnail_url", n => { ImageThumbnailUrl = n.GetStringValue(); } },
                 { "images", n => { Images = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "integration_type", n => { IntegrationType = n.GetEnumValue<global::ApiSdk.Models.CatalogVariantCreateQueryResourceObject_attributes_integration_type>(); } },
+                { "integration_type", n => { IntegrationType = n.GetEnumValue<global::Klaviyo.Models.CatalogVariantCreateQueryResourceObject_attributes_integration_type>(); } },
                 { "inventory_policy", n => { InventoryPolicy = n.GetIntValue(); } },
                 { "inventory_quantity", n => { InventoryQuantity = n.GetDoubleValue(); } },
                 { "price", n => { Price = n.GetDoubleValue(); } },
@@ -156,13 +156,13 @@ namespace ApiSdk.Models
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("catalog_type", CatalogType);
-            writer.WriteObjectValue<global::ApiSdk.Models.CatalogVariantCreateQueryResourceObject_attributes_custom_metadata>("custom_metadata", CustomMetadata);
+            writer.WriteObjectValue<global::Klaviyo.Models.CatalogVariantCreateQueryResourceObject_attributes_custom_metadata>("custom_metadata", CustomMetadata);
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("external_id", ExternalId);
             writer.WriteStringValue("image_full_url", ImageFullUrl);
             writer.WriteCollectionOfPrimitiveValues<string>("images", Images);
             writer.WriteStringValue("image_thumbnail_url", ImageThumbnailUrl);
-            writer.WriteEnumValue<global::ApiSdk.Models.CatalogVariantCreateQueryResourceObject_attributes_integration_type>("integration_type", IntegrationType);
+            writer.WriteEnumValue<global::Klaviyo.Models.CatalogVariantCreateQueryResourceObject_attributes_integration_type>("integration_type", IntegrationType);
             writer.WriteIntValue("inventory_policy", InventoryPolicy);
             writer.WriteDoubleValue("inventory_quantity", InventoryQuantity);
             writer.WriteDoubleValue("price", Price);

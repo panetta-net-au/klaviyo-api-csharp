@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace ApiSdk.Models
+namespace Klaviyo.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
     #pragma warning disable CS1591
@@ -57,18 +57,18 @@ namespace ApiSdk.Models
         /// <summary>Latitude coordinate. We recommend providing a precision of four decimal places.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::ApiSdk.Models.ProfileLocation.ProfileLocation_latitude? Latitude { get; set; }
+        public global::Klaviyo.Models.ProfileLocation.ProfileLocation_latitude? Latitude { get; set; }
 #nullable restore
 #else
-        public global::ApiSdk.Models.ProfileLocation.ProfileLocation_latitude Latitude { get; set; }
+        public global::Klaviyo.Models.ProfileLocation.ProfileLocation_latitude Latitude { get; set; }
 #endif
         /// <summary>Longitude coordinate. We recommend providing a precision of four decimal places.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::ApiSdk.Models.ProfileLocation.ProfileLocation_longitude? Longitude { get; set; }
+        public global::Klaviyo.Models.ProfileLocation.ProfileLocation_longitude? Longitude { get; set; }
 #nullable restore
 #else
-        public global::ApiSdk.Models.ProfileLocation.ProfileLocation_longitude Longitude { get; set; }
+        public global::Klaviyo.Models.ProfileLocation.ProfileLocation_longitude Longitude { get; set; }
 #endif
         /// <summary>Region within a country, such as state or province</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -95,7 +95,7 @@ namespace ApiSdk.Models
         public string Zip { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::ApiSdk.Models.ProfileLocation"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Klaviyo.Models.ProfileLocation"/> and sets the default values.
         /// </summary>
         public ProfileLocation()
         {
@@ -104,12 +104,12 @@ namespace ApiSdk.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::ApiSdk.Models.ProfileLocation"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.ProfileLocation"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::ApiSdk.Models.ProfileLocation CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Klaviyo.Models.ProfileLocation CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::ApiSdk.Models.ProfileLocation();
+            return new global::Klaviyo.Models.ProfileLocation();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -124,8 +124,8 @@ namespace ApiSdk.Models
                 { "city", n => { City = n.GetStringValue(); } },
                 { "country", n => { Country = n.GetStringValue(); } },
                 { "ip", n => { Ip = n.GetStringValue(); } },
-                { "latitude", n => { Latitude = n.GetObjectValue<global::ApiSdk.Models.ProfileLocation.ProfileLocation_latitude>(global::ApiSdk.Models.ProfileLocation.ProfileLocation_latitude.CreateFromDiscriminatorValue); } },
-                { "longitude", n => { Longitude = n.GetObjectValue<global::ApiSdk.Models.ProfileLocation.ProfileLocation_longitude>(global::ApiSdk.Models.ProfileLocation.ProfileLocation_longitude.CreateFromDiscriminatorValue); } },
+                { "latitude", n => { Latitude = n.GetObjectValue<global::Klaviyo.Models.ProfileLocation.ProfileLocation_latitude>(global::Klaviyo.Models.ProfileLocation.ProfileLocation_latitude.CreateFromDiscriminatorValue); } },
+                { "longitude", n => { Longitude = n.GetObjectValue<global::Klaviyo.Models.ProfileLocation.ProfileLocation_longitude>(global::Klaviyo.Models.ProfileLocation.ProfileLocation_longitude.CreateFromDiscriminatorValue); } },
                 { "region", n => { Region = n.GetStringValue(); } },
                 { "timezone", n => { Timezone = n.GetStringValue(); } },
                 { "zip", n => { Zip = n.GetStringValue(); } },
@@ -143,8 +143,8 @@ namespace ApiSdk.Models
             writer.WriteStringValue("city", City);
             writer.WriteStringValue("country", Country);
             writer.WriteStringValue("ip", Ip);
-            writer.WriteObjectValue<global::ApiSdk.Models.ProfileLocation.ProfileLocation_latitude>("latitude", Latitude);
-            writer.WriteObjectValue<global::ApiSdk.Models.ProfileLocation.ProfileLocation_longitude>("longitude", Longitude);
+            writer.WriteObjectValue<global::Klaviyo.Models.ProfileLocation.ProfileLocation_latitude>("latitude", Latitude);
+            writer.WriteObjectValue<global::Klaviyo.Models.ProfileLocation.ProfileLocation_longitude>("longitude", Longitude);
             writer.WriteStringValue("region", Region);
             writer.WriteStringValue("timezone", Timezone);
             writer.WriteStringValue("zip", Zip);
@@ -169,13 +169,13 @@ namespace ApiSdk.Models
             /// <summary>
             /// Creates a new instance of the appropriate class based on discriminator value
             /// </summary>
-            /// <returns>A <see cref="global::ApiSdk.Models.ProfileLocation.ProfileLocation_latitude"/></returns>
+            /// <returns>A <see cref="global::Klaviyo.Models.ProfileLocation.ProfileLocation_latitude"/></returns>
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::ApiSdk.Models.ProfileLocation.ProfileLocation_latitude CreateFromDiscriminatorValue(IParseNode parseNode)
+            public static global::Klaviyo.Models.ProfileLocation.ProfileLocation_latitude CreateFromDiscriminatorValue(IParseNode parseNode)
             {
                 _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
                 var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::ApiSdk.Models.ProfileLocation.ProfileLocation_latitude();
+                var result = new global::Klaviyo.Models.ProfileLocation.ProfileLocation_latitude();
                 if(parseNode.GetDoubleValue() is double doubleValue)
                 {
                     result.Double = doubleValue;
@@ -230,13 +230,13 @@ namespace ApiSdk.Models
             /// <summary>
             /// Creates a new instance of the appropriate class based on discriminator value
             /// </summary>
-            /// <returns>A <see cref="global::ApiSdk.Models.ProfileLocation.ProfileLocation_longitude"/></returns>
+            /// <returns>A <see cref="global::Klaviyo.Models.ProfileLocation.ProfileLocation_longitude"/></returns>
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::ApiSdk.Models.ProfileLocation.ProfileLocation_longitude CreateFromDiscriminatorValue(IParseNode parseNode)
+            public static global::Klaviyo.Models.ProfileLocation.ProfileLocation_longitude CreateFromDiscriminatorValue(IParseNode parseNode)
             {
                 _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
                 var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::ApiSdk.Models.ProfileLocation.ProfileLocation_longitude();
+                var result = new global::Klaviyo.Models.ProfileLocation.ProfileLocation_longitude();
                 if(parseNode.GetDoubleValue() is double doubleValue)
                 {
                     result.Double = doubleValue;

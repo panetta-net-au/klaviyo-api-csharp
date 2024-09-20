@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace ApiSdk.Models
+namespace Klaviyo.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
     #pragma warning disable CS1591
@@ -15,22 +15,22 @@ namespace ApiSdk.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Measurements for profile metrics.</summary>
-        public global::ApiSdk.Models.ProfileMetricCondition_measurement? Measurement { get; set; }
+        public global::Klaviyo.Models.ProfileMetricCondition_measurement? Measurement { get; set; }
         /// <summary>The measurement_filter property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::ApiSdk.Models.NumericOperatorFilter? MeasurementFilter { get; set; }
+        public global::Klaviyo.Models.NumericOperatorFilter? MeasurementFilter { get; set; }
 #nullable restore
 #else
-        public global::ApiSdk.Models.NumericOperatorFilter MeasurementFilter { get; set; }
+        public global::Klaviyo.Models.NumericOperatorFilter MeasurementFilter { get; set; }
 #endif
         /// <summary>The metric_filters property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::ApiSdk.Models.ProfileMetricPropertyFilter>? MetricFilters { get; set; }
+        public List<global::Klaviyo.Models.ProfileMetricPropertyFilter>? MetricFilters { get; set; }
 #nullable restore
 #else
-        public List<global::ApiSdk.Models.ProfileMetricPropertyFilter> MetricFilters { get; set; }
+        public List<global::Klaviyo.Models.ProfileMetricPropertyFilter> MetricFilters { get; set; }
 #endif
         /// <summary>The metric_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -43,15 +43,15 @@ namespace ApiSdk.Models
         /// <summary>The timeframe_filter property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::ApiSdk.Models.ProfileMetricCondition.ProfileMetricCondition_timeframe_filter? TimeframeFilter { get; set; }
+        public global::Klaviyo.Models.ProfileMetricCondition.ProfileMetricCondition_timeframe_filter? TimeframeFilter { get; set; }
 #nullable restore
 #else
-        public global::ApiSdk.Models.ProfileMetricCondition.ProfileMetricCondition_timeframe_filter TimeframeFilter { get; set; }
+        public global::Klaviyo.Models.ProfileMetricCondition.ProfileMetricCondition_timeframe_filter TimeframeFilter { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public global::ApiSdk.Models.ProfileMetricEnum? Type { get; set; }
+        public global::Klaviyo.Models.ProfileMetricEnum? Type { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::ApiSdk.Models.ProfileMetricCondition"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Klaviyo.Models.ProfileMetricCondition"/> and sets the default values.
         /// </summary>
         public ProfileMetricCondition()
         {
@@ -60,12 +60,12 @@ namespace ApiSdk.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::ApiSdk.Models.ProfileMetricCondition"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.ProfileMetricCondition"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::ApiSdk.Models.ProfileMetricCondition CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Klaviyo.Models.ProfileMetricCondition CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::ApiSdk.Models.ProfileMetricCondition();
+            return new global::Klaviyo.Models.ProfileMetricCondition();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -75,12 +75,12 @@ namespace ApiSdk.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "measurement", n => { Measurement = n.GetEnumValue<global::ApiSdk.Models.ProfileMetricCondition_measurement>(); } },
-                { "measurement_filter", n => { MeasurementFilter = n.GetObjectValue<global::ApiSdk.Models.NumericOperatorFilter>(global::ApiSdk.Models.NumericOperatorFilter.CreateFromDiscriminatorValue); } },
-                { "metric_filters", n => { MetricFilters = n.GetCollectionOfObjectValues<global::ApiSdk.Models.ProfileMetricPropertyFilter>(global::ApiSdk.Models.ProfileMetricPropertyFilter.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "measurement", n => { Measurement = n.GetEnumValue<global::Klaviyo.Models.ProfileMetricCondition_measurement>(); } },
+                { "measurement_filter", n => { MeasurementFilter = n.GetObjectValue<global::Klaviyo.Models.NumericOperatorFilter>(global::Klaviyo.Models.NumericOperatorFilter.CreateFromDiscriminatorValue); } },
+                { "metric_filters", n => { MetricFilters = n.GetCollectionOfObjectValues<global::Klaviyo.Models.ProfileMetricPropertyFilter>(global::Klaviyo.Models.ProfileMetricPropertyFilter.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "metric_id", n => { MetricId = n.GetStringValue(); } },
-                { "timeframe_filter", n => { TimeframeFilter = n.GetObjectValue<global::ApiSdk.Models.ProfileMetricCondition.ProfileMetricCondition_timeframe_filter>(global::ApiSdk.Models.ProfileMetricCondition.ProfileMetricCondition_timeframe_filter.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::ApiSdk.Models.ProfileMetricEnum>(); } },
+                { "timeframe_filter", n => { TimeframeFilter = n.GetObjectValue<global::Klaviyo.Models.ProfileMetricCondition.ProfileMetricCondition_timeframe_filter>(global::Klaviyo.Models.ProfileMetricCondition.ProfileMetricCondition_timeframe_filter.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetEnumValue<global::Klaviyo.Models.ProfileMetricEnum>(); } },
             };
         }
         /// <summary>
@@ -90,101 +90,101 @@ namespace ApiSdk.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::ApiSdk.Models.ProfileMetricCondition_measurement>("measurement", Measurement);
-            writer.WriteObjectValue<global::ApiSdk.Models.NumericOperatorFilter>("measurement_filter", MeasurementFilter);
-            writer.WriteCollectionOfObjectValues<global::ApiSdk.Models.ProfileMetricPropertyFilter>("metric_filters", MetricFilters);
+            writer.WriteEnumValue<global::Klaviyo.Models.ProfileMetricCondition_measurement>("measurement", Measurement);
+            writer.WriteObjectValue<global::Klaviyo.Models.NumericOperatorFilter>("measurement_filter", MeasurementFilter);
+            writer.WriteCollectionOfObjectValues<global::Klaviyo.Models.ProfileMetricPropertyFilter>("metric_filters", MetricFilters);
             writer.WriteStringValue("metric_id", MetricId);
-            writer.WriteObjectValue<global::ApiSdk.Models.ProfileMetricCondition.ProfileMetricCondition_timeframe_filter>("timeframe_filter", TimeframeFilter);
-            writer.WriteEnumValue<global::ApiSdk.Models.ProfileMetricEnum>("type", Type);
+            writer.WriteObjectValue<global::Klaviyo.Models.ProfileMetricCondition.ProfileMetricCondition_timeframe_filter>("timeframe_filter", TimeframeFilter);
+            writer.WriteEnumValue<global::Klaviyo.Models.ProfileMetricEnum>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::ApiSdk.Models.AlltimeDateFilter"/>, <see cref="global::ApiSdk.Models.RelativeAnniversaryDateFilter"/>, <see cref="global::ApiSdk.Models.RelativeDateOperatorBaseFilter"/>, <see cref="global::ApiSdk.Models.RelativeDateRangeFilter"/>, <see cref="global::ApiSdk.Models.StaticDateFilter"/>, <see cref="global::ApiSdk.Models.StaticDateRangeFilter"/>
+        /// Composed type wrapper for classes <see cref="global::Klaviyo.Models.AlltimeDateFilter"/>, <see cref="global::Klaviyo.Models.RelativeAnniversaryDateFilter"/>, <see cref="global::Klaviyo.Models.RelativeDateOperatorBaseFilter"/>, <see cref="global::Klaviyo.Models.RelativeDateRangeFilter"/>, <see cref="global::Klaviyo.Models.StaticDateFilter"/>, <see cref="global::Klaviyo.Models.StaticDateRangeFilter"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
         public partial class ProfileMetricCondition_timeframe_filter : IComposedTypeWrapper, IParsable
         {
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.AlltimeDateFilter"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.AlltimeDateFilter"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.AlltimeDateFilter? AlltimeDateFilter { get; set; }
+            public global::Klaviyo.Models.AlltimeDateFilter? AlltimeDateFilter { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.AlltimeDateFilter AlltimeDateFilter { get; set; }
+            public global::Klaviyo.Models.AlltimeDateFilter AlltimeDateFilter { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.RelativeAnniversaryDateFilter"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.RelativeAnniversaryDateFilter"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.RelativeAnniversaryDateFilter? RelativeAnniversaryDateFilter { get; set; }
+            public global::Klaviyo.Models.RelativeAnniversaryDateFilter? RelativeAnniversaryDateFilter { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.RelativeAnniversaryDateFilter RelativeAnniversaryDateFilter { get; set; }
+            public global::Klaviyo.Models.RelativeAnniversaryDateFilter RelativeAnniversaryDateFilter { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.RelativeDateOperatorBaseFilter"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.RelativeDateOperatorBaseFilter"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.RelativeDateOperatorBaseFilter? RelativeDateOperatorBaseFilter { get; set; }
+            public global::Klaviyo.Models.RelativeDateOperatorBaseFilter? RelativeDateOperatorBaseFilter { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.RelativeDateOperatorBaseFilter RelativeDateOperatorBaseFilter { get; set; }
+            public global::Klaviyo.Models.RelativeDateOperatorBaseFilter RelativeDateOperatorBaseFilter { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.RelativeDateRangeFilter"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.RelativeDateRangeFilter"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.RelativeDateRangeFilter? RelativeDateRangeFilter { get; set; }
+            public global::Klaviyo.Models.RelativeDateRangeFilter? RelativeDateRangeFilter { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.RelativeDateRangeFilter RelativeDateRangeFilter { get; set; }
+            public global::Klaviyo.Models.RelativeDateRangeFilter RelativeDateRangeFilter { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.StaticDateFilter"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.StaticDateFilter"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.StaticDateFilter? StaticDateFilter { get; set; }
+            public global::Klaviyo.Models.StaticDateFilter? StaticDateFilter { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.StaticDateFilter StaticDateFilter { get; set; }
+            public global::Klaviyo.Models.StaticDateFilter StaticDateFilter { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.StaticDateRangeFilter"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.StaticDateRangeFilter"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.StaticDateRangeFilter? StaticDateRangeFilter { get; set; }
+            public global::Klaviyo.Models.StaticDateRangeFilter? StaticDateRangeFilter { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.StaticDateRangeFilter StaticDateRangeFilter { get; set; }
+            public global::Klaviyo.Models.StaticDateRangeFilter StaticDateRangeFilter { get; set; }
 #endif
             /// <summary>
             /// Creates a new instance of the appropriate class based on discriminator value
             /// </summary>
-            /// <returns>A <see cref="global::ApiSdk.Models.ProfileMetricCondition.ProfileMetricCondition_timeframe_filter"/></returns>
+            /// <returns>A <see cref="global::Klaviyo.Models.ProfileMetricCondition.ProfileMetricCondition_timeframe_filter"/></returns>
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::ApiSdk.Models.ProfileMetricCondition.ProfileMetricCondition_timeframe_filter CreateFromDiscriminatorValue(IParseNode parseNode)
+            public static global::Klaviyo.Models.ProfileMetricCondition.ProfileMetricCondition_timeframe_filter CreateFromDiscriminatorValue(IParseNode parseNode)
             {
                 _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
                 var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::ApiSdk.Models.ProfileMetricCondition.ProfileMetricCondition_timeframe_filter();
+                var result = new global::Klaviyo.Models.ProfileMetricCondition.ProfileMetricCondition_timeframe_filter();
                 if("AlltimeDateFilter".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.AlltimeDateFilter = new global::ApiSdk.Models.AlltimeDateFilter();
+                    result.AlltimeDateFilter = new global::Klaviyo.Models.AlltimeDateFilter();
                 }
                 else if("RelativeAnniversaryDateFilter".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.RelativeAnniversaryDateFilter = new global::ApiSdk.Models.RelativeAnniversaryDateFilter();
+                    result.RelativeAnniversaryDateFilter = new global::Klaviyo.Models.RelativeAnniversaryDateFilter();
                 }
                 else if("RelativeDateOperatorBaseFilter".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.RelativeDateOperatorBaseFilter = new global::ApiSdk.Models.RelativeDateOperatorBaseFilter();
+                    result.RelativeDateOperatorBaseFilter = new global::Klaviyo.Models.RelativeDateOperatorBaseFilter();
                 }
                 else if("RelativeDateRangeFilter".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.RelativeDateRangeFilter = new global::ApiSdk.Models.RelativeDateRangeFilter();
+                    result.RelativeDateRangeFilter = new global::Klaviyo.Models.RelativeDateRangeFilter();
                 }
                 else if("StaticDateFilter".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.StaticDateFilter = new global::ApiSdk.Models.StaticDateFilter();
+                    result.StaticDateFilter = new global::Klaviyo.Models.StaticDateFilter();
                 }
                 else if("StaticDateRangeFilter".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.StaticDateRangeFilter = new global::ApiSdk.Models.StaticDateRangeFilter();
+                    result.StaticDateRangeFilter = new global::Klaviyo.Models.StaticDateRangeFilter();
                 }
                 return result;
             }
@@ -229,27 +229,27 @@ namespace ApiSdk.Models
                 _ = writer ?? throw new ArgumentNullException(nameof(writer));
                 if(AlltimeDateFilter != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.AlltimeDateFilter>(null, AlltimeDateFilter);
+                    writer.WriteObjectValue<global::Klaviyo.Models.AlltimeDateFilter>(null, AlltimeDateFilter);
                 }
                 else if(RelativeAnniversaryDateFilter != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.RelativeAnniversaryDateFilter>(null, RelativeAnniversaryDateFilter);
+                    writer.WriteObjectValue<global::Klaviyo.Models.RelativeAnniversaryDateFilter>(null, RelativeAnniversaryDateFilter);
                 }
                 else if(RelativeDateOperatorBaseFilter != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.RelativeDateOperatorBaseFilter>(null, RelativeDateOperatorBaseFilter);
+                    writer.WriteObjectValue<global::Klaviyo.Models.RelativeDateOperatorBaseFilter>(null, RelativeDateOperatorBaseFilter);
                 }
                 else if(RelativeDateRangeFilter != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.RelativeDateRangeFilter>(null, RelativeDateRangeFilter);
+                    writer.WriteObjectValue<global::Klaviyo.Models.RelativeDateRangeFilter>(null, RelativeDateRangeFilter);
                 }
                 else if(StaticDateFilter != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.StaticDateFilter>(null, StaticDateFilter);
+                    writer.WriteObjectValue<global::Klaviyo.Models.StaticDateFilter>(null, StaticDateFilter);
                 }
                 else if(StaticDateRangeFilter != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.StaticDateRangeFilter>(null, StaticDateRangeFilter);
+                    writer.WriteObjectValue<global::Klaviyo.Models.StaticDateRangeFilter>(null, StaticDateRangeFilter);
                 }
             }
         }

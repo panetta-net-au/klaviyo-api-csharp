@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace ApiSdk.Models
+namespace Klaviyo.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
     #pragma warning disable CS1591
@@ -17,10 +17,10 @@ namespace ApiSdk.Models
         /// <summary>Optional attribute(s) used for partitioning by the aggregation function</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::ApiSdk.Models.MetricAggregateQueryResourceObject_attributes_by?>? By { get; set; }
+        public List<global::Klaviyo.Models.MetricAggregateQueryResourceObject_attributes_by?>? By { get; set; }
 #nullable restore
 #else
-        public List<global::ApiSdk.Models.MetricAggregateQueryResourceObject_attributes_by?> By { get; set; }
+        public List<global::Klaviyo.Models.MetricAggregateQueryResourceObject_attributes_by?> By { get; set; }
 #endif
         /// <summary>List of filters, must include time range using ISO 8601 format (YYYY-MM-DDTHH:MM:SS.mmmmmm).            These filters follow a similar format to those in `GET` requests, the primary difference is that this endpoint asks for a list.            The time range can be filtered by providing a `greater-or-equal` and a `less-than` filter on the `datetime` field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -31,14 +31,14 @@ namespace ApiSdk.Models
         public List<string> Filter { get; set; }
 #endif
         /// <summary>Aggregation interval, e.g. &quot;hour&quot;, &quot;day&quot;, &quot;week&quot;, &quot;month&quot;</summary>
-        public global::ApiSdk.Models.MetricAggregateQueryResourceObject_attributes_interval? Interval { get; set; }
+        public global::Klaviyo.Models.MetricAggregateQueryResourceObject_attributes_interval? Interval { get; set; }
         /// <summary>Measurement key, e.g. `unique`, `sum_value`, `count`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::ApiSdk.Models.MetricAggregateQueryResourceObject_attributes_measurements?>? Measurements { get; set; }
+        public List<global::Klaviyo.Models.MetricAggregateQueryResourceObject_attributes_measurements?>? Measurements { get; set; }
 #nullable restore
 #else
-        public List<global::ApiSdk.Models.MetricAggregateQueryResourceObject_attributes_measurements?> Measurements { get; set; }
+        public List<global::Klaviyo.Models.MetricAggregateQueryResourceObject_attributes_measurements?> Measurements { get; set; }
 #endif
         /// <summary>The metric ID used in the aggregation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -67,7 +67,7 @@ namespace ApiSdk.Models
         public List<string> ReturnFields { get; set; }
 #endif
         /// <summary>Provide a sort key (e.g. -$message)</summary>
-        public global::ApiSdk.Models.MetricAggregateQueryResourceObject_attributes_sort? Sort { get; set; }
+        public global::Klaviyo.Models.MetricAggregateQueryResourceObject_attributes_sort? Sort { get; set; }
         /// <summary>The timezone used for processing the query, e.g. `&apos;America/New_York&apos;`.            This field is validated against a list of common timezones from the [IANA Time Zone Database](https://www.iana.org/time-zones).            While most are supported, a few notable exceptions are `Factory`, `Europe/Kyiv` and `Pacific/Kanton`. This field is case-sensitive.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -77,23 +77,23 @@ namespace ApiSdk.Models
         public string Timezone { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::ApiSdk.Models.MetricAggregateQueryResourceObject_attributes"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Klaviyo.Models.MetricAggregateQueryResourceObject_attributes"/> and sets the default values.
         /// </summary>
         public MetricAggregateQueryResourceObject_attributes()
         {
             AdditionalData = new Dictionary<string, object>();
-            Interval = global::ApiSdk.Models.MetricAggregateQueryResourceObject_attributes_interval.Day;
+            Interval = global::Klaviyo.Models.MetricAggregateQueryResourceObject_attributes_interval.Day;
             Timezone = "UTC";
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::ApiSdk.Models.MetricAggregateQueryResourceObject_attributes"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.MetricAggregateQueryResourceObject_attributes"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::ApiSdk.Models.MetricAggregateQueryResourceObject_attributes CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Klaviyo.Models.MetricAggregateQueryResourceObject_attributes CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::ApiSdk.Models.MetricAggregateQueryResourceObject_attributes();
+            return new global::Klaviyo.Models.MetricAggregateQueryResourceObject_attributes();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -103,15 +103,15 @@ namespace ApiSdk.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "by", n => { By = n.GetCollectionOfEnumValues<global::ApiSdk.Models.MetricAggregateQueryResourceObject_attributes_by>()?.AsList(); } },
+                { "by", n => { By = n.GetCollectionOfEnumValues<global::Klaviyo.Models.MetricAggregateQueryResourceObject_attributes_by>()?.AsList(); } },
                 { "filter", n => { Filter = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "interval", n => { Interval = n.GetEnumValue<global::ApiSdk.Models.MetricAggregateQueryResourceObject_attributes_interval>(); } },
-                { "measurements", n => { Measurements = n.GetCollectionOfEnumValues<global::ApiSdk.Models.MetricAggregateQueryResourceObject_attributes_measurements>()?.AsList(); } },
+                { "interval", n => { Interval = n.GetEnumValue<global::Klaviyo.Models.MetricAggregateQueryResourceObject_attributes_interval>(); } },
+                { "measurements", n => { Measurements = n.GetCollectionOfEnumValues<global::Klaviyo.Models.MetricAggregateQueryResourceObject_attributes_measurements>()?.AsList(); } },
                 { "metric_id", n => { MetricId = n.GetStringValue(); } },
                 { "page_cursor", n => { PageCursor = n.GetStringValue(); } },
                 { "page_size", n => { PageSize = n.GetIntValue(); } },
                 { "return_fields", n => { ReturnFields = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "sort", n => { Sort = n.GetEnumValue<global::ApiSdk.Models.MetricAggregateQueryResourceObject_attributes_sort>(); } },
+                { "sort", n => { Sort = n.GetEnumValue<global::Klaviyo.Models.MetricAggregateQueryResourceObject_attributes_sort>(); } },
                 { "timezone", n => { Timezone = n.GetStringValue(); } },
             };
         }
@@ -122,15 +122,15 @@ namespace ApiSdk.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfEnumValues<global::ApiSdk.Models.MetricAggregateQueryResourceObject_attributes_by>("by", By);
+            writer.WriteCollectionOfEnumValues<global::Klaviyo.Models.MetricAggregateQueryResourceObject_attributes_by>("by", By);
             writer.WriteCollectionOfPrimitiveValues<string>("filter", Filter);
-            writer.WriteEnumValue<global::ApiSdk.Models.MetricAggregateQueryResourceObject_attributes_interval>("interval", Interval);
-            writer.WriteCollectionOfEnumValues<global::ApiSdk.Models.MetricAggregateQueryResourceObject_attributes_measurements>("measurements", Measurements);
+            writer.WriteEnumValue<global::Klaviyo.Models.MetricAggregateQueryResourceObject_attributes_interval>("interval", Interval);
+            writer.WriteCollectionOfEnumValues<global::Klaviyo.Models.MetricAggregateQueryResourceObject_attributes_measurements>("measurements", Measurements);
             writer.WriteStringValue("metric_id", MetricId);
             writer.WriteStringValue("page_cursor", PageCursor);
             writer.WriteIntValue("page_size", PageSize);
             writer.WriteCollectionOfPrimitiveValues<string>("return_fields", ReturnFields);
-            writer.WriteEnumValue<global::ApiSdk.Models.MetricAggregateQueryResourceObject_attributes_sort>("sort", Sort);
+            writer.WriteEnumValue<global::Klaviyo.Models.MetricAggregateQueryResourceObject_attributes_sort>("sort", Sort);
             writer.WriteStringValue("timezone", Timezone);
             writer.WriteAdditionalData(AdditionalData);
         }

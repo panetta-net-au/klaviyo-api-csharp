@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace ApiSdk.Models
+namespace Klaviyo.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
     #pragma warning disable CS1591
@@ -41,10 +41,10 @@ namespace ApiSdk.Models
         /// <summary>The source property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::ApiSdk.Models.PatchTagGroupResponse4XXError_errors_source? Source { get; set; }
+        public global::Klaviyo.Models.PatchTagGroupResponse4XXError_errors_source? Source { get; set; }
 #nullable restore
 #else
-        public global::ApiSdk.Models.PatchTagGroupResponse4XXError_errors_source Source { get; set; }
+        public global::Klaviyo.Models.PatchTagGroupResponse4XXError_errors_source Source { get; set; }
 #endif
         /// <summary>The title property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -55,7 +55,7 @@ namespace ApiSdk.Models
         public string Title { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::ApiSdk.Models.PatchTagGroupResponse4XXError_errors"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Klaviyo.Models.PatchTagGroupResponse4XXError_errors"/> and sets the default values.
         /// </summary>
         public PatchTagGroupResponse4XXError_errors()
         {
@@ -64,12 +64,12 @@ namespace ApiSdk.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::ApiSdk.Models.PatchTagGroupResponse4XXError_errors"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.PatchTagGroupResponse4XXError_errors"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::ApiSdk.Models.PatchTagGroupResponse4XXError_errors CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Klaviyo.Models.PatchTagGroupResponse4XXError_errors CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::ApiSdk.Models.PatchTagGroupResponse4XXError_errors();
+            return new global::Klaviyo.Models.PatchTagGroupResponse4XXError_errors();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -82,7 +82,7 @@ namespace ApiSdk.Models
                 { "code", n => { Code = n.GetStringValue(); } },
                 { "detail", n => { Detail = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "source", n => { Source = n.GetObjectValue<global::ApiSdk.Models.PatchTagGroupResponse4XXError_errors_source>(global::ApiSdk.Models.PatchTagGroupResponse4XXError_errors_source.CreateFromDiscriminatorValue); } },
+                { "source", n => { Source = n.GetObjectValue<global::Klaviyo.Models.PatchTagGroupResponse4XXError_errors_source>(global::Klaviyo.Models.PatchTagGroupResponse4XXError_errors_source.CreateFromDiscriminatorValue); } },
                 { "title", n => { Title = n.GetStringValue(); } },
             };
         }
@@ -96,7 +96,7 @@ namespace ApiSdk.Models
             writer.WriteStringValue("code", Code);
             writer.WriteStringValue("detail", Detail);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::ApiSdk.Models.PatchTagGroupResponse4XXError_errors_source>("source", Source);
+            writer.WriteObjectValue<global::Klaviyo.Models.PatchTagGroupResponse4XXError_errors_source>("source", Source);
             writer.WriteStringValue("title", Title);
             writer.WriteAdditionalData(AdditionalData);
         }

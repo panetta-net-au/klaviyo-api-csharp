@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace ApiSdk.Models
+namespace Klaviyo.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
     #pragma warning disable CS1591
@@ -17,10 +17,10 @@ namespace ApiSdk.Models
         /// <summary>The attributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::ApiSdk.Models.TemplateResponseObjectResource_attributes? Attributes { get; set; }
+        public global::Klaviyo.Models.TemplateResponseObjectResource_attributes? Attributes { get; set; }
 #nullable restore
 #else
-        public global::ApiSdk.Models.TemplateResponseObjectResource_attributes Attributes { get; set; }
+        public global::Klaviyo.Models.TemplateResponseObjectResource_attributes Attributes { get; set; }
 #endif
         /// <summary>The ID of template</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -33,15 +33,15 @@ namespace ApiSdk.Models
         /// <summary>The links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::ApiSdk.Models.ObjectLinks? Links { get; set; }
+        public global::Klaviyo.Models.ObjectLinks? Links { get; set; }
 #nullable restore
 #else
-        public global::ApiSdk.Models.ObjectLinks Links { get; set; }
+        public global::Klaviyo.Models.ObjectLinks Links { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public global::ApiSdk.Models.TemplateEnum? Type { get; set; }
+        public global::Klaviyo.Models.TemplateEnum? Type { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::ApiSdk.Models.TemplateResponseObjectResource"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Klaviyo.Models.TemplateResponseObjectResource"/> and sets the default values.
         /// </summary>
         public TemplateResponseObjectResource()
         {
@@ -50,12 +50,12 @@ namespace ApiSdk.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::ApiSdk.Models.TemplateResponseObjectResource"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.TemplateResponseObjectResource"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::ApiSdk.Models.TemplateResponseObjectResource CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Klaviyo.Models.TemplateResponseObjectResource CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::ApiSdk.Models.TemplateResponseObjectResource();
+            return new global::Klaviyo.Models.TemplateResponseObjectResource();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -65,10 +65,10 @@ namespace ApiSdk.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "attributes", n => { Attributes = n.GetObjectValue<global::ApiSdk.Models.TemplateResponseObjectResource_attributes>(global::ApiSdk.Models.TemplateResponseObjectResource_attributes.CreateFromDiscriminatorValue); } },
+                { "attributes", n => { Attributes = n.GetObjectValue<global::Klaviyo.Models.TemplateResponseObjectResource_attributes>(global::Klaviyo.Models.TemplateResponseObjectResource_attributes.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::ApiSdk.Models.ObjectLinks>(global::ApiSdk.Models.ObjectLinks.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::ApiSdk.Models.TemplateEnum>(); } },
+                { "links", n => { Links = n.GetObjectValue<global::Klaviyo.Models.ObjectLinks>(global::Klaviyo.Models.ObjectLinks.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetEnumValue<global::Klaviyo.Models.TemplateEnum>(); } },
             };
         }
         /// <summary>
@@ -78,10 +78,10 @@ namespace ApiSdk.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::ApiSdk.Models.TemplateResponseObjectResource_attributes>("attributes", Attributes);
+            writer.WriteObjectValue<global::Klaviyo.Models.TemplateResponseObjectResource_attributes>("attributes", Attributes);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::ApiSdk.Models.ObjectLinks>("links", Links);
-            writer.WriteEnumValue<global::ApiSdk.Models.TemplateEnum>("type", Type);
+            writer.WriteObjectValue<global::Klaviyo.Models.ObjectLinks>("links", Links);
+            writer.WriteEnumValue<global::Klaviyo.Models.TemplateEnum>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

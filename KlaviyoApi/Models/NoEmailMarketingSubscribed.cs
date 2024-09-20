@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace ApiSdk.Models
+namespace Klaviyo.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
     #pragma warning disable CS1591
@@ -17,15 +17,15 @@ namespace ApiSdk.Models
         /// <summary>The filters property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::ApiSdk.Models.NoEmailMarketingSubscribed.NoEmailMarketingSubscribed_filters>? Filters { get; set; }
+        public List<global::Klaviyo.Models.NoEmailMarketingSubscribed.NoEmailMarketingSubscribed_filters>? Filters { get; set; }
 #nullable restore
 #else
-        public List<global::ApiSdk.Models.NoEmailMarketingSubscribed.NoEmailMarketingSubscribed_filters> Filters { get; set; }
+        public List<global::Klaviyo.Models.NoEmailMarketingSubscribed.NoEmailMarketingSubscribed_filters> Filters { get; set; }
 #endif
         /// <summary>The subscription property</summary>
-        public global::ApiSdk.Models.SubscribedEnum? Subscription { get; set; }
+        public global::Klaviyo.Models.SubscribedEnum? Subscription { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::ApiSdk.Models.NoEmailMarketingSubscribed"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Klaviyo.Models.NoEmailMarketingSubscribed"/> and sets the default values.
         /// </summary>
         public NoEmailMarketingSubscribed()
         {
@@ -34,12 +34,12 @@ namespace ApiSdk.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::ApiSdk.Models.NoEmailMarketingSubscribed"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.NoEmailMarketingSubscribed"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::ApiSdk.Models.NoEmailMarketingSubscribed CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Klaviyo.Models.NoEmailMarketingSubscribed CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::ApiSdk.Models.NoEmailMarketingSubscribed();
+            return new global::Klaviyo.Models.NoEmailMarketingSubscribed();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -49,8 +49,8 @@ namespace ApiSdk.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "filters", n => { Filters = n.GetCollectionOfObjectValues<global::ApiSdk.Models.NoEmailMarketingSubscribed.NoEmailMarketingSubscribed_filters>(global::ApiSdk.Models.NoEmailMarketingSubscribed.NoEmailMarketingSubscribed_filters.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "subscription", n => { Subscription = n.GetEnumValue<global::ApiSdk.Models.SubscribedEnum>(); } },
+                { "filters", n => { Filters = n.GetCollectionOfObjectValues<global::Klaviyo.Models.NoEmailMarketingSubscribed.NoEmailMarketingSubscribed_filters>(global::Klaviyo.Models.NoEmailMarketingSubscribed.NoEmailMarketingSubscribed_filters.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "subscription", n => { Subscription = n.GetEnumValue<global::Klaviyo.Models.SubscribedEnum>(); } },
             };
         }
         /// <summary>
@@ -60,61 +60,61 @@ namespace ApiSdk.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::ApiSdk.Models.NoEmailMarketingSubscribed.NoEmailMarketingSubscribed_filters>("filters", Filters);
-            writer.WriteEnumValue<global::ApiSdk.Models.SubscribedEnum>("subscription", Subscription);
+            writer.WriteCollectionOfObjectValues<global::Klaviyo.Models.NoEmailMarketingSubscribed.NoEmailMarketingSubscribed_filters>("filters", Filters);
+            writer.WriteEnumValue<global::Klaviyo.Models.SubscribedEnum>("subscription", Subscription);
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::ApiSdk.Models.BounceDateFilter"/>, <see cref="global::ApiSdk.Models.InvalidEmailDateFilter"/>, <see cref="global::ApiSdk.Models.ManualSuppressionDateFilter"/>
+        /// Composed type wrapper for classes <see cref="global::Klaviyo.Models.BounceDateFilter"/>, <see cref="global::Klaviyo.Models.InvalidEmailDateFilter"/>, <see cref="global::Klaviyo.Models.ManualSuppressionDateFilter"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
         public partial class NoEmailMarketingSubscribed_filters : IComposedTypeWrapper, IParsable
         {
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.BounceDateFilter"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.BounceDateFilter"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.BounceDateFilter? BounceDateFilter { get; set; }
+            public global::Klaviyo.Models.BounceDateFilter? BounceDateFilter { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.BounceDateFilter BounceDateFilter { get; set; }
+            public global::Klaviyo.Models.BounceDateFilter BounceDateFilter { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.InvalidEmailDateFilter"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.InvalidEmailDateFilter"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.InvalidEmailDateFilter? InvalidEmailDateFilter { get; set; }
+            public global::Klaviyo.Models.InvalidEmailDateFilter? InvalidEmailDateFilter { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.InvalidEmailDateFilter InvalidEmailDateFilter { get; set; }
+            public global::Klaviyo.Models.InvalidEmailDateFilter InvalidEmailDateFilter { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.ManualSuppressionDateFilter"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.ManualSuppressionDateFilter"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.ManualSuppressionDateFilter? ManualSuppressionDateFilter { get; set; }
+            public global::Klaviyo.Models.ManualSuppressionDateFilter? ManualSuppressionDateFilter { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.ManualSuppressionDateFilter ManualSuppressionDateFilter { get; set; }
+            public global::Klaviyo.Models.ManualSuppressionDateFilter ManualSuppressionDateFilter { get; set; }
 #endif
             /// <summary>
             /// Creates a new instance of the appropriate class based on discriminator value
             /// </summary>
-            /// <returns>A <see cref="global::ApiSdk.Models.NoEmailMarketingSubscribed.NoEmailMarketingSubscribed_filters"/></returns>
+            /// <returns>A <see cref="global::Klaviyo.Models.NoEmailMarketingSubscribed.NoEmailMarketingSubscribed_filters"/></returns>
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::ApiSdk.Models.NoEmailMarketingSubscribed.NoEmailMarketingSubscribed_filters CreateFromDiscriminatorValue(IParseNode parseNode)
+            public static global::Klaviyo.Models.NoEmailMarketingSubscribed.NoEmailMarketingSubscribed_filters CreateFromDiscriminatorValue(IParseNode parseNode)
             {
                 _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
                 var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::ApiSdk.Models.NoEmailMarketingSubscribed.NoEmailMarketingSubscribed_filters();
+                var result = new global::Klaviyo.Models.NoEmailMarketingSubscribed.NoEmailMarketingSubscribed_filters();
                 if("BounceDateFilter".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.BounceDateFilter = new global::ApiSdk.Models.BounceDateFilter();
+                    result.BounceDateFilter = new global::Klaviyo.Models.BounceDateFilter();
                 }
                 else if("InvalidEmailDateFilter".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.InvalidEmailDateFilter = new global::ApiSdk.Models.InvalidEmailDateFilter();
+                    result.InvalidEmailDateFilter = new global::Klaviyo.Models.InvalidEmailDateFilter();
                 }
                 else if("ManualSuppressionDateFilter".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.ManualSuppressionDateFilter = new global::ApiSdk.Models.ManualSuppressionDateFilter();
+                    result.ManualSuppressionDateFilter = new global::Klaviyo.Models.ManualSuppressionDateFilter();
                 }
                 return result;
             }
@@ -147,15 +147,15 @@ namespace ApiSdk.Models
                 _ = writer ?? throw new ArgumentNullException(nameof(writer));
                 if(BounceDateFilter != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.BounceDateFilter>(null, BounceDateFilter);
+                    writer.WriteObjectValue<global::Klaviyo.Models.BounceDateFilter>(null, BounceDateFilter);
                 }
                 else if(InvalidEmailDateFilter != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.InvalidEmailDateFilter>(null, InvalidEmailDateFilter);
+                    writer.WriteObjectValue<global::Klaviyo.Models.InvalidEmailDateFilter>(null, InvalidEmailDateFilter);
                 }
                 else if(ManualSuppressionDateFilter != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.ManualSuppressionDateFilter>(null, ManualSuppressionDateFilter);
+                    writer.WriteObjectValue<global::Klaviyo.Models.ManualSuppressionDateFilter>(null, ManualSuppressionDateFilter);
                 }
             }
         }

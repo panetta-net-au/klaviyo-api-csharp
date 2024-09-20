@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace ApiSdk.Models
+namespace Klaviyo.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
     #pragma warning disable CS1591
@@ -55,7 +55,7 @@ namespace ApiSdk.Models
         public string Self { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::ApiSdk.Models.CollectionLinks"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Klaviyo.Models.CollectionLinks"/> and sets the default values.
         /// </summary>
         public CollectionLinks()
         {
@@ -64,12 +64,12 @@ namespace ApiSdk.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::ApiSdk.Models.CollectionLinks"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.CollectionLinks"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::ApiSdk.Models.CollectionLinks CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Klaviyo.Models.CollectionLinks CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::ApiSdk.Models.CollectionLinks();
+            return new global::Klaviyo.Models.CollectionLinks();
         }
         /// <summary>
         /// The deserialization information for the current model

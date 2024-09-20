@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace ApiSdk.Models
+namespace Klaviyo.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
     #pragma warning disable CS1591
@@ -41,10 +41,10 @@ namespace ApiSdk.Models
         /// <summary>The street_address property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::ApiSdk.Models.StreetAddress? StreetAddress { get; set; }
+        public global::Klaviyo.Models.StreetAddress? StreetAddress { get; set; }
 #nullable restore
 #else
-        public global::ApiSdk.Models.StreetAddress StreetAddress { get; set; }
+        public global::Klaviyo.Models.StreetAddress StreetAddress { get; set; }
 #endif
         /// <summary>The website_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -55,7 +55,7 @@ namespace ApiSdk.Models
         public string WebsiteUrl { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::ApiSdk.Models.ContactInformation"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Klaviyo.Models.ContactInformation"/> and sets the default values.
         /// </summary>
         public ContactInformation()
         {
@@ -64,12 +64,12 @@ namespace ApiSdk.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::ApiSdk.Models.ContactInformation"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.ContactInformation"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::ApiSdk.Models.ContactInformation CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Klaviyo.Models.ContactInformation CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::ApiSdk.Models.ContactInformation();
+            return new global::Klaviyo.Models.ContactInformation();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -82,7 +82,7 @@ namespace ApiSdk.Models
                 { "default_sender_email", n => { DefaultSenderEmail = n.GetStringValue(); } },
                 { "default_sender_name", n => { DefaultSenderName = n.GetStringValue(); } },
                 { "organization_name", n => { OrganizationName = n.GetStringValue(); } },
-                { "street_address", n => { StreetAddress = n.GetObjectValue<global::ApiSdk.Models.StreetAddress>(global::ApiSdk.Models.StreetAddress.CreateFromDiscriminatorValue); } },
+                { "street_address", n => { StreetAddress = n.GetObjectValue<global::Klaviyo.Models.StreetAddress>(global::Klaviyo.Models.StreetAddress.CreateFromDiscriminatorValue); } },
                 { "website_url", n => { WebsiteUrl = n.GetStringValue(); } },
             };
         }
@@ -96,7 +96,7 @@ namespace ApiSdk.Models
             writer.WriteStringValue("default_sender_email", DefaultSenderEmail);
             writer.WriteStringValue("default_sender_name", DefaultSenderName);
             writer.WriteStringValue("organization_name", OrganizationName);
-            writer.WriteObjectValue<global::ApiSdk.Models.StreetAddress>("street_address", StreetAddress);
+            writer.WriteObjectValue<global::Klaviyo.Models.StreetAddress>("street_address", StreetAddress);
             writer.WriteStringValue("website_url", WebsiteUrl);
             writer.WriteAdditionalData(AdditionalData);
         }

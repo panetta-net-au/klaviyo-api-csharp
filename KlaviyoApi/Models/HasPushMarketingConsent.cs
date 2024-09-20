@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace ApiSdk.Models
+namespace Klaviyo.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
     #pragma warning disable CS1591
@@ -23,17 +23,17 @@ namespace ApiSdk.Models
         public UntypedNode CanReceiveMarketing { get; set; }
 #endif
         /// <summary>The channel property</summary>
-        public global::ApiSdk.Models.PushEnum? Channel { get; set; }
+        public global::Klaviyo.Models.PushEnum? Channel { get; set; }
         /// <summary>The consent_status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::ApiSdk.Models.HasPushMarketing? ConsentStatus { get; set; }
+        public global::Klaviyo.Models.HasPushMarketing? ConsentStatus { get; set; }
 #nullable restore
 #else
-        public global::ApiSdk.Models.HasPushMarketing ConsentStatus { get; set; }
+        public global::Klaviyo.Models.HasPushMarketing ConsentStatus { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::ApiSdk.Models.HasPushMarketingConsent"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Klaviyo.Models.HasPushMarketingConsent"/> and sets the default values.
         /// </summary>
         public HasPushMarketingConsent()
         {
@@ -42,12 +42,12 @@ namespace ApiSdk.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::ApiSdk.Models.HasPushMarketingConsent"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.HasPushMarketingConsent"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::ApiSdk.Models.HasPushMarketingConsent CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Klaviyo.Models.HasPushMarketingConsent CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::ApiSdk.Models.HasPushMarketingConsent();
+            return new global::Klaviyo.Models.HasPushMarketingConsent();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -58,8 +58,8 @@ namespace ApiSdk.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "can_receive_marketing", n => { CanReceiveMarketing = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "channel", n => { Channel = n.GetEnumValue<global::ApiSdk.Models.PushEnum>(); } },
-                { "consent_status", n => { ConsentStatus = n.GetObjectValue<global::ApiSdk.Models.HasPushMarketing>(global::ApiSdk.Models.HasPushMarketing.CreateFromDiscriminatorValue); } },
+                { "channel", n => { Channel = n.GetEnumValue<global::Klaviyo.Models.PushEnum>(); } },
+                { "consent_status", n => { ConsentStatus = n.GetObjectValue<global::Klaviyo.Models.HasPushMarketing>(global::Klaviyo.Models.HasPushMarketing.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -70,8 +70,8 @@ namespace ApiSdk.Models
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<UntypedNode>("can_receive_marketing", CanReceiveMarketing);
-            writer.WriteEnumValue<global::ApiSdk.Models.PushEnum>("channel", Channel);
-            writer.WriteObjectValue<global::ApiSdk.Models.HasPushMarketing>("consent_status", ConsentStatus);
+            writer.WriteEnumValue<global::Klaviyo.Models.PushEnum>("channel", Channel);
+            writer.WriteObjectValue<global::Klaviyo.Models.HasPushMarketing>("consent_status", ConsentStatus);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

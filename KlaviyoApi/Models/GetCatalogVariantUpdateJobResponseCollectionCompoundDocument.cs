@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace ApiSdk.Models
+namespace Klaviyo.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
     #pragma warning disable CS1591
@@ -17,21 +17,21 @@ namespace ApiSdk.Models
         /// <summary>The data property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::ApiSdk.Models.CatalogVariantUpdateJobResponseObjectResource>? Data { get; set; }
+        public List<global::Klaviyo.Models.CatalogVariantUpdateJobResponseObjectResource>? Data { get; set; }
 #nullable restore
 #else
-        public List<global::ApiSdk.Models.CatalogVariantUpdateJobResponseObjectResource> Data { get; set; }
+        public List<global::Klaviyo.Models.CatalogVariantUpdateJobResponseObjectResource> Data { get; set; }
 #endif
         /// <summary>The links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::ApiSdk.Models.CollectionLinks? Links { get; set; }
+        public global::Klaviyo.Models.CollectionLinks? Links { get; set; }
 #nullable restore
 #else
-        public global::ApiSdk.Models.CollectionLinks Links { get; set; }
+        public global::Klaviyo.Models.CollectionLinks Links { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::ApiSdk.Models.GetCatalogVariantUpdateJobResponseCollectionCompoundDocument"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Klaviyo.Models.GetCatalogVariantUpdateJobResponseCollectionCompoundDocument"/> and sets the default values.
         /// </summary>
         public GetCatalogVariantUpdateJobResponseCollectionCompoundDocument()
         {
@@ -40,12 +40,12 @@ namespace ApiSdk.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::ApiSdk.Models.GetCatalogVariantUpdateJobResponseCollectionCompoundDocument"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.GetCatalogVariantUpdateJobResponseCollectionCompoundDocument"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::ApiSdk.Models.GetCatalogVariantUpdateJobResponseCollectionCompoundDocument CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Klaviyo.Models.GetCatalogVariantUpdateJobResponseCollectionCompoundDocument CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::ApiSdk.Models.GetCatalogVariantUpdateJobResponseCollectionCompoundDocument();
+            return new global::Klaviyo.Models.GetCatalogVariantUpdateJobResponseCollectionCompoundDocument();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -55,8 +55,8 @@ namespace ApiSdk.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "data", n => { Data = n.GetCollectionOfObjectValues<global::ApiSdk.Models.CatalogVariantUpdateJobResponseObjectResource>(global::ApiSdk.Models.CatalogVariantUpdateJobResponseObjectResource.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "links", n => { Links = n.GetObjectValue<global::ApiSdk.Models.CollectionLinks>(global::ApiSdk.Models.CollectionLinks.CreateFromDiscriminatorValue); } },
+                { "data", n => { Data = n.GetCollectionOfObjectValues<global::Klaviyo.Models.CatalogVariantUpdateJobResponseObjectResource>(global::Klaviyo.Models.CatalogVariantUpdateJobResponseObjectResource.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "links", n => { Links = n.GetObjectValue<global::Klaviyo.Models.CollectionLinks>(global::Klaviyo.Models.CollectionLinks.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -66,8 +66,8 @@ namespace ApiSdk.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::ApiSdk.Models.CatalogVariantUpdateJobResponseObjectResource>("data", Data);
-            writer.WriteObjectValue<global::ApiSdk.Models.CollectionLinks>("links", Links);
+            writer.WriteCollectionOfObjectValues<global::Klaviyo.Models.CatalogVariantUpdateJobResponseObjectResource>("data", Data);
+            writer.WriteObjectValue<global::Klaviyo.Models.CollectionLinks>("links", Links);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

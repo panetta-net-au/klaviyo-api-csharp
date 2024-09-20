@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace ApiSdk.Models
+namespace Klaviyo.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
     #pragma warning disable CS1591
@@ -17,9 +17,9 @@ namespace ApiSdk.Models
         /// <summary>The datetime when this coupon code will expire. If not specified or set to null, it will be automatically set to 1 year.</summary>
         public DateTimeOffset? ExpiresAt { get; set; }
         /// <summary>The API status of our coupon codes.</summary>
-        public global::ApiSdk.Models.CouponCodeUpdateQueryResourceObject_attributes_status? Status { get; set; }
+        public global::Klaviyo.Models.CouponCodeUpdateQueryResourceObject_attributes_status? Status { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::ApiSdk.Models.CouponCodeUpdateQueryResourceObject_attributes"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Klaviyo.Models.CouponCodeUpdateQueryResourceObject_attributes"/> and sets the default values.
         /// </summary>
         public CouponCodeUpdateQueryResourceObject_attributes()
         {
@@ -28,12 +28,12 @@ namespace ApiSdk.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::ApiSdk.Models.CouponCodeUpdateQueryResourceObject_attributes"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.CouponCodeUpdateQueryResourceObject_attributes"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::ApiSdk.Models.CouponCodeUpdateQueryResourceObject_attributes CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Klaviyo.Models.CouponCodeUpdateQueryResourceObject_attributes CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::ApiSdk.Models.CouponCodeUpdateQueryResourceObject_attributes();
+            return new global::Klaviyo.Models.CouponCodeUpdateQueryResourceObject_attributes();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -44,7 +44,7 @@ namespace ApiSdk.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "expires_at", n => { ExpiresAt = n.GetDateTimeOffsetValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::ApiSdk.Models.CouponCodeUpdateQueryResourceObject_attributes_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Klaviyo.Models.CouponCodeUpdateQueryResourceObject_attributes_status>(); } },
             };
         }
         /// <summary>
@@ -55,7 +55,7 @@ namespace ApiSdk.Models
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteDateTimeOffsetValue("expires_at", ExpiresAt);
-            writer.WriteEnumValue<global::ApiSdk.Models.CouponCodeUpdateQueryResourceObject_attributes_status>("status", Status);
+            writer.WriteEnumValue<global::Klaviyo.Models.CouponCodeUpdateQueryResourceObject_attributes_status>("status", Status);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

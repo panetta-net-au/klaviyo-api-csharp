@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace ApiSdk.Models
+namespace Klaviyo.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
     #pragma warning disable CS1591
@@ -23,17 +23,17 @@ namespace ApiSdk.Models
         public UntypedNode CanReceiveMarketing { get; set; }
 #endif
         /// <summary>The channel property</summary>
-        public global::ApiSdk.Models.SmsEnum? Channel { get; set; }
+        public global::Klaviyo.Models.SmsEnum? Channel { get; set; }
         /// <summary>The consent_status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::ApiSdk.Models.NoSMSMarketingConsent.NoSMSMarketingConsent_consent_status? ConsentStatus { get; set; }
+        public global::Klaviyo.Models.NoSMSMarketingConsent.NoSMSMarketingConsent_consent_status? ConsentStatus { get; set; }
 #nullable restore
 #else
-        public global::ApiSdk.Models.NoSMSMarketingConsent.NoSMSMarketingConsent_consent_status ConsentStatus { get; set; }
+        public global::Klaviyo.Models.NoSMSMarketingConsent.NoSMSMarketingConsent_consent_status ConsentStatus { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::ApiSdk.Models.NoSMSMarketingConsent"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Klaviyo.Models.NoSMSMarketingConsent"/> and sets the default values.
         /// </summary>
         public NoSMSMarketingConsent()
         {
@@ -42,12 +42,12 @@ namespace ApiSdk.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::ApiSdk.Models.NoSMSMarketingConsent"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.NoSMSMarketingConsent"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::ApiSdk.Models.NoSMSMarketingConsent CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Klaviyo.Models.NoSMSMarketingConsent CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::ApiSdk.Models.NoSMSMarketingConsent();
+            return new global::Klaviyo.Models.NoSMSMarketingConsent();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -58,8 +58,8 @@ namespace ApiSdk.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "can_receive_marketing", n => { CanReceiveMarketing = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "channel", n => { Channel = n.GetEnumValue<global::ApiSdk.Models.SmsEnum>(); } },
-                { "consent_status", n => { ConsentStatus = n.GetObjectValue<global::ApiSdk.Models.NoSMSMarketingConsent.NoSMSMarketingConsent_consent_status>(global::ApiSdk.Models.NoSMSMarketingConsent.NoSMSMarketingConsent_consent_status.CreateFromDiscriminatorValue); } },
+                { "channel", n => { Channel = n.GetEnumValue<global::Klaviyo.Models.SmsEnum>(); } },
+                { "consent_status", n => { ConsentStatus = n.GetObjectValue<global::Klaviyo.Models.NoSMSMarketingConsent.NoSMSMarketingConsent_consent_status>(global::Klaviyo.Models.NoSMSMarketingConsent.NoSMSMarketingConsent_consent_status.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -70,61 +70,61 @@ namespace ApiSdk.Models
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<UntypedNode>("can_receive_marketing", CanReceiveMarketing);
-            writer.WriteEnumValue<global::ApiSdk.Models.SmsEnum>("channel", Channel);
-            writer.WriteObjectValue<global::ApiSdk.Models.NoSMSMarketingConsent.NoSMSMarketingConsent_consent_status>("consent_status", ConsentStatus);
+            writer.WriteEnumValue<global::Klaviyo.Models.SmsEnum>("channel", Channel);
+            writer.WriteObjectValue<global::Klaviyo.Models.NoSMSMarketingConsent.NoSMSMarketingConsent_consent_status>("consent_status", ConsentStatus);
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::ApiSdk.Models.NoSMSMarketing"/>, <see cref="global::ApiSdk.Models.NoSMSMarketingNeverSubscribed"/>, <see cref="global::ApiSdk.Models.NoSMSMarketingUnsubscribed"/>
+        /// Composed type wrapper for classes <see cref="global::Klaviyo.Models.NoSMSMarketing"/>, <see cref="global::Klaviyo.Models.NoSMSMarketingNeverSubscribed"/>, <see cref="global::Klaviyo.Models.NoSMSMarketingUnsubscribed"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
         public partial class NoSMSMarketingConsent_consent_status : IComposedTypeWrapper, IParsable
         {
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.NoSMSMarketing"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.NoSMSMarketing"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.NoSMSMarketing? NoSMSMarketing { get; set; }
+            public global::Klaviyo.Models.NoSMSMarketing? NoSMSMarketing { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.NoSMSMarketing NoSMSMarketing { get; set; }
+            public global::Klaviyo.Models.NoSMSMarketing NoSMSMarketing { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.NoSMSMarketingNeverSubscribed"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.NoSMSMarketingNeverSubscribed"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.NoSMSMarketingNeverSubscribed? NoSMSMarketingNeverSubscribed { get; set; }
+            public global::Klaviyo.Models.NoSMSMarketingNeverSubscribed? NoSMSMarketingNeverSubscribed { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.NoSMSMarketingNeverSubscribed NoSMSMarketingNeverSubscribed { get; set; }
+            public global::Klaviyo.Models.NoSMSMarketingNeverSubscribed NoSMSMarketingNeverSubscribed { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.NoSMSMarketingUnsubscribed"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.NoSMSMarketingUnsubscribed"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.NoSMSMarketingUnsubscribed? NoSMSMarketingUnsubscribed { get; set; }
+            public global::Klaviyo.Models.NoSMSMarketingUnsubscribed? NoSMSMarketingUnsubscribed { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.NoSMSMarketingUnsubscribed NoSMSMarketingUnsubscribed { get; set; }
+            public global::Klaviyo.Models.NoSMSMarketingUnsubscribed NoSMSMarketingUnsubscribed { get; set; }
 #endif
             /// <summary>
             /// Creates a new instance of the appropriate class based on discriminator value
             /// </summary>
-            /// <returns>A <see cref="global::ApiSdk.Models.NoSMSMarketingConsent.NoSMSMarketingConsent_consent_status"/></returns>
+            /// <returns>A <see cref="global::Klaviyo.Models.NoSMSMarketingConsent.NoSMSMarketingConsent_consent_status"/></returns>
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::ApiSdk.Models.NoSMSMarketingConsent.NoSMSMarketingConsent_consent_status CreateFromDiscriminatorValue(IParseNode parseNode)
+            public static global::Klaviyo.Models.NoSMSMarketingConsent.NoSMSMarketingConsent_consent_status CreateFromDiscriminatorValue(IParseNode parseNode)
             {
                 _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
                 var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::ApiSdk.Models.NoSMSMarketingConsent.NoSMSMarketingConsent_consent_status();
+                var result = new global::Klaviyo.Models.NoSMSMarketingConsent.NoSMSMarketingConsent_consent_status();
                 if("NoSMSMarketing".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.NoSMSMarketing = new global::ApiSdk.Models.NoSMSMarketing();
+                    result.NoSMSMarketing = new global::Klaviyo.Models.NoSMSMarketing();
                 }
                 else if("NoSMSMarketingNeverSubscribed".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.NoSMSMarketingNeverSubscribed = new global::ApiSdk.Models.NoSMSMarketingNeverSubscribed();
+                    result.NoSMSMarketingNeverSubscribed = new global::Klaviyo.Models.NoSMSMarketingNeverSubscribed();
                 }
                 else if("NoSMSMarketingUnsubscribed".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.NoSMSMarketingUnsubscribed = new global::ApiSdk.Models.NoSMSMarketingUnsubscribed();
+                    result.NoSMSMarketingUnsubscribed = new global::Klaviyo.Models.NoSMSMarketingUnsubscribed();
                 }
                 return result;
             }
@@ -157,15 +157,15 @@ namespace ApiSdk.Models
                 _ = writer ?? throw new ArgumentNullException(nameof(writer));
                 if(NoSMSMarketing != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.NoSMSMarketing>(null, NoSMSMarketing);
+                    writer.WriteObjectValue<global::Klaviyo.Models.NoSMSMarketing>(null, NoSMSMarketing);
                 }
                 else if(NoSMSMarketingNeverSubscribed != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.NoSMSMarketingNeverSubscribed>(null, NoSMSMarketingNeverSubscribed);
+                    writer.WriteObjectValue<global::Klaviyo.Models.NoSMSMarketingNeverSubscribed>(null, NoSMSMarketingNeverSubscribed);
                 }
                 else if(NoSMSMarketingUnsubscribed != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.NoSMSMarketingUnsubscribed>(null, NoSMSMarketingUnsubscribed);
+                    writer.WriteObjectValue<global::Klaviyo.Models.NoSMSMarketingUnsubscribed>(null, NoSMSMarketingUnsubscribed);
                 }
             }
         }

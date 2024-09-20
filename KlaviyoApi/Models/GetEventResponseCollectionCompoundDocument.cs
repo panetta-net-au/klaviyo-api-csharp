@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace ApiSdk.Models
+namespace Klaviyo.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
     #pragma warning disable CS1591
@@ -17,29 +17,29 @@ namespace ApiSdk.Models
         /// <summary>The data property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::ApiSdk.Models.EventResponseObjectResource>? Data { get; set; }
+        public List<global::Klaviyo.Models.EventResponseObjectResource>? Data { get; set; }
 #nullable restore
 #else
-        public List<global::ApiSdk.Models.EventResponseObjectResource> Data { get; set; }
+        public List<global::Klaviyo.Models.EventResponseObjectResource> Data { get; set; }
 #endif
         /// <summary>The included property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::ApiSdk.Models.GetEventResponseCollectionCompoundDocument.GetEventResponseCollectionCompoundDocument_included>? Included { get; set; }
+        public List<global::Klaviyo.Models.GetEventResponseCollectionCompoundDocument.GetEventResponseCollectionCompoundDocument_included>? Included { get; set; }
 #nullable restore
 #else
-        public List<global::ApiSdk.Models.GetEventResponseCollectionCompoundDocument.GetEventResponseCollectionCompoundDocument_included> Included { get; set; }
+        public List<global::Klaviyo.Models.GetEventResponseCollectionCompoundDocument.GetEventResponseCollectionCompoundDocument_included> Included { get; set; }
 #endif
         /// <summary>The links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::ApiSdk.Models.CollectionLinks? Links { get; set; }
+        public global::Klaviyo.Models.CollectionLinks? Links { get; set; }
 #nullable restore
 #else
-        public global::ApiSdk.Models.CollectionLinks Links { get; set; }
+        public global::Klaviyo.Models.CollectionLinks Links { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::ApiSdk.Models.GetEventResponseCollectionCompoundDocument"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Klaviyo.Models.GetEventResponseCollectionCompoundDocument"/> and sets the default values.
         /// </summary>
         public GetEventResponseCollectionCompoundDocument()
         {
@@ -48,12 +48,12 @@ namespace ApiSdk.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::ApiSdk.Models.GetEventResponseCollectionCompoundDocument"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.GetEventResponseCollectionCompoundDocument"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::ApiSdk.Models.GetEventResponseCollectionCompoundDocument CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Klaviyo.Models.GetEventResponseCollectionCompoundDocument CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::ApiSdk.Models.GetEventResponseCollectionCompoundDocument();
+            return new global::Klaviyo.Models.GetEventResponseCollectionCompoundDocument();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -63,9 +63,9 @@ namespace ApiSdk.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "data", n => { Data = n.GetCollectionOfObjectValues<global::ApiSdk.Models.EventResponseObjectResource>(global::ApiSdk.Models.EventResponseObjectResource.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "included", n => { Included = n.GetCollectionOfObjectValues<global::ApiSdk.Models.GetEventResponseCollectionCompoundDocument.GetEventResponseCollectionCompoundDocument_included>(global::ApiSdk.Models.GetEventResponseCollectionCompoundDocument.GetEventResponseCollectionCompoundDocument_included.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "links", n => { Links = n.GetObjectValue<global::ApiSdk.Models.CollectionLinks>(global::ApiSdk.Models.CollectionLinks.CreateFromDiscriminatorValue); } },
+                { "data", n => { Data = n.GetCollectionOfObjectValues<global::Klaviyo.Models.EventResponseObjectResource>(global::Klaviyo.Models.EventResponseObjectResource.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "included", n => { Included = n.GetCollectionOfObjectValues<global::Klaviyo.Models.GetEventResponseCollectionCompoundDocument.GetEventResponseCollectionCompoundDocument_included>(global::Klaviyo.Models.GetEventResponseCollectionCompoundDocument.GetEventResponseCollectionCompoundDocument_included.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "links", n => { Links = n.GetObjectValue<global::Klaviyo.Models.CollectionLinks>(global::Klaviyo.Models.CollectionLinks.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -75,62 +75,62 @@ namespace ApiSdk.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::ApiSdk.Models.EventResponseObjectResource>("data", Data);
-            writer.WriteCollectionOfObjectValues<global::ApiSdk.Models.GetEventResponseCollectionCompoundDocument.GetEventResponseCollectionCompoundDocument_included>("included", Included);
-            writer.WriteObjectValue<global::ApiSdk.Models.CollectionLinks>("links", Links);
+            writer.WriteCollectionOfObjectValues<global::Klaviyo.Models.EventResponseObjectResource>("data", Data);
+            writer.WriteCollectionOfObjectValues<global::Klaviyo.Models.GetEventResponseCollectionCompoundDocument.GetEventResponseCollectionCompoundDocument_included>("included", Included);
+            writer.WriteObjectValue<global::Klaviyo.Models.CollectionLinks>("links", Links);
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::ApiSdk.Models.AttributionResponseObjectResource"/>, <see cref="global::ApiSdk.Models.MetricResponseObjectResource"/>, <see cref="global::ApiSdk.Models.ProfileResponseObjectResource"/>
+        /// Composed type wrapper for classes <see cref="global::Klaviyo.Models.AttributionResponseObjectResource"/>, <see cref="global::Klaviyo.Models.MetricResponseObjectResource"/>, <see cref="global::Klaviyo.Models.ProfileResponseObjectResource"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
         public partial class GetEventResponseCollectionCompoundDocument_included : IComposedTypeWrapper, IParsable
         {
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.AttributionResponseObjectResource"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.AttributionResponseObjectResource"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.AttributionResponseObjectResource? AttributionResponseObjectResource { get; set; }
+            public global::Klaviyo.Models.AttributionResponseObjectResource? AttributionResponseObjectResource { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.AttributionResponseObjectResource AttributionResponseObjectResource { get; set; }
+            public global::Klaviyo.Models.AttributionResponseObjectResource AttributionResponseObjectResource { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.MetricResponseObjectResource"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.MetricResponseObjectResource"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.MetricResponseObjectResource? MetricResponseObjectResource { get; set; }
+            public global::Klaviyo.Models.MetricResponseObjectResource? MetricResponseObjectResource { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.MetricResponseObjectResource MetricResponseObjectResource { get; set; }
+            public global::Klaviyo.Models.MetricResponseObjectResource MetricResponseObjectResource { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.ProfileResponseObjectResource"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.ProfileResponseObjectResource"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.ProfileResponseObjectResource? ProfileResponseObjectResource { get; set; }
+            public global::Klaviyo.Models.ProfileResponseObjectResource? ProfileResponseObjectResource { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.ProfileResponseObjectResource ProfileResponseObjectResource { get; set; }
+            public global::Klaviyo.Models.ProfileResponseObjectResource ProfileResponseObjectResource { get; set; }
 #endif
             /// <summary>
             /// Creates a new instance of the appropriate class based on discriminator value
             /// </summary>
-            /// <returns>A <see cref="global::ApiSdk.Models.GetEventResponseCollectionCompoundDocument.GetEventResponseCollectionCompoundDocument_included"/></returns>
+            /// <returns>A <see cref="global::Klaviyo.Models.GetEventResponseCollectionCompoundDocument.GetEventResponseCollectionCompoundDocument_included"/></returns>
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::ApiSdk.Models.GetEventResponseCollectionCompoundDocument.GetEventResponseCollectionCompoundDocument_included CreateFromDiscriminatorValue(IParseNode parseNode)
+            public static global::Klaviyo.Models.GetEventResponseCollectionCompoundDocument.GetEventResponseCollectionCompoundDocument_included CreateFromDiscriminatorValue(IParseNode parseNode)
             {
                 _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
                 var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::ApiSdk.Models.GetEventResponseCollectionCompoundDocument.GetEventResponseCollectionCompoundDocument_included();
+                var result = new global::Klaviyo.Models.GetEventResponseCollectionCompoundDocument.GetEventResponseCollectionCompoundDocument_included();
                 if("AttributionResponseObjectResource".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.AttributionResponseObjectResource = new global::ApiSdk.Models.AttributionResponseObjectResource();
+                    result.AttributionResponseObjectResource = new global::Klaviyo.Models.AttributionResponseObjectResource();
                 }
                 else if("MetricResponseObjectResource".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.MetricResponseObjectResource = new global::ApiSdk.Models.MetricResponseObjectResource();
+                    result.MetricResponseObjectResource = new global::Klaviyo.Models.MetricResponseObjectResource();
                 }
                 else if("ProfileResponseObjectResource".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.ProfileResponseObjectResource = new global::ApiSdk.Models.ProfileResponseObjectResource();
+                    result.ProfileResponseObjectResource = new global::Klaviyo.Models.ProfileResponseObjectResource();
                 }
                 return result;
             }
@@ -163,15 +163,15 @@ namespace ApiSdk.Models
                 _ = writer ?? throw new ArgumentNullException(nameof(writer));
                 if(AttributionResponseObjectResource != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.AttributionResponseObjectResource>(null, AttributionResponseObjectResource);
+                    writer.WriteObjectValue<global::Klaviyo.Models.AttributionResponseObjectResource>(null, AttributionResponseObjectResource);
                 }
                 else if(MetricResponseObjectResource != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.MetricResponseObjectResource>(null, MetricResponseObjectResource);
+                    writer.WriteObjectValue<global::Klaviyo.Models.MetricResponseObjectResource>(null, MetricResponseObjectResource);
                 }
                 else if(ProfileResponseObjectResource != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.ProfileResponseObjectResource>(null, ProfileResponseObjectResource);
+                    writer.WriteObjectValue<global::Klaviyo.Models.ProfileResponseObjectResource>(null, ProfileResponseObjectResource);
                 }
             }
         }

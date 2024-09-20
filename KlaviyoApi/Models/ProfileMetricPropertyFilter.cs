@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace ApiSdk.Models
+namespace Klaviyo.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
     #pragma warning disable CS1591
@@ -17,10 +17,10 @@ namespace ApiSdk.Models
         /// <summary>The filter property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::ApiSdk.Models.ProfileMetricPropertyFilter.ProfileMetricPropertyFilter_filter? Filter { get; set; }
+        public global::Klaviyo.Models.ProfileMetricPropertyFilter.ProfileMetricPropertyFilter_filter? Filter { get; set; }
 #nullable restore
 #else
-        public global::ApiSdk.Models.ProfileMetricPropertyFilter.ProfileMetricPropertyFilter_filter Filter { get; set; }
+        public global::Klaviyo.Models.ProfileMetricPropertyFilter.ProfileMetricPropertyFilter_filter Filter { get; set; }
 #endif
         /// <summary>The property property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -31,7 +31,7 @@ namespace ApiSdk.Models
         public string Property { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::ApiSdk.Models.ProfileMetricPropertyFilter"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Klaviyo.Models.ProfileMetricPropertyFilter"/> and sets the default values.
         /// </summary>
         public ProfileMetricPropertyFilter()
         {
@@ -40,12 +40,12 @@ namespace ApiSdk.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::ApiSdk.Models.ProfileMetricPropertyFilter"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.ProfileMetricPropertyFilter"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::ApiSdk.Models.ProfileMetricPropertyFilter CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Klaviyo.Models.ProfileMetricPropertyFilter CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::ApiSdk.Models.ProfileMetricPropertyFilter();
+            return new global::Klaviyo.Models.ProfileMetricPropertyFilter();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -55,7 +55,7 @@ namespace ApiSdk.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "filter", n => { Filter = n.GetObjectValue<global::ApiSdk.Models.ProfileMetricPropertyFilter.ProfileMetricPropertyFilter_filter>(global::ApiSdk.Models.ProfileMetricPropertyFilter.ProfileMetricPropertyFilter_filter.CreateFromDiscriminatorValue); } },
+                { "filter", n => { Filter = n.GetObjectValue<global::Klaviyo.Models.ProfileMetricPropertyFilter.ProfileMetricPropertyFilter_filter>(global::Klaviyo.Models.ProfileMetricPropertyFilter.ProfileMetricPropertyFilter_filter.CreateFromDiscriminatorValue); } },
                 { "property", n => { Property = n.GetStringValue(); } },
             };
         }
@@ -66,85 +66,109 @@ namespace ApiSdk.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::ApiSdk.Models.ProfileMetricPropertyFilter.ProfileMetricPropertyFilter_filter>("filter", Filter);
+            writer.WriteObjectValue<global::Klaviyo.Models.ProfileMetricPropertyFilter.ProfileMetricPropertyFilter_filter>("filter", Filter);
             writer.WriteStringValue("property", Property);
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::ApiSdk.Models.ListLengthFilter"/>, <see cref="global::ApiSdk.Models.ListSetFilter"/>, <see cref="global::ApiSdk.Models.ListSubstringFilter"/>, <see cref="global::ApiSdk.Models.StringArrayOperatorFilter"/>, <see cref="global::ApiSdk.Models.StringOperatorFilter"/>
+        /// Composed type wrapper for classes <see cref="global::Klaviyo.Models.BooleanFilter"/>, <see cref="global::Klaviyo.Models.ListLengthFilter"/>, <see cref="global::Klaviyo.Models.ListSetFilter"/>, <see cref="global::Klaviyo.Models.ListSubstringFilter"/>, <see cref="global::Klaviyo.Models.NumericOperatorFilter"/>, <see cref="global::Klaviyo.Models.StringArrayOperatorFilter"/>, <see cref="global::Klaviyo.Models.StringOperatorFilter"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
         public partial class ProfileMetricPropertyFilter_filter : IComposedTypeWrapper, IParsable
         {
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.ListLengthFilter"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.BooleanFilter"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.ListLengthFilter? ListLengthFilter { get; set; }
+            public global::Klaviyo.Models.BooleanFilter? BooleanFilter { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.ListLengthFilter ListLengthFilter { get; set; }
+            public global::Klaviyo.Models.BooleanFilter BooleanFilter { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.ListSetFilter"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.ListLengthFilter"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.ListSetFilter? ListSetFilter { get; set; }
+            public global::Klaviyo.Models.ListLengthFilter? ListLengthFilter { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.ListSetFilter ListSetFilter { get; set; }
+            public global::Klaviyo.Models.ListLengthFilter ListLengthFilter { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.ListSubstringFilter"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.ListSetFilter"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.ListSubstringFilter? ListSubstringFilter { get; set; }
+            public global::Klaviyo.Models.ListSetFilter? ListSetFilter { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.ListSubstringFilter ListSubstringFilter { get; set; }
+            public global::Klaviyo.Models.ListSetFilter ListSetFilter { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.StringArrayOperatorFilter"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.ListSubstringFilter"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.StringArrayOperatorFilter? StringArrayOperatorFilter { get; set; }
+            public global::Klaviyo.Models.ListSubstringFilter? ListSubstringFilter { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.StringArrayOperatorFilter StringArrayOperatorFilter { get; set; }
+            public global::Klaviyo.Models.ListSubstringFilter ListSubstringFilter { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.StringOperatorFilter"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.NumericOperatorFilter"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.StringOperatorFilter? StringOperatorFilter { get; set; }
+            public global::Klaviyo.Models.NumericOperatorFilter? NumericOperatorFilter { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.StringOperatorFilter StringOperatorFilter { get; set; }
+            public global::Klaviyo.Models.NumericOperatorFilter NumericOperatorFilter { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.StringArrayOperatorFilter"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Klaviyo.Models.StringArrayOperatorFilter? StringArrayOperatorFilter { get; set; }
+#nullable restore
+#else
+            public global::Klaviyo.Models.StringArrayOperatorFilter StringArrayOperatorFilter { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.StringOperatorFilter"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Klaviyo.Models.StringOperatorFilter? StringOperatorFilter { get; set; }
+#nullable restore
+#else
+            public global::Klaviyo.Models.StringOperatorFilter StringOperatorFilter { get; set; }
 #endif
             /// <summary>
             /// Creates a new instance of the appropriate class based on discriminator value
             /// </summary>
-            /// <returns>A <see cref="global::ApiSdk.Models.ProfileMetricPropertyFilter.ProfileMetricPropertyFilter_filter"/></returns>
+            /// <returns>A <see cref="global::Klaviyo.Models.ProfileMetricPropertyFilter.ProfileMetricPropertyFilter_filter"/></returns>
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::ApiSdk.Models.ProfileMetricPropertyFilter.ProfileMetricPropertyFilter_filter CreateFromDiscriminatorValue(IParseNode parseNode)
+            public static global::Klaviyo.Models.ProfileMetricPropertyFilter.ProfileMetricPropertyFilter_filter CreateFromDiscriminatorValue(IParseNode parseNode)
             {
                 _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
                 var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::ApiSdk.Models.ProfileMetricPropertyFilter.ProfileMetricPropertyFilter_filter();
-                if("ListLengthFilter".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                var result = new global::Klaviyo.Models.ProfileMetricPropertyFilter.ProfileMetricPropertyFilter_filter();
+                if("BooleanFilter".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.ListLengthFilter = new global::ApiSdk.Models.ListLengthFilter();
+                    result.BooleanFilter = new global::Klaviyo.Models.BooleanFilter();
+                }
+                else if("ListLengthFilter".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.ListLengthFilter = new global::Klaviyo.Models.ListLengthFilter();
                 }
                 else if("ListSetFilter".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.ListSetFilter = new global::ApiSdk.Models.ListSetFilter();
+                    result.ListSetFilter = new global::Klaviyo.Models.ListSetFilter();
                 }
                 else if("ListSubstringFilter".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.ListSubstringFilter = new global::ApiSdk.Models.ListSubstringFilter();
+                    result.ListSubstringFilter = new global::Klaviyo.Models.ListSubstringFilter();
+                }
+                else if("NumericOperatorFilter".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.NumericOperatorFilter = new global::Klaviyo.Models.NumericOperatorFilter();
                 }
                 else if("StringArrayOperatorFilter".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.StringArrayOperatorFilter = new global::ApiSdk.Models.StringArrayOperatorFilter();
+                    result.StringArrayOperatorFilter = new global::Klaviyo.Models.StringArrayOperatorFilter();
                 }
                 else if("StringOperatorFilter".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.StringOperatorFilter = new global::ApiSdk.Models.StringOperatorFilter();
+                    result.StringOperatorFilter = new global::Klaviyo.Models.StringOperatorFilter();
                 }
                 return result;
             }
@@ -154,7 +178,11 @@ namespace ApiSdk.Models
             /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
             public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
             {
-                if(ListLengthFilter != null)
+                if(BooleanFilter != null)
+                {
+                    return BooleanFilter.GetFieldDeserializers();
+                }
+                else if(ListLengthFilter != null)
                 {
                     return ListLengthFilter.GetFieldDeserializers();
                 }
@@ -165,6 +193,10 @@ namespace ApiSdk.Models
                 else if(ListSubstringFilter != null)
                 {
                     return ListSubstringFilter.GetFieldDeserializers();
+                }
+                else if(NumericOperatorFilter != null)
+                {
+                    return NumericOperatorFilter.GetFieldDeserializers();
                 }
                 else if(StringArrayOperatorFilter != null)
                 {
@@ -183,25 +215,33 @@ namespace ApiSdk.Models
             public virtual void Serialize(ISerializationWriter writer)
             {
                 _ = writer ?? throw new ArgumentNullException(nameof(writer));
-                if(ListLengthFilter != null)
+                if(BooleanFilter != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.ListLengthFilter>(null, ListLengthFilter);
+                    writer.WriteObjectValue<global::Klaviyo.Models.BooleanFilter>(null, BooleanFilter);
+                }
+                else if(ListLengthFilter != null)
+                {
+                    writer.WriteObjectValue<global::Klaviyo.Models.ListLengthFilter>(null, ListLengthFilter);
                 }
                 else if(ListSetFilter != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.ListSetFilter>(null, ListSetFilter);
+                    writer.WriteObjectValue<global::Klaviyo.Models.ListSetFilter>(null, ListSetFilter);
                 }
                 else if(ListSubstringFilter != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.ListSubstringFilter>(null, ListSubstringFilter);
+                    writer.WriteObjectValue<global::Klaviyo.Models.ListSubstringFilter>(null, ListSubstringFilter);
+                }
+                else if(NumericOperatorFilter != null)
+                {
+                    writer.WriteObjectValue<global::Klaviyo.Models.NumericOperatorFilter>(null, NumericOperatorFilter);
                 }
                 else if(StringArrayOperatorFilter != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.StringArrayOperatorFilter>(null, StringArrayOperatorFilter);
+                    writer.WriteObjectValue<global::Klaviyo.Models.StringArrayOperatorFilter>(null, StringArrayOperatorFilter);
                 }
                 else if(StringOperatorFilter != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.StringOperatorFilter>(null, StringOperatorFilter);
+                    writer.WriteObjectValue<global::Klaviyo.Models.StringOperatorFilter>(null, StringOperatorFilter);
                 }
             }
         }

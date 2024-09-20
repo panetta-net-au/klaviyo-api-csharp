@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace ApiSdk.Models
+namespace Klaviyo.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
     #pragma warning disable CS1591
@@ -17,11 +17,11 @@ namespace ApiSdk.Models
         /// <summary>The in_region property</summary>
         public bool? InRegion { get; set; }
         /// <summary>Regions for profile region conditions.</summary>
-        public global::ApiSdk.Models.ProfileRegionCondition_region? Region { get; set; }
+        public global::Klaviyo.Models.ProfileRegionCondition_region? Region { get; set; }
         /// <summary>The type property</summary>
-        public global::ApiSdk.Models.ProfileRegionEnum? Type { get; set; }
+        public global::Klaviyo.Models.ProfileRegionEnum? Type { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::ApiSdk.Models.ProfileRegionCondition"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Klaviyo.Models.ProfileRegionCondition"/> and sets the default values.
         /// </summary>
         public ProfileRegionCondition()
         {
@@ -30,12 +30,12 @@ namespace ApiSdk.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::ApiSdk.Models.ProfileRegionCondition"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.ProfileRegionCondition"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::ApiSdk.Models.ProfileRegionCondition CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Klaviyo.Models.ProfileRegionCondition CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::ApiSdk.Models.ProfileRegionCondition();
+            return new global::Klaviyo.Models.ProfileRegionCondition();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -46,8 +46,8 @@ namespace ApiSdk.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "in_region", n => { InRegion = n.GetBoolValue(); } },
-                { "region", n => { Region = n.GetEnumValue<global::ApiSdk.Models.ProfileRegionCondition_region>(); } },
-                { "type", n => { Type = n.GetEnumValue<global::ApiSdk.Models.ProfileRegionEnum>(); } },
+                { "region", n => { Region = n.GetEnumValue<global::Klaviyo.Models.ProfileRegionCondition_region>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Klaviyo.Models.ProfileRegionEnum>(); } },
             };
         }
         /// <summary>
@@ -58,8 +58,8 @@ namespace ApiSdk.Models
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("in_region", InRegion);
-            writer.WriteEnumValue<global::ApiSdk.Models.ProfileRegionCondition_region>("region", Region);
-            writer.WriteEnumValue<global::ApiSdk.Models.ProfileRegionEnum>("type", Type);
+            writer.WriteEnumValue<global::Klaviyo.Models.ProfileRegionCondition_region>("region", Region);
+            writer.WriteEnumValue<global::Klaviyo.Models.ProfileRegionEnum>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

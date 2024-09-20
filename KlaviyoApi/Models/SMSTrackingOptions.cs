@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace ApiSdk.Models
+namespace Klaviyo.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
     #pragma warning disable CS1591
@@ -19,13 +19,13 @@ namespace ApiSdk.Models
         /// <summary>The utm_params property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::ApiSdk.Models.UtmParamInfo>? UtmParams { get; set; }
+        public List<global::Klaviyo.Models.UtmParamInfo>? UtmParams { get; set; }
 #nullable restore
 #else
-        public List<global::ApiSdk.Models.UtmParamInfo> UtmParams { get; set; }
+        public List<global::Klaviyo.Models.UtmParamInfo> UtmParams { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::ApiSdk.Models.SMSTrackingOptions"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Klaviyo.Models.SMSTrackingOptions"/> and sets the default values.
         /// </summary>
         public SMSTrackingOptions()
         {
@@ -34,12 +34,12 @@ namespace ApiSdk.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::ApiSdk.Models.SMSTrackingOptions"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.SMSTrackingOptions"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::ApiSdk.Models.SMSTrackingOptions CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Klaviyo.Models.SMSTrackingOptions CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::ApiSdk.Models.SMSTrackingOptions();
+            return new global::Klaviyo.Models.SMSTrackingOptions();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -50,7 +50,7 @@ namespace ApiSdk.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "add_utm", n => { AddUtm = n.GetBoolValue(); } },
-                { "utm_params", n => { UtmParams = n.GetCollectionOfObjectValues<global::ApiSdk.Models.UtmParamInfo>(global::ApiSdk.Models.UtmParamInfo.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "utm_params", n => { UtmParams = n.GetCollectionOfObjectValues<global::Klaviyo.Models.UtmParamInfo>(global::Klaviyo.Models.UtmParamInfo.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace ApiSdk.Models
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("add_utm", AddUtm);
-            writer.WriteCollectionOfObjectValues<global::ApiSdk.Models.UtmParamInfo>("utm_params", UtmParams);
+            writer.WriteCollectionOfObjectValues<global::Klaviyo.Models.UtmParamInfo>("utm_params", UtmParams);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

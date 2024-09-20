@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace ApiSdk.Models
+namespace Klaviyo.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
     #pragma warning disable CS1591
@@ -17,10 +17,10 @@ namespace ApiSdk.Models
         /// <summary>The attributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::ApiSdk.Models.TemplateUpdateQueryResourceObject_attributes? Attributes { get; set; }
+        public global::Klaviyo.Models.TemplateUpdateQueryResourceObject_attributes? Attributes { get; set; }
 #nullable restore
 #else
-        public global::ApiSdk.Models.TemplateUpdateQueryResourceObject_attributes Attributes { get; set; }
+        public global::Klaviyo.Models.TemplateUpdateQueryResourceObject_attributes Attributes { get; set; }
 #endif
         /// <summary>The ID of template</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -31,9 +31,9 @@ namespace ApiSdk.Models
         public string Id { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public global::ApiSdk.Models.TemplateEnum? Type { get; set; }
+        public global::Klaviyo.Models.TemplateEnum? Type { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::ApiSdk.Models.TemplateUpdateQueryResourceObject"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Klaviyo.Models.TemplateUpdateQueryResourceObject"/> and sets the default values.
         /// </summary>
         public TemplateUpdateQueryResourceObject()
         {
@@ -42,12 +42,12 @@ namespace ApiSdk.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::ApiSdk.Models.TemplateUpdateQueryResourceObject"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.TemplateUpdateQueryResourceObject"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::ApiSdk.Models.TemplateUpdateQueryResourceObject CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Klaviyo.Models.TemplateUpdateQueryResourceObject CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::ApiSdk.Models.TemplateUpdateQueryResourceObject();
+            return new global::Klaviyo.Models.TemplateUpdateQueryResourceObject();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -57,9 +57,9 @@ namespace ApiSdk.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "attributes", n => { Attributes = n.GetObjectValue<global::ApiSdk.Models.TemplateUpdateQueryResourceObject_attributes>(global::ApiSdk.Models.TemplateUpdateQueryResourceObject_attributes.CreateFromDiscriminatorValue); } },
+                { "attributes", n => { Attributes = n.GetObjectValue<global::Klaviyo.Models.TemplateUpdateQueryResourceObject_attributes>(global::Klaviyo.Models.TemplateUpdateQueryResourceObject_attributes.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::ApiSdk.Models.TemplateEnum>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Klaviyo.Models.TemplateEnum>(); } },
             };
         }
         /// <summary>
@@ -69,9 +69,9 @@ namespace ApiSdk.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::ApiSdk.Models.TemplateUpdateQueryResourceObject_attributes>("attributes", Attributes);
+            writer.WriteObjectValue<global::Klaviyo.Models.TemplateUpdateQueryResourceObject_attributes>("attributes", Attributes);
             writer.WriteStringValue("id", Id);
-            writer.WriteEnumValue<global::ApiSdk.Models.TemplateEnum>("type", Type);
+            writer.WriteEnumValue<global::Klaviyo.Models.TemplateEnum>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

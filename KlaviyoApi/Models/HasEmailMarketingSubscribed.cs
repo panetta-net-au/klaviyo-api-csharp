@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace ApiSdk.Models
+namespace Klaviyo.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
     #pragma warning disable CS1591
@@ -17,15 +17,15 @@ namespace ApiSdk.Models
         /// <summary>The filters property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::ApiSdk.Models.HasEmailMarketingSubscribed.HasEmailMarketingSubscribed_filters>? Filters { get; set; }
+        public List<global::Klaviyo.Models.HasEmailMarketingSubscribed.HasEmailMarketingSubscribed_filters>? Filters { get; set; }
 #nullable restore
 #else
-        public List<global::ApiSdk.Models.HasEmailMarketingSubscribed.HasEmailMarketingSubscribed_filters> Filters { get; set; }
+        public List<global::Klaviyo.Models.HasEmailMarketingSubscribed.HasEmailMarketingSubscribed_filters> Filters { get; set; }
 #endif
         /// <summary>The subscription property</summary>
-        public global::ApiSdk.Models.SubscribedEnum? Subscription { get; set; }
+        public global::Klaviyo.Models.SubscribedEnum? Subscription { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::ApiSdk.Models.HasEmailMarketingSubscribed"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Klaviyo.Models.HasEmailMarketingSubscribed"/> and sets the default values.
         /// </summary>
         public HasEmailMarketingSubscribed()
         {
@@ -34,12 +34,12 @@ namespace ApiSdk.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::ApiSdk.Models.HasEmailMarketingSubscribed"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.HasEmailMarketingSubscribed"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::ApiSdk.Models.HasEmailMarketingSubscribed CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Klaviyo.Models.HasEmailMarketingSubscribed CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::ApiSdk.Models.HasEmailMarketingSubscribed();
+            return new global::Klaviyo.Models.HasEmailMarketingSubscribed();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -49,8 +49,8 @@ namespace ApiSdk.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "filters", n => { Filters = n.GetCollectionOfObjectValues<global::ApiSdk.Models.HasEmailMarketingSubscribed.HasEmailMarketingSubscribed_filters>(global::ApiSdk.Models.HasEmailMarketingSubscribed.HasEmailMarketingSubscribed_filters.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "subscription", n => { Subscription = n.GetEnumValue<global::ApiSdk.Models.SubscribedEnum>(); } },
+                { "filters", n => { Filters = n.GetCollectionOfObjectValues<global::Klaviyo.Models.HasEmailMarketingSubscribed.HasEmailMarketingSubscribed_filters>(global::Klaviyo.Models.HasEmailMarketingSubscribed.HasEmailMarketingSubscribed_filters.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "subscription", n => { Subscription = n.GetEnumValue<global::Klaviyo.Models.SubscribedEnum>(); } },
             };
         }
         /// <summary>
@@ -60,169 +60,169 @@ namespace ApiSdk.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::ApiSdk.Models.HasEmailMarketingSubscribed.HasEmailMarketingSubscribed_filters>("filters", Filters);
-            writer.WriteEnumValue<global::ApiSdk.Models.SubscribedEnum>("subscription", Subscription);
+            writer.WriteCollectionOfObjectValues<global::Klaviyo.Models.HasEmailMarketingSubscribed.HasEmailMarketingSubscribed_filters>("filters", Filters);
+            writer.WriteEnumValue<global::Klaviyo.Models.SubscribedEnum>("subscription", Subscription);
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::ApiSdk.Models.APIMethodFilter"/>, <see cref="global::ApiSdk.Models.BackInStockMethodFilter"/>, <see cref="global::ApiSdk.Models.CustomSourceFilter"/>, <see cref="global::ApiSdk.Models.DoubleOptinFilter"/>, <see cref="global::ApiSdk.Models.FormMethodFilter"/>, <see cref="global::ApiSdk.Models.InboundMessageMethodFilter"/>, <see cref="global::ApiSdk.Models.ManualAddMethodFilter"/>, <see cref="global::ApiSdk.Models.ManualImportMethodFilter"/>, <see cref="global::ApiSdk.Models.PreferencePageFilter"/>, <see cref="global::ApiSdk.Models.SftpMethodFilter"/>, <see cref="global::ApiSdk.Models.ShopifyIntegrationMethodFilter"/>, <see cref="global::ApiSdk.Models.StatusDateFilter"/>
+        /// Composed type wrapper for classes <see cref="global::Klaviyo.Models.APIMethodFilter"/>, <see cref="global::Klaviyo.Models.BackInStockMethodFilter"/>, <see cref="global::Klaviyo.Models.CustomSourceFilter"/>, <see cref="global::Klaviyo.Models.DoubleOptinFilter"/>, <see cref="global::Klaviyo.Models.FormMethodFilter"/>, <see cref="global::Klaviyo.Models.InboundMessageMethodFilter"/>, <see cref="global::Klaviyo.Models.ManualAddMethodFilter"/>, <see cref="global::Klaviyo.Models.ManualImportMethodFilter"/>, <see cref="global::Klaviyo.Models.PreferencePageFilter"/>, <see cref="global::Klaviyo.Models.SftpMethodFilter"/>, <see cref="global::Klaviyo.Models.ShopifyIntegrationMethodFilter"/>, <see cref="global::Klaviyo.Models.StatusDateFilter"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
         public partial class HasEmailMarketingSubscribed_filters : IComposedTypeWrapper, IParsable
         {
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.APIMethodFilter"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.APIMethodFilter"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.APIMethodFilter? APIMethodFilter { get; set; }
+            public global::Klaviyo.Models.APIMethodFilter? APIMethodFilter { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.APIMethodFilter APIMethodFilter { get; set; }
+            public global::Klaviyo.Models.APIMethodFilter APIMethodFilter { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.BackInStockMethodFilter"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.BackInStockMethodFilter"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.BackInStockMethodFilter? BackInStockMethodFilter { get; set; }
+            public global::Klaviyo.Models.BackInStockMethodFilter? BackInStockMethodFilter { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.BackInStockMethodFilter BackInStockMethodFilter { get; set; }
+            public global::Klaviyo.Models.BackInStockMethodFilter BackInStockMethodFilter { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.CustomSourceFilter"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.CustomSourceFilter"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.CustomSourceFilter? CustomSourceFilter { get; set; }
+            public global::Klaviyo.Models.CustomSourceFilter? CustomSourceFilter { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.CustomSourceFilter CustomSourceFilter { get; set; }
+            public global::Klaviyo.Models.CustomSourceFilter CustomSourceFilter { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.DoubleOptinFilter"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.DoubleOptinFilter"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.DoubleOptinFilter? DoubleOptinFilter { get; set; }
+            public global::Klaviyo.Models.DoubleOptinFilter? DoubleOptinFilter { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.DoubleOptinFilter DoubleOptinFilter { get; set; }
+            public global::Klaviyo.Models.DoubleOptinFilter DoubleOptinFilter { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.FormMethodFilter"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.FormMethodFilter"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.FormMethodFilter? FormMethodFilter { get; set; }
+            public global::Klaviyo.Models.FormMethodFilter? FormMethodFilter { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.FormMethodFilter FormMethodFilter { get; set; }
+            public global::Klaviyo.Models.FormMethodFilter FormMethodFilter { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.InboundMessageMethodFilter"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.InboundMessageMethodFilter"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.InboundMessageMethodFilter? InboundMessageMethodFilter { get; set; }
+            public global::Klaviyo.Models.InboundMessageMethodFilter? InboundMessageMethodFilter { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.InboundMessageMethodFilter InboundMessageMethodFilter { get; set; }
+            public global::Klaviyo.Models.InboundMessageMethodFilter InboundMessageMethodFilter { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.ManualAddMethodFilter"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.ManualAddMethodFilter"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.ManualAddMethodFilter? ManualAddMethodFilter { get; set; }
+            public global::Klaviyo.Models.ManualAddMethodFilter? ManualAddMethodFilter { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.ManualAddMethodFilter ManualAddMethodFilter { get; set; }
+            public global::Klaviyo.Models.ManualAddMethodFilter ManualAddMethodFilter { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.ManualImportMethodFilter"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.ManualImportMethodFilter"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.ManualImportMethodFilter? ManualImportMethodFilter { get; set; }
+            public global::Klaviyo.Models.ManualImportMethodFilter? ManualImportMethodFilter { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.ManualImportMethodFilter ManualImportMethodFilter { get; set; }
+            public global::Klaviyo.Models.ManualImportMethodFilter ManualImportMethodFilter { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.PreferencePageFilter"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.PreferencePageFilter"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.PreferencePageFilter? PreferencePageFilter { get; set; }
+            public global::Klaviyo.Models.PreferencePageFilter? PreferencePageFilter { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.PreferencePageFilter PreferencePageFilter { get; set; }
+            public global::Klaviyo.Models.PreferencePageFilter PreferencePageFilter { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.SftpMethodFilter"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.SftpMethodFilter"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.SftpMethodFilter? SftpMethodFilter { get; set; }
+            public global::Klaviyo.Models.SftpMethodFilter? SftpMethodFilter { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.SftpMethodFilter SftpMethodFilter { get; set; }
+            public global::Klaviyo.Models.SftpMethodFilter SftpMethodFilter { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.ShopifyIntegrationMethodFilter"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.ShopifyIntegrationMethodFilter"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.ShopifyIntegrationMethodFilter? ShopifyIntegrationMethodFilter { get; set; }
+            public global::Klaviyo.Models.ShopifyIntegrationMethodFilter? ShopifyIntegrationMethodFilter { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.ShopifyIntegrationMethodFilter ShopifyIntegrationMethodFilter { get; set; }
+            public global::Klaviyo.Models.ShopifyIntegrationMethodFilter ShopifyIntegrationMethodFilter { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.StatusDateFilter"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.StatusDateFilter"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.StatusDateFilter? StatusDateFilter { get; set; }
+            public global::Klaviyo.Models.StatusDateFilter? StatusDateFilter { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.StatusDateFilter StatusDateFilter { get; set; }
+            public global::Klaviyo.Models.StatusDateFilter StatusDateFilter { get; set; }
 #endif
             /// <summary>
             /// Creates a new instance of the appropriate class based on discriminator value
             /// </summary>
-            /// <returns>A <see cref="global::ApiSdk.Models.HasEmailMarketingSubscribed.HasEmailMarketingSubscribed_filters"/></returns>
+            /// <returns>A <see cref="global::Klaviyo.Models.HasEmailMarketingSubscribed.HasEmailMarketingSubscribed_filters"/></returns>
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::ApiSdk.Models.HasEmailMarketingSubscribed.HasEmailMarketingSubscribed_filters CreateFromDiscriminatorValue(IParseNode parseNode)
+            public static global::Klaviyo.Models.HasEmailMarketingSubscribed.HasEmailMarketingSubscribed_filters CreateFromDiscriminatorValue(IParseNode parseNode)
             {
                 _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
                 var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::ApiSdk.Models.HasEmailMarketingSubscribed.HasEmailMarketingSubscribed_filters();
+                var result = new global::Klaviyo.Models.HasEmailMarketingSubscribed.HasEmailMarketingSubscribed_filters();
                 if("APIMethodFilter".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.APIMethodFilter = new global::ApiSdk.Models.APIMethodFilter();
+                    result.APIMethodFilter = new global::Klaviyo.Models.APIMethodFilter();
                 }
                 else if("BackInStockMethodFilter".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.BackInStockMethodFilter = new global::ApiSdk.Models.BackInStockMethodFilter();
+                    result.BackInStockMethodFilter = new global::Klaviyo.Models.BackInStockMethodFilter();
                 }
                 else if("CustomSourceFilter".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.CustomSourceFilter = new global::ApiSdk.Models.CustomSourceFilter();
+                    result.CustomSourceFilter = new global::Klaviyo.Models.CustomSourceFilter();
                 }
                 else if("DoubleOptinFilter".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.DoubleOptinFilter = new global::ApiSdk.Models.DoubleOptinFilter();
+                    result.DoubleOptinFilter = new global::Klaviyo.Models.DoubleOptinFilter();
                 }
                 else if("FormMethodFilter".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.FormMethodFilter = new global::ApiSdk.Models.FormMethodFilter();
+                    result.FormMethodFilter = new global::Klaviyo.Models.FormMethodFilter();
                 }
                 else if("InboundMessageMethodFilter".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.InboundMessageMethodFilter = new global::ApiSdk.Models.InboundMessageMethodFilter();
+                    result.InboundMessageMethodFilter = new global::Klaviyo.Models.InboundMessageMethodFilter();
                 }
                 else if("ManualAddMethodFilter".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.ManualAddMethodFilter = new global::ApiSdk.Models.ManualAddMethodFilter();
+                    result.ManualAddMethodFilter = new global::Klaviyo.Models.ManualAddMethodFilter();
                 }
                 else if("ManualImportMethodFilter".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.ManualImportMethodFilter = new global::ApiSdk.Models.ManualImportMethodFilter();
+                    result.ManualImportMethodFilter = new global::Klaviyo.Models.ManualImportMethodFilter();
                 }
                 else if("PreferencePageFilter".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.PreferencePageFilter = new global::ApiSdk.Models.PreferencePageFilter();
+                    result.PreferencePageFilter = new global::Klaviyo.Models.PreferencePageFilter();
                 }
                 else if("SftpMethodFilter".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.SftpMethodFilter = new global::ApiSdk.Models.SftpMethodFilter();
+                    result.SftpMethodFilter = new global::Klaviyo.Models.SftpMethodFilter();
                 }
                 else if("ShopifyIntegrationMethodFilter".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.ShopifyIntegrationMethodFilter = new global::ApiSdk.Models.ShopifyIntegrationMethodFilter();
+                    result.ShopifyIntegrationMethodFilter = new global::Klaviyo.Models.ShopifyIntegrationMethodFilter();
                 }
                 else if("StatusDateFilter".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.StatusDateFilter = new global::ApiSdk.Models.StatusDateFilter();
+                    result.StatusDateFilter = new global::Klaviyo.Models.StatusDateFilter();
                 }
                 return result;
             }
@@ -291,51 +291,51 @@ namespace ApiSdk.Models
                 _ = writer ?? throw new ArgumentNullException(nameof(writer));
                 if(APIMethodFilter != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.APIMethodFilter>(null, APIMethodFilter);
+                    writer.WriteObjectValue<global::Klaviyo.Models.APIMethodFilter>(null, APIMethodFilter);
                 }
                 else if(BackInStockMethodFilter != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.BackInStockMethodFilter>(null, BackInStockMethodFilter);
+                    writer.WriteObjectValue<global::Klaviyo.Models.BackInStockMethodFilter>(null, BackInStockMethodFilter);
                 }
                 else if(CustomSourceFilter != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.CustomSourceFilter>(null, CustomSourceFilter);
+                    writer.WriteObjectValue<global::Klaviyo.Models.CustomSourceFilter>(null, CustomSourceFilter);
                 }
                 else if(DoubleOptinFilter != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.DoubleOptinFilter>(null, DoubleOptinFilter);
+                    writer.WriteObjectValue<global::Klaviyo.Models.DoubleOptinFilter>(null, DoubleOptinFilter);
                 }
                 else if(FormMethodFilter != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.FormMethodFilter>(null, FormMethodFilter);
+                    writer.WriteObjectValue<global::Klaviyo.Models.FormMethodFilter>(null, FormMethodFilter);
                 }
                 else if(InboundMessageMethodFilter != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.InboundMessageMethodFilter>(null, InboundMessageMethodFilter);
+                    writer.WriteObjectValue<global::Klaviyo.Models.InboundMessageMethodFilter>(null, InboundMessageMethodFilter);
                 }
                 else if(ManualAddMethodFilter != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.ManualAddMethodFilter>(null, ManualAddMethodFilter);
+                    writer.WriteObjectValue<global::Klaviyo.Models.ManualAddMethodFilter>(null, ManualAddMethodFilter);
                 }
                 else if(ManualImportMethodFilter != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.ManualImportMethodFilter>(null, ManualImportMethodFilter);
+                    writer.WriteObjectValue<global::Klaviyo.Models.ManualImportMethodFilter>(null, ManualImportMethodFilter);
                 }
                 else if(PreferencePageFilter != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.PreferencePageFilter>(null, PreferencePageFilter);
+                    writer.WriteObjectValue<global::Klaviyo.Models.PreferencePageFilter>(null, PreferencePageFilter);
                 }
                 else if(SftpMethodFilter != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.SftpMethodFilter>(null, SftpMethodFilter);
+                    writer.WriteObjectValue<global::Klaviyo.Models.SftpMethodFilter>(null, SftpMethodFilter);
                 }
                 else if(ShopifyIntegrationMethodFilter != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.ShopifyIntegrationMethodFilter>(null, ShopifyIntegrationMethodFilter);
+                    writer.WriteObjectValue<global::Klaviyo.Models.ShopifyIntegrationMethodFilter>(null, ShopifyIntegrationMethodFilter);
                 }
                 else if(StatusDateFilter != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.StatusDateFilter>(null, StatusDateFilter);
+                    writer.WriteObjectValue<global::Klaviyo.Models.StatusDateFilter>(null, StatusDateFilter);
                 }
             }
         }

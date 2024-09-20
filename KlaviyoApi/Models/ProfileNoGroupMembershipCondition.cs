@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace ApiSdk.Models
+namespace Klaviyo.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
     #pragma warning disable CS1591
@@ -31,9 +31,9 @@ namespace ApiSdk.Models
         public UntypedNode IsMember { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public global::ApiSdk.Models.ProfileGroupMembershipEnum? Type { get; set; }
+        public global::Klaviyo.Models.ProfileGroupMembershipEnum? Type { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::ApiSdk.Models.ProfileNoGroupMembershipCondition"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Klaviyo.Models.ProfileNoGroupMembershipCondition"/> and sets the default values.
         /// </summary>
         public ProfileNoGroupMembershipCondition()
         {
@@ -42,12 +42,12 @@ namespace ApiSdk.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::ApiSdk.Models.ProfileNoGroupMembershipCondition"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.ProfileNoGroupMembershipCondition"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::ApiSdk.Models.ProfileNoGroupMembershipCondition CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Klaviyo.Models.ProfileNoGroupMembershipCondition CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::ApiSdk.Models.ProfileNoGroupMembershipCondition();
+            return new global::Klaviyo.Models.ProfileNoGroupMembershipCondition();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -59,7 +59,7 @@ namespace ApiSdk.Models
             {
                 { "group_ids", n => { GroupIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "is_member", n => { IsMember = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::ApiSdk.Models.ProfileGroupMembershipEnum>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Klaviyo.Models.ProfileGroupMembershipEnum>(); } },
             };
         }
         /// <summary>
@@ -71,7 +71,7 @@ namespace ApiSdk.Models
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("group_ids", GroupIds);
             writer.WriteObjectValue<UntypedNode>("is_member", IsMember);
-            writer.WriteEnumValue<global::ApiSdk.Models.ProfileGroupMembershipEnum>("type", Type);
+            writer.WriteEnumValue<global::Klaviyo.Models.ProfileGroupMembershipEnum>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

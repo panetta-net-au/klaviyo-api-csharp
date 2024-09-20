@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace ApiSdk.Models
+namespace Klaviyo.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
     #pragma warning disable CS1591
@@ -15,9 +15,9 @@ namespace ApiSdk.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The subscription property</summary>
-        public global::ApiSdk.Models.AnyEnum? Subscription { get; set; }
+        public global::Klaviyo.Models.AnyEnum? Subscription { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::ApiSdk.Models.NoSMSMarketing"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Klaviyo.Models.NoSMSMarketing"/> and sets the default values.
         /// </summary>
         public NoSMSMarketing()
         {
@@ -26,12 +26,12 @@ namespace ApiSdk.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::ApiSdk.Models.NoSMSMarketing"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.NoSMSMarketing"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::ApiSdk.Models.NoSMSMarketing CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Klaviyo.Models.NoSMSMarketing CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::ApiSdk.Models.NoSMSMarketing();
+            return new global::Klaviyo.Models.NoSMSMarketing();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -41,7 +41,7 @@ namespace ApiSdk.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "subscription", n => { Subscription = n.GetEnumValue<global::ApiSdk.Models.AnyEnum>(); } },
+                { "subscription", n => { Subscription = n.GetEnumValue<global::Klaviyo.Models.AnyEnum>(); } },
             };
         }
         /// <summary>
@@ -51,7 +51,7 @@ namespace ApiSdk.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::ApiSdk.Models.AnyEnum>("subscription", Subscription);
+            writer.WriteEnumValue<global::Klaviyo.Models.AnyEnum>("subscription", Subscription);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

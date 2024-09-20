@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace ApiSdk.Models
+namespace Klaviyo.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
     #pragma warning disable CS1591
@@ -17,13 +17,13 @@ namespace ApiSdk.Models
         /// <summary>The context for the template render. This must be a JSON object which has values for any tags used in the template. See [this doc](https://help.klaviyo.com/hc/en-us/articles/4408802648731) for more details.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::ApiSdk.Models.TemplateRenderQueryResourceObject_attributes_context? Context { get; set; }
+        public global::Klaviyo.Models.TemplateRenderQueryResourceObject_attributes_context? Context { get; set; }
 #nullable restore
 #else
-        public global::ApiSdk.Models.TemplateRenderQueryResourceObject_attributes_context Context { get; set; }
+        public global::Klaviyo.Models.TemplateRenderQueryResourceObject_attributes_context Context { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::ApiSdk.Models.TemplateRenderQueryResourceObject_attributes"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Klaviyo.Models.TemplateRenderQueryResourceObject_attributes"/> and sets the default values.
         /// </summary>
         public TemplateRenderQueryResourceObject_attributes()
         {
@@ -32,12 +32,12 @@ namespace ApiSdk.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::ApiSdk.Models.TemplateRenderQueryResourceObject_attributes"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.TemplateRenderQueryResourceObject_attributes"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::ApiSdk.Models.TemplateRenderQueryResourceObject_attributes CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Klaviyo.Models.TemplateRenderQueryResourceObject_attributes CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::ApiSdk.Models.TemplateRenderQueryResourceObject_attributes();
+            return new global::Klaviyo.Models.TemplateRenderQueryResourceObject_attributes();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -47,7 +47,7 @@ namespace ApiSdk.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "context", n => { Context = n.GetObjectValue<global::ApiSdk.Models.TemplateRenderQueryResourceObject_attributes_context>(global::ApiSdk.Models.TemplateRenderQueryResourceObject_attributes_context.CreateFromDiscriminatorValue); } },
+                { "context", n => { Context = n.GetObjectValue<global::Klaviyo.Models.TemplateRenderQueryResourceObject_attributes_context>(global::Klaviyo.Models.TemplateRenderQueryResourceObject_attributes_context.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace ApiSdk.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::ApiSdk.Models.TemplateRenderQueryResourceObject_attributes_context>("context", Context);
+            writer.WriteObjectValue<global::Klaviyo.Models.TemplateRenderQueryResourceObject_attributes_context>("context", Context);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

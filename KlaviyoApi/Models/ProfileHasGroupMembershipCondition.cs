@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace ApiSdk.Models
+namespace Klaviyo.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
     #pragma warning disable CS1591
@@ -33,15 +33,15 @@ namespace ApiSdk.Models
         /// <summary>The timeframe_filter property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::ApiSdk.Models.ProfileHasGroupMembershipCondition.ProfileHasGroupMembershipCondition_timeframe_filter? TimeframeFilter { get; set; }
+        public global::Klaviyo.Models.ProfileHasGroupMembershipCondition.ProfileHasGroupMembershipCondition_timeframe_filter? TimeframeFilter { get; set; }
 #nullable restore
 #else
-        public global::ApiSdk.Models.ProfileHasGroupMembershipCondition.ProfileHasGroupMembershipCondition_timeframe_filter TimeframeFilter { get; set; }
+        public global::Klaviyo.Models.ProfileHasGroupMembershipCondition.ProfileHasGroupMembershipCondition_timeframe_filter TimeframeFilter { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public global::ApiSdk.Models.ProfileGroupMembershipEnum? Type { get; set; }
+        public global::Klaviyo.Models.ProfileGroupMembershipEnum? Type { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::ApiSdk.Models.ProfileHasGroupMembershipCondition"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Klaviyo.Models.ProfileHasGroupMembershipCondition"/> and sets the default values.
         /// </summary>
         public ProfileHasGroupMembershipCondition()
         {
@@ -50,12 +50,12 @@ namespace ApiSdk.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::ApiSdk.Models.ProfileHasGroupMembershipCondition"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.ProfileHasGroupMembershipCondition"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::ApiSdk.Models.ProfileHasGroupMembershipCondition CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Klaviyo.Models.ProfileHasGroupMembershipCondition CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::ApiSdk.Models.ProfileHasGroupMembershipCondition();
+            return new global::Klaviyo.Models.ProfileHasGroupMembershipCondition();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -67,8 +67,8 @@ namespace ApiSdk.Models
             {
                 { "group_ids", n => { GroupIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "is_member", n => { IsMember = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "timeframe_filter", n => { TimeframeFilter = n.GetObjectValue<global::ApiSdk.Models.ProfileHasGroupMembershipCondition.ProfileHasGroupMembershipCondition_timeframe_filter>(global::ApiSdk.Models.ProfileHasGroupMembershipCondition.ProfileHasGroupMembershipCondition_timeframe_filter.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::ApiSdk.Models.ProfileGroupMembershipEnum>(); } },
+                { "timeframe_filter", n => { TimeframeFilter = n.GetObjectValue<global::Klaviyo.Models.ProfileHasGroupMembershipCondition.ProfileHasGroupMembershipCondition_timeframe_filter>(global::Klaviyo.Models.ProfileHasGroupMembershipCondition.ProfileHasGroupMembershipCondition_timeframe_filter.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetEnumValue<global::Klaviyo.Models.ProfileGroupMembershipEnum>(); } },
             };
         }
         /// <summary>
@@ -80,73 +80,73 @@ namespace ApiSdk.Models
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("group_ids", GroupIds);
             writer.WriteObjectValue<UntypedNode>("is_member", IsMember);
-            writer.WriteObjectValue<global::ApiSdk.Models.ProfileHasGroupMembershipCondition.ProfileHasGroupMembershipCondition_timeframe_filter>("timeframe_filter", TimeframeFilter);
-            writer.WriteEnumValue<global::ApiSdk.Models.ProfileGroupMembershipEnum>("type", Type);
+            writer.WriteObjectValue<global::Klaviyo.Models.ProfileHasGroupMembershipCondition.ProfileHasGroupMembershipCondition_timeframe_filter>("timeframe_filter", TimeframeFilter);
+            writer.WriteEnumValue<global::Klaviyo.Models.ProfileGroupMembershipEnum>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::ApiSdk.Models.RelativeDateOperatorBaseFilter"/>, <see cref="global::ApiSdk.Models.RelativeDateRangeFilter"/>, <see cref="global::ApiSdk.Models.StaticDateFilter"/>, <see cref="global::ApiSdk.Models.StaticDateRangeFilter"/>
+        /// Composed type wrapper for classes <see cref="global::Klaviyo.Models.RelativeDateOperatorBaseFilter"/>, <see cref="global::Klaviyo.Models.RelativeDateRangeFilter"/>, <see cref="global::Klaviyo.Models.StaticDateFilter"/>, <see cref="global::Klaviyo.Models.StaticDateRangeFilter"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
         public partial class ProfileHasGroupMembershipCondition_timeframe_filter : IComposedTypeWrapper, IParsable
         {
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.RelativeDateOperatorBaseFilter"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.RelativeDateOperatorBaseFilter"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.RelativeDateOperatorBaseFilter? RelativeDateOperatorBaseFilter { get; set; }
+            public global::Klaviyo.Models.RelativeDateOperatorBaseFilter? RelativeDateOperatorBaseFilter { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.RelativeDateOperatorBaseFilter RelativeDateOperatorBaseFilter { get; set; }
+            public global::Klaviyo.Models.RelativeDateOperatorBaseFilter RelativeDateOperatorBaseFilter { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.RelativeDateRangeFilter"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.RelativeDateRangeFilter"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.RelativeDateRangeFilter? RelativeDateRangeFilter { get; set; }
+            public global::Klaviyo.Models.RelativeDateRangeFilter? RelativeDateRangeFilter { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.RelativeDateRangeFilter RelativeDateRangeFilter { get; set; }
+            public global::Klaviyo.Models.RelativeDateRangeFilter RelativeDateRangeFilter { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.StaticDateFilter"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.StaticDateFilter"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.StaticDateFilter? StaticDateFilter { get; set; }
+            public global::Klaviyo.Models.StaticDateFilter? StaticDateFilter { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.StaticDateFilter StaticDateFilter { get; set; }
+            public global::Klaviyo.Models.StaticDateFilter StaticDateFilter { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="global::ApiSdk.Models.StaticDateRangeFilter"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.StaticDateRangeFilter"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::ApiSdk.Models.StaticDateRangeFilter? StaticDateRangeFilter { get; set; }
+            public global::Klaviyo.Models.StaticDateRangeFilter? StaticDateRangeFilter { get; set; }
 #nullable restore
 #else
-            public global::ApiSdk.Models.StaticDateRangeFilter StaticDateRangeFilter { get; set; }
+            public global::Klaviyo.Models.StaticDateRangeFilter StaticDateRangeFilter { get; set; }
 #endif
             /// <summary>
             /// Creates a new instance of the appropriate class based on discriminator value
             /// </summary>
-            /// <returns>A <see cref="global::ApiSdk.Models.ProfileHasGroupMembershipCondition.ProfileHasGroupMembershipCondition_timeframe_filter"/></returns>
+            /// <returns>A <see cref="global::Klaviyo.Models.ProfileHasGroupMembershipCondition.ProfileHasGroupMembershipCondition_timeframe_filter"/></returns>
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::ApiSdk.Models.ProfileHasGroupMembershipCondition.ProfileHasGroupMembershipCondition_timeframe_filter CreateFromDiscriminatorValue(IParseNode parseNode)
+            public static global::Klaviyo.Models.ProfileHasGroupMembershipCondition.ProfileHasGroupMembershipCondition_timeframe_filter CreateFromDiscriminatorValue(IParseNode parseNode)
             {
                 _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
                 var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
-                var result = new global::ApiSdk.Models.ProfileHasGroupMembershipCondition.ProfileHasGroupMembershipCondition_timeframe_filter();
+                var result = new global::Klaviyo.Models.ProfileHasGroupMembershipCondition.ProfileHasGroupMembershipCondition_timeframe_filter();
                 if("RelativeDateOperatorBaseFilter".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.RelativeDateOperatorBaseFilter = new global::ApiSdk.Models.RelativeDateOperatorBaseFilter();
+                    result.RelativeDateOperatorBaseFilter = new global::Klaviyo.Models.RelativeDateOperatorBaseFilter();
                 }
                 else if("RelativeDateRangeFilter".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.RelativeDateRangeFilter = new global::ApiSdk.Models.RelativeDateRangeFilter();
+                    result.RelativeDateRangeFilter = new global::Klaviyo.Models.RelativeDateRangeFilter();
                 }
                 else if("StaticDateFilter".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.StaticDateFilter = new global::ApiSdk.Models.StaticDateFilter();
+                    result.StaticDateFilter = new global::Klaviyo.Models.StaticDateFilter();
                 }
                 else if("StaticDateRangeFilter".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
-                    result.StaticDateRangeFilter = new global::ApiSdk.Models.StaticDateRangeFilter();
+                    result.StaticDateRangeFilter = new global::Klaviyo.Models.StaticDateRangeFilter();
                 }
                 return result;
             }
@@ -183,19 +183,19 @@ namespace ApiSdk.Models
                 _ = writer ?? throw new ArgumentNullException(nameof(writer));
                 if(RelativeDateOperatorBaseFilter != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.RelativeDateOperatorBaseFilter>(null, RelativeDateOperatorBaseFilter);
+                    writer.WriteObjectValue<global::Klaviyo.Models.RelativeDateOperatorBaseFilter>(null, RelativeDateOperatorBaseFilter);
                 }
                 else if(RelativeDateRangeFilter != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.RelativeDateRangeFilter>(null, RelativeDateRangeFilter);
+                    writer.WriteObjectValue<global::Klaviyo.Models.RelativeDateRangeFilter>(null, RelativeDateRangeFilter);
                 }
                 else if(StaticDateFilter != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.StaticDateFilter>(null, StaticDateFilter);
+                    writer.WriteObjectValue<global::Klaviyo.Models.StaticDateFilter>(null, StaticDateFilter);
                 }
                 else if(StaticDateRangeFilter != null)
                 {
-                    writer.WriteObjectValue<global::ApiSdk.Models.StaticDateRangeFilter>(null, StaticDateRangeFilter);
+                    writer.WriteObjectValue<global::Klaviyo.Models.StaticDateRangeFilter>(null, StaticDateRangeFilter);
                 }
             }
         }

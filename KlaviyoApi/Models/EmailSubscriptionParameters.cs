@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace ApiSdk.Models
+namespace Klaviyo.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
     #pragma warning disable CS1591
@@ -17,13 +17,13 @@ namespace ApiSdk.Models
         /// <summary>The marketing property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::ApiSdk.Models.MarketingSubscriptionParameters? Marketing { get; set; }
+        public global::Klaviyo.Models.MarketingSubscriptionParameters? Marketing { get; set; }
 #nullable restore
 #else
-        public global::ApiSdk.Models.MarketingSubscriptionParameters Marketing { get; set; }
+        public global::Klaviyo.Models.MarketingSubscriptionParameters Marketing { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::ApiSdk.Models.EmailSubscriptionParameters"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Klaviyo.Models.EmailSubscriptionParameters"/> and sets the default values.
         /// </summary>
         public EmailSubscriptionParameters()
         {
@@ -32,12 +32,12 @@ namespace ApiSdk.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::ApiSdk.Models.EmailSubscriptionParameters"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.EmailSubscriptionParameters"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::ApiSdk.Models.EmailSubscriptionParameters CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Klaviyo.Models.EmailSubscriptionParameters CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::ApiSdk.Models.EmailSubscriptionParameters();
+            return new global::Klaviyo.Models.EmailSubscriptionParameters();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -47,7 +47,7 @@ namespace ApiSdk.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "marketing", n => { Marketing = n.GetObjectValue<global::ApiSdk.Models.MarketingSubscriptionParameters>(global::ApiSdk.Models.MarketingSubscriptionParameters.CreateFromDiscriminatorValue); } },
+                { "marketing", n => { Marketing = n.GetObjectValue<global::Klaviyo.Models.MarketingSubscriptionParameters>(global::Klaviyo.Models.MarketingSubscriptionParameters.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -57,7 +57,7 @@ namespace ApiSdk.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::ApiSdk.Models.MarketingSubscriptionParameters>("marketing", Marketing);
+            writer.WriteObjectValue<global::Klaviyo.Models.MarketingSubscriptionParameters>("marketing", Marketing);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

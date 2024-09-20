@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace ApiSdk.Models
+namespace Klaviyo.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
     #pragma warning disable CS1591
@@ -27,11 +27,11 @@ namespace ApiSdk.Models
         public string Name { get; set; }
 #endif
         /// <summary>Status of the form. A live form with an in-progress draft is considered &quot;live&quot;.</summary>
-        public global::ApiSdk.Models.FormResponseObjectResource_attributes_status? Status { get; set; }
+        public global::Klaviyo.Models.FormResponseObjectResource_attributes_status? Status { get; set; }
         /// <summary>ISO8601 timestamp when the form was last updated.</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::ApiSdk.Models.FormResponseObjectResource_attributes"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Klaviyo.Models.FormResponseObjectResource_attributes"/> and sets the default values.
         /// </summary>
         public FormResponseObjectResource_attributes()
         {
@@ -40,12 +40,12 @@ namespace ApiSdk.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::ApiSdk.Models.FormResponseObjectResource_attributes"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.FormResponseObjectResource_attributes"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::ApiSdk.Models.FormResponseObjectResource_attributes CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Klaviyo.Models.FormResponseObjectResource_attributes CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::ApiSdk.Models.FormResponseObjectResource_attributes();
+            return new global::Klaviyo.Models.FormResponseObjectResource_attributes();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -58,7 +58,7 @@ namespace ApiSdk.Models
                 { "ab_test", n => { AbTest = n.GetBoolValue(); } },
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::ApiSdk.Models.FormResponseObjectResource_attributes_status>(); } },
+                { "status", n => { Status = n.GetEnumValue<global::Klaviyo.Models.FormResponseObjectResource_attributes_status>(); } },
                 { "updated_at", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
             };
         }
@@ -72,7 +72,7 @@ namespace ApiSdk.Models
             writer.WriteBoolValue("ab_test", AbTest);
             writer.WriteDateTimeOffsetValue("created_at", CreatedAt);
             writer.WriteStringValue("name", Name);
-            writer.WriteEnumValue<global::ApiSdk.Models.FormResponseObjectResource_attributes_status>("status", Status);
+            writer.WriteEnumValue<global::Klaviyo.Models.FormResponseObjectResource_attributes_status>("status", Status);
             writer.WriteDateTimeOffsetValue("updated_at", UpdatedAt);
             writer.WriteAdditionalData(AdditionalData);
         }

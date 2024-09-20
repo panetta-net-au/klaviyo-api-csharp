@@ -5,7 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace ApiSdk.Models
+namespace Klaviyo.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
     #pragma warning disable CS1591
@@ -15,26 +15,26 @@ namespace ApiSdk.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The background state of the push token.</summary>
-        public global::ApiSdk.Models.PushTokenCreateQueryResourceObject_attributes_background? Background { get; set; }
+        public global::Klaviyo.Models.PushTokenCreateQueryResourceObject_attributes_background? Background { get; set; }
         /// <summary>The device_metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::ApiSdk.Models.DeviceMetadata? DeviceMetadata { get; set; }
+        public global::Klaviyo.Models.DeviceMetadata? DeviceMetadata { get; set; }
 #nullable restore
 #else
-        public global::ApiSdk.Models.DeviceMetadata DeviceMetadata { get; set; }
+        public global::Klaviyo.Models.DeviceMetadata DeviceMetadata { get; set; }
 #endif
         /// <summary>This is the enablement status for the individual push token.</summary>
-        public global::ApiSdk.Models.PushTokenCreateQueryResourceObject_attributes_enablement_status? EnablementStatus { get; set; }
+        public global::Klaviyo.Models.PushTokenCreateQueryResourceObject_attributes_enablement_status? EnablementStatus { get; set; }
         /// <summary>The platform on which the push token was created.</summary>
-        public global::ApiSdk.Models.PushTokenCreateQueryResourceObject_attributes_platform? Platform { get; set; }
+        public global::Klaviyo.Models.PushTokenCreateQueryResourceObject_attributes_platform? Platform { get; set; }
         /// <summary>The profile associated with the push token to create/update</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::ApiSdk.Models.PushTokenCreateQueryResourceObject_attributes_profile? Profile { get; set; }
+        public global::Klaviyo.Models.PushTokenCreateQueryResourceObject_attributes_profile? Profile { get; set; }
 #nullable restore
 #else
-        public global::ApiSdk.Models.PushTokenCreateQueryResourceObject_attributes_profile Profile { get; set; }
+        public global::Klaviyo.Models.PushTokenCreateQueryResourceObject_attributes_profile Profile { get; set; }
 #endif
         /// <summary>A push token from APNS or FCM.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -45,25 +45,25 @@ namespace ApiSdk.Models
         public string Token { get; set; }
 #endif
         /// <summary>The vendor of the push token.</summary>
-        public global::ApiSdk.Models.PushTokenCreateQueryResourceObject_attributes_vendor? Vendor { get; set; }
+        public global::Klaviyo.Models.PushTokenCreateQueryResourceObject_attributes_vendor? Vendor { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::ApiSdk.Models.PushTokenCreateQueryResourceObject_attributes"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Klaviyo.Models.PushTokenCreateQueryResourceObject_attributes"/> and sets the default values.
         /// </summary>
         public PushTokenCreateQueryResourceObject_attributes()
         {
             AdditionalData = new Dictionary<string, object>();
-            Background = global::ApiSdk.Models.PushTokenCreateQueryResourceObject_attributes_background.AVAILABLE;
-            EnablementStatus = global::ApiSdk.Models.PushTokenCreateQueryResourceObject_attributes_enablement_status.AUTHORIZED;
+            Background = global::Klaviyo.Models.PushTokenCreateQueryResourceObject_attributes_background.AVAILABLE;
+            EnablementStatus = global::Klaviyo.Models.PushTokenCreateQueryResourceObject_attributes_enablement_status.AUTHORIZED;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::ApiSdk.Models.PushTokenCreateQueryResourceObject_attributes"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.PushTokenCreateQueryResourceObject_attributes"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::ApiSdk.Models.PushTokenCreateQueryResourceObject_attributes CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Klaviyo.Models.PushTokenCreateQueryResourceObject_attributes CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
-            return new global::ApiSdk.Models.PushTokenCreateQueryResourceObject_attributes();
+            return new global::Klaviyo.Models.PushTokenCreateQueryResourceObject_attributes();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -73,13 +73,13 @@ namespace ApiSdk.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "background", n => { Background = n.GetEnumValue<global::ApiSdk.Models.PushTokenCreateQueryResourceObject_attributes_background>(); } },
-                { "device_metadata", n => { DeviceMetadata = n.GetObjectValue<global::ApiSdk.Models.DeviceMetadata>(global::ApiSdk.Models.DeviceMetadata.CreateFromDiscriminatorValue); } },
-                { "enablement_status", n => { EnablementStatus = n.GetEnumValue<global::ApiSdk.Models.PushTokenCreateQueryResourceObject_attributes_enablement_status>(); } },
-                { "platform", n => { Platform = n.GetEnumValue<global::ApiSdk.Models.PushTokenCreateQueryResourceObject_attributes_platform>(); } },
-                { "profile", n => { Profile = n.GetObjectValue<global::ApiSdk.Models.PushTokenCreateQueryResourceObject_attributes_profile>(global::ApiSdk.Models.PushTokenCreateQueryResourceObject_attributes_profile.CreateFromDiscriminatorValue); } },
+                { "background", n => { Background = n.GetEnumValue<global::Klaviyo.Models.PushTokenCreateQueryResourceObject_attributes_background>(); } },
+                { "device_metadata", n => { DeviceMetadata = n.GetObjectValue<global::Klaviyo.Models.DeviceMetadata>(global::Klaviyo.Models.DeviceMetadata.CreateFromDiscriminatorValue); } },
+                { "enablement_status", n => { EnablementStatus = n.GetEnumValue<global::Klaviyo.Models.PushTokenCreateQueryResourceObject_attributes_enablement_status>(); } },
+                { "platform", n => { Platform = n.GetEnumValue<global::Klaviyo.Models.PushTokenCreateQueryResourceObject_attributes_platform>(); } },
+                { "profile", n => { Profile = n.GetObjectValue<global::Klaviyo.Models.PushTokenCreateQueryResourceObject_attributes_profile>(global::Klaviyo.Models.PushTokenCreateQueryResourceObject_attributes_profile.CreateFromDiscriminatorValue); } },
                 { "token", n => { Token = n.GetStringValue(); } },
-                { "vendor", n => { Vendor = n.GetEnumValue<global::ApiSdk.Models.PushTokenCreateQueryResourceObject_attributes_vendor>(); } },
+                { "vendor", n => { Vendor = n.GetEnumValue<global::Klaviyo.Models.PushTokenCreateQueryResourceObject_attributes_vendor>(); } },
             };
         }
         /// <summary>
@@ -89,13 +89,13 @@ namespace ApiSdk.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::ApiSdk.Models.PushTokenCreateQueryResourceObject_attributes_background>("background", Background);
-            writer.WriteObjectValue<global::ApiSdk.Models.DeviceMetadata>("device_metadata", DeviceMetadata);
-            writer.WriteEnumValue<global::ApiSdk.Models.PushTokenCreateQueryResourceObject_attributes_enablement_status>("enablement_status", EnablementStatus);
-            writer.WriteEnumValue<global::ApiSdk.Models.PushTokenCreateQueryResourceObject_attributes_platform>("platform", Platform);
-            writer.WriteObjectValue<global::ApiSdk.Models.PushTokenCreateQueryResourceObject_attributes_profile>("profile", Profile);
+            writer.WriteEnumValue<global::Klaviyo.Models.PushTokenCreateQueryResourceObject_attributes_background>("background", Background);
+            writer.WriteObjectValue<global::Klaviyo.Models.DeviceMetadata>("device_metadata", DeviceMetadata);
+            writer.WriteEnumValue<global::Klaviyo.Models.PushTokenCreateQueryResourceObject_attributes_enablement_status>("enablement_status", EnablementStatus);
+            writer.WriteEnumValue<global::Klaviyo.Models.PushTokenCreateQueryResourceObject_attributes_platform>("platform", Platform);
+            writer.WriteObjectValue<global::Klaviyo.Models.PushTokenCreateQueryResourceObject_attributes_profile>("profile", Profile);
             writer.WriteStringValue("token", Token);
-            writer.WriteEnumValue<global::ApiSdk.Models.PushTokenCreateQueryResourceObject_attributes_vendor>("vendor", Vendor);
+            writer.WriteEnumValue<global::Klaviyo.Models.PushTokenCreateQueryResourceObject_attributes_vendor>("vendor", Vendor);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
