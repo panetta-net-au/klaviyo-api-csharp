@@ -13,7 +13,7 @@ This is a .NET Standard library, which means it can be used in a wide range of .
 To use this client in your C# project, simply include the generated files in your project and initialize the client with your Klaviyo API credentials.
 
 ```csharp
-using ApiSdk;
+using Klaviyo.ApiSdk;
 using Microsoft.Kiota.Abstractions.Authentication;
 using Microsoft.Kiota.Http.HttpClientLibrary;
 
