@@ -1,5 +1,8 @@
 # Klaviyo C# Client
 
+![NuGet Version](https://img.shields.io/nuget/v/Starshipit.KlaviyoApi)
+![NuGet Downloads](https://img.shields.io/nuget/dt/Starshipit.KlaviyoApi)
+
 This repository contains a generated C# client for the Klaviyo API. The client is automatically generated using the [Kiota](https://github.com/microsoft/kiota) tool based on the Klaviyo OpenAPI specification.
 
 ## Overview
