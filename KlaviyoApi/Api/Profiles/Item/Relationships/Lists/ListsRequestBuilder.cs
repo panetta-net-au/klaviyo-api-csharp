@@ -36,27 +36,27 @@ namespace Klaviyo.Api.Profiles.Item.Relationships.Lists
         /// <summary>
         /// Get list memberships for a profile with the given profile ID.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `3/s`&lt;br&gt;Steady: `60/m`**Scopes:**`lists:read``profiles:read`
         /// </summary>
-        /// <returns>A <see cref="global::Klaviyo.Models.GetProfileListRelationshipsResponseCollection"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.GetProfileListsRelationshipsResponseCollection"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Klaviyo.Models.GetProfileListRelationshipsResponseCollection4XXError">When receiving a 4XX status code</exception>
-        /// <exception cref="global::Klaviyo.Models.GetProfileListRelationshipsResponseCollection5XXError">When receiving a 5XX status code</exception>
+        /// <exception cref="global::Klaviyo.Models.GetProfileListsRelationshipsResponseCollection4XXError">When receiving a 4XX status code</exception>
+        /// <exception cref="global::Klaviyo.Models.GetProfileListsRelationshipsResponseCollection5XXError">When receiving a 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Klaviyo.Models.GetProfileListRelationshipsResponseCollection?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Klaviyo.Models.GetProfileListsRelationshipsResponseCollection?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Klaviyo.Models.GetProfileListRelationshipsResponseCollection> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Klaviyo.Models.GetProfileListsRelationshipsResponseCollection> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "4XX", global::Klaviyo.Models.GetProfileListRelationshipsResponseCollection4XXError.CreateFromDiscriminatorValue },
-                { "5XX", global::Klaviyo.Models.GetProfileListRelationshipsResponseCollection5XXError.CreateFromDiscriminatorValue },
+                { "4XX", global::Klaviyo.Models.GetProfileListsRelationshipsResponseCollection4XXError.CreateFromDiscriminatorValue },
+                { "5XX", global::Klaviyo.Models.GetProfileListsRelationshipsResponseCollection5XXError.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Klaviyo.Models.GetProfileListRelationshipsResponseCollection>(requestInfo, global::Klaviyo.Models.GetProfileListRelationshipsResponseCollection.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Klaviyo.Models.GetProfileListsRelationshipsResponseCollection>(requestInfo, global::Klaviyo.Models.GetProfileListsRelationshipsResponseCollection.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get list memberships for a profile with the given profile ID.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `3/s`&lt;br&gt;Steady: `60/m`**Scopes:**`lists:read``profiles:read`
@@ -74,7 +74,7 @@ namespace Klaviyo.Api.Profiles.Item.Relationships.Lists
 #endif
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
-            requestInfo.Headers.TryAdd("Accept", "application/json");
+            requestInfo.Headers.TryAdd("Accept", "application/vnd.api+json");
             return requestInfo;
         }
         /// <summary>

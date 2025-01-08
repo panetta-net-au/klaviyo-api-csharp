@@ -11,6 +11,10 @@ namespace Klaviyo.Models
         #pragma warning disable CS1591
         Android,
         #pragma warning restore CS1591
+        [EnumMember(Value = "flutter_community")]
+        #pragma warning disable CS1591
+        Flutter_community,
+        #pragma warning restore CS1591
         [EnumMember(Value = "react_native")]
         #pragma warning disable CS1591
         React_native,

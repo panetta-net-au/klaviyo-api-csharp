@@ -32,14 +32,6 @@ namespace Klaviyo.Api.Profiles
         #pragma warning disable CS1591
         Minus_id,
         #pragma warning restore CS1591
-        [EnumMember(Value = "updated")]
-        #pragma warning disable CS1591
-        Updated,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "-updated")]
-        #pragma warning disable CS1591
-        Minus_updated,
-        #pragma warning restore CS1591
         [EnumMember(Value = "subscriptions.email.marketing.list_suppressions.timestamp")]
         #pragma warning disable CS1591
         SubscriptionsEmailMarketingList_suppressionsTimestamp,
@@ -55,6 +47,14 @@ namespace Klaviyo.Api.Profiles
         [EnumMember(Value = "-subscriptions.email.marketing.suppression.timestamp")]
         #pragma warning disable CS1591
         Minus_subscriptionsEmailMarketingSuppressionTimestamp,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "updated")]
+        #pragma warning disable CS1591
+        Updated,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "-updated")]
+        #pragma warning disable CS1591
+        Minus_updated,
         #pragma warning restore CS1591
     }
 }

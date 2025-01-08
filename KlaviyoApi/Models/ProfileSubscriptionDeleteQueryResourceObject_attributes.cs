@@ -30,6 +30,14 @@ namespace Klaviyo.Models
 #else
         public string PhoneNumber { get; set; }
 #endif
+        /// <summary>The subscriptions property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Klaviyo.Models.UnsubscriptionChannels? Subscriptions { get; set; }
+#nullable restore
+#else
+        public global::Klaviyo.Models.UnsubscriptionChannels Subscriptions { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Klaviyo.Models.ProfileSubscriptionDeleteQueryResourceObject_attributes"/> and sets the default values.
         /// </summary>
@@ -57,6 +65,7 @@ namespace Klaviyo.Models
             {
                 { "email", n => { Email = n.GetStringValue(); } },
                 { "phone_number", n => { PhoneNumber = n.GetStringValue(); } },
+                { "subscriptions", n => { Subscriptions = n.GetObjectValue<global::Klaviyo.Models.UnsubscriptionChannels>(global::Klaviyo.Models.UnsubscriptionChannels.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -68,6 +77,7 @@ namespace Klaviyo.Models
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("email", Email);
             writer.WriteStringValue("phone_number", PhoneNumber);
+            writer.WriteObjectValue<global::Klaviyo.Models.UnsubscriptionChannels>("subscriptions", Subscriptions);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -20,6 +20,42 @@ namespace Klaviyo.Api.Campaigns.Item.CampaignMessages
         #pragma warning disable CS1591
         Content,
         #pragma warning restore CS1591
+        [EnumMember(Value = "content.subject")]
+        #pragma warning disable CS1591
+        ContentSubject,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "content.preview_text")]
+        #pragma warning disable CS1591
+        ContentPreview_text,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "content.from_email")]
+        #pragma warning disable CS1591
+        ContentFrom_email,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "content.from_label")]
+        #pragma warning disable CS1591
+        ContentFrom_label,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "content.reply_to_email")]
+        #pragma warning disable CS1591
+        ContentReply_to_email,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "content.cc_email")]
+        #pragma warning disable CS1591
+        ContentCc_email,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "content.bcc_email")]
+        #pragma warning disable CS1591
+        ContentBcc_email,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "content.body")]
+        #pragma warning disable CS1591
+        ContentBody,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "content.media_url")]
+        #pragma warning disable CS1591
+        ContentMedia_url,
+        #pragma warning restore CS1591
         [EnumMember(Value = "send_times")]
         #pragma warning disable CS1591
         Send_times,

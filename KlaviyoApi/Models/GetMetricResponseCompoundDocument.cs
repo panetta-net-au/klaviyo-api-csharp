@@ -22,6 +22,14 @@ namespace Klaviyo.Models
 #else
         public global::Klaviyo.Models.MetricResponseObjectResource Data { get; set; }
 #endif
+        /// <summary>The included property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Klaviyo.Models.FlowResponseObjectResource>? Included { get; set; }
+#nullable restore
+#else
+        public List<global::Klaviyo.Models.FlowResponseObjectResource> Included { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Klaviyo.Models.GetMetricResponseCompoundDocument"/> and sets the default values.
         /// </summary>
@@ -48,6 +56,7 @@ namespace Klaviyo.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "data", n => { Data = n.GetObjectValue<global::Klaviyo.Models.MetricResponseObjectResource>(global::Klaviyo.Models.MetricResponseObjectResource.CreateFromDiscriminatorValue); } },
+                { "included", n => { Included = n.GetCollectionOfObjectValues<global::Klaviyo.Models.FlowResponseObjectResource>(global::Klaviyo.Models.FlowResponseObjectResource.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -58,6 +67,7 @@ namespace Klaviyo.Models
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Klaviyo.Models.MetricResponseObjectResource>("data", Data);
+            writer.WriteCollectionOfObjectValues<global::Klaviyo.Models.FlowResponseObjectResource>("included", Included);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

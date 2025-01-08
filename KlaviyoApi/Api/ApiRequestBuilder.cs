@@ -33,12 +33,15 @@ using Klaviyo.Api.FlowMessages;
 using Klaviyo.Api.FlowSeriesReports;
 using Klaviyo.Api.FlowValuesReports;
 using Klaviyo.Api.Flows;
+using Klaviyo.Api.FormSeriesReports;
+using Klaviyo.Api.FormValuesReports;
 using Klaviyo.Api.FormVersions;
 using Klaviyo.Api.Forms;
 using Klaviyo.Api.ImageUpload;
 using Klaviyo.Api.Images;
 using Klaviyo.Api.Lists;
 using Klaviyo.Api.MetricAggregates;
+using Klaviyo.Api.MetricProperties;
 using Klaviyo.Api.Metrics;
 using Klaviyo.Api.ProfileBulkImportJobs;
 using Klaviyo.Api.ProfileImport;
@@ -49,12 +52,17 @@ using Klaviyo.Api.ProfileSuppressionBulkCreateJobs;
 using Klaviyo.Api.ProfileSuppressionBulkDeleteJobs;
 using Klaviyo.Api.Profiles;
 using Klaviyo.Api.PushTokens;
+using Klaviyo.Api.Reviews;
+using Klaviyo.Api.SegmentSeriesReports;
+using Klaviyo.Api.SegmentValuesReports;
 using Klaviyo.Api.Segments;
 using Klaviyo.Api.TagGroups;
 using Klaviyo.Api.Tags;
 using Klaviyo.Api.TemplateClone;
 using Klaviyo.Api.TemplateRender;
+using Klaviyo.Api.TemplateUniversalContent;
 using Klaviyo.Api.Templates;
+using Klaviyo.Api.TrackingSettings;
 using Klaviyo.Api.WebhookTopics;
 using Klaviyo.Api.Webhooks;
 using Microsoft.Kiota.Abstractions.Extensions;
@@ -241,6 +249,16 @@ namespace Klaviyo.Api
         {
             get => new global::Klaviyo.Api.Forms.FormsRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The formSeriesReports property</summary>
+        public global::Klaviyo.Api.FormSeriesReports.FormSeriesReportsRequestBuilder FormSeriesReports
+        {
+            get => new global::Klaviyo.Api.FormSeriesReports.FormSeriesReportsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The formValuesReports property</summary>
+        public global::Klaviyo.Api.FormValuesReports.FormValuesReportsRequestBuilder FormValuesReports
+        {
+            get => new global::Klaviyo.Api.FormValuesReports.FormValuesReportsRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The formVersions property</summary>
         public global::Klaviyo.Api.FormVersions.FormVersionsRequestBuilder FormVersions
         {
@@ -265,6 +283,11 @@ namespace Klaviyo.Api
         public global::Klaviyo.Api.MetricAggregates.MetricAggregatesRequestBuilder MetricAggregates
         {
             get => new global::Klaviyo.Api.MetricAggregates.MetricAggregatesRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The metricProperties property</summary>
+        public global::Klaviyo.Api.MetricProperties.MetricPropertiesRequestBuilder MetricProperties
+        {
+            get => new global::Klaviyo.Api.MetricProperties.MetricPropertiesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The metrics property</summary>
         public global::Klaviyo.Api.Metrics.MetricsRequestBuilder Metrics
@@ -316,10 +339,25 @@ namespace Klaviyo.Api
         {
             get => new global::Klaviyo.Api.PushTokens.PushTokensRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The reviews property</summary>
+        public global::Klaviyo.Api.Reviews.ReviewsRequestBuilder Reviews
+        {
+            get => new global::Klaviyo.Api.Reviews.ReviewsRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The segments property</summary>
         public global::Klaviyo.Api.Segments.SegmentsRequestBuilder Segments
         {
             get => new global::Klaviyo.Api.Segments.SegmentsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The segmentSeriesReports property</summary>
+        public global::Klaviyo.Api.SegmentSeriesReports.SegmentSeriesReportsRequestBuilder SegmentSeriesReports
+        {
+            get => new global::Klaviyo.Api.SegmentSeriesReports.SegmentSeriesReportsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The segmentValuesReports property</summary>
+        public global::Klaviyo.Api.SegmentValuesReports.SegmentValuesReportsRequestBuilder SegmentValuesReports
+        {
+            get => new global::Klaviyo.Api.SegmentValuesReports.SegmentValuesReportsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The tagGroups property</summary>
         public global::Klaviyo.Api.TagGroups.TagGroupsRequestBuilder TagGroups
@@ -345,6 +383,16 @@ namespace Klaviyo.Api
         public global::Klaviyo.Api.Templates.TemplatesRequestBuilder Templates
         {
             get => new global::Klaviyo.Api.Templates.TemplatesRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The templateUniversalContent property</summary>
+        public global::Klaviyo.Api.TemplateUniversalContent.TemplateUniversalContentRequestBuilder TemplateUniversalContent
+        {
+            get => new global::Klaviyo.Api.TemplateUniversalContent.TemplateUniversalContentRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The trackingSettings property</summary>
+        public global::Klaviyo.Api.TrackingSettings.TrackingSettingsRequestBuilder TrackingSettings
+        {
+            get => new global::Klaviyo.Api.TrackingSettings.TrackingSettingsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The webhooks property</summary>
         public global::Klaviyo.Api.Webhooks.WebhooksRequestBuilder Webhooks

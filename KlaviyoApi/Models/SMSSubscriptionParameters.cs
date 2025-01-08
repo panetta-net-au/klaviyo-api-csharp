@@ -17,10 +17,18 @@ namespace Klaviyo.Models
         /// <summary>The marketing property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Klaviyo.Models.MarketingSubscriptionParameters? Marketing { get; set; }
+        public global::Klaviyo.Models.SubscriptionParameters? Marketing { get; set; }
 #nullable restore
 #else
-        public global::Klaviyo.Models.MarketingSubscriptionParameters Marketing { get; set; }
+        public global::Klaviyo.Models.SubscriptionParameters Marketing { get; set; }
+#endif
+        /// <summary>The transactional property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Klaviyo.Models.SubscriptionParameters? Transactional { get; set; }
+#nullable restore
+#else
+        public global::Klaviyo.Models.SubscriptionParameters Transactional { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Klaviyo.Models.SMSSubscriptionParameters"/> and sets the default values.
@@ -47,7 +55,8 @@ namespace Klaviyo.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "marketing", n => { Marketing = n.GetObjectValue<global::Klaviyo.Models.MarketingSubscriptionParameters>(global::Klaviyo.Models.MarketingSubscriptionParameters.CreateFromDiscriminatorValue); } },
+                { "marketing", n => { Marketing = n.GetObjectValue<global::Klaviyo.Models.SubscriptionParameters>(global::Klaviyo.Models.SubscriptionParameters.CreateFromDiscriminatorValue); } },
+                { "transactional", n => { Transactional = n.GetObjectValue<global::Klaviyo.Models.SubscriptionParameters>(global::Klaviyo.Models.SubscriptionParameters.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -57,7 +66,8 @@ namespace Klaviyo.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Klaviyo.Models.MarketingSubscriptionParameters>("marketing", Marketing);
+            writer.WriteObjectValue<global::Klaviyo.Models.SubscriptionParameters>("marketing", Marketing);
+            writer.WriteObjectValue<global::Klaviyo.Models.SubscriptionParameters>("transactional", Transactional);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

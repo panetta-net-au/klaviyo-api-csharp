@@ -14,6 +14,14 @@ namespace Klaviyo.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>The data property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Klaviyo.Models.GetListRetrieveResponseCompoundDocument_data_relationships_flowTriggers_data>? Data { get; set; }
+#nullable restore
+#else
+        public List<global::Klaviyo.Models.GetListRetrieveResponseCompoundDocument_data_relationships_flowTriggers_data> Data { get; set; }
+#endif
         /// <summary>The links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -47,6 +55,7 @@ namespace Klaviyo.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "data", n => { Data = n.GetCollectionOfObjectValues<global::Klaviyo.Models.GetListRetrieveResponseCompoundDocument_data_relationships_flowTriggers_data>(global::Klaviyo.Models.GetListRetrieveResponseCompoundDocument_data_relationships_flowTriggers_data.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "links", n => { Links = n.GetObjectValue<global::Klaviyo.Models.RelationshipLinks>(global::Klaviyo.Models.RelationshipLinks.CreateFromDiscriminatorValue); } },
             };
         }
@@ -57,6 +66,7 @@ namespace Klaviyo.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            writer.WriteCollectionOfObjectValues<global::Klaviyo.Models.GetListRetrieveResponseCompoundDocument_data_relationships_flowTriggers_data>("data", Data);
             writer.WriteObjectValue<global::Klaviyo.Models.RelationshipLinks>("links", Links);
             writer.WriteAdditionalData(AdditionalData);
         }

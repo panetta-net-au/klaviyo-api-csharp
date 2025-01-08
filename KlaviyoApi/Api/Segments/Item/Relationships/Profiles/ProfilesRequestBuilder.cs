@@ -36,27 +36,27 @@ namespace Klaviyo.Api.Segments.Item.Relationships.Profiles
         /// <summary>
         /// Get all profile membership [relationships](https://developers.klaviyo.com/en/reference/api_overview#relationships) for the given segment ID.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `75/s`&lt;br&gt;Steady: `700/m`**Scopes:**`profiles:read``segments:read`
         /// </summary>
-        /// <returns>A <see cref="global::Klaviyo.Models.GetSegmentRelationshipsResponseCollection"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.GetSegmentProfilesRelationshipsResponseCollection"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Klaviyo.Models.GetSegmentRelationshipsResponseCollection4XXError">When receiving a 4XX status code</exception>
-        /// <exception cref="global::Klaviyo.Models.GetSegmentRelationshipsResponseCollection5XXError">When receiving a 5XX status code</exception>
+        /// <exception cref="global::Klaviyo.Models.GetSegmentProfilesRelationshipsResponseCollection4XXError">When receiving a 4XX status code</exception>
+        /// <exception cref="global::Klaviyo.Models.GetSegmentProfilesRelationshipsResponseCollection5XXError">When receiving a 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Klaviyo.Models.GetSegmentRelationshipsResponseCollection?> GetAsync(Action<RequestConfiguration<global::Klaviyo.Api.Segments.Item.Relationships.Profiles.ProfilesRequestBuilder.ProfilesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Klaviyo.Models.GetSegmentProfilesRelationshipsResponseCollection?> GetAsync(Action<RequestConfiguration<global::Klaviyo.Api.Segments.Item.Relationships.Profiles.ProfilesRequestBuilder.ProfilesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Klaviyo.Models.GetSegmentRelationshipsResponseCollection> GetAsync(Action<RequestConfiguration<global::Klaviyo.Api.Segments.Item.Relationships.Profiles.ProfilesRequestBuilder.ProfilesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Klaviyo.Models.GetSegmentProfilesRelationshipsResponseCollection> GetAsync(Action<RequestConfiguration<global::Klaviyo.Api.Segments.Item.Relationships.Profiles.ProfilesRequestBuilder.ProfilesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "4XX", global::Klaviyo.Models.GetSegmentRelationshipsResponseCollection4XXError.CreateFromDiscriminatorValue },
-                { "5XX", global::Klaviyo.Models.GetSegmentRelationshipsResponseCollection5XXError.CreateFromDiscriminatorValue },
+                { "4XX", global::Klaviyo.Models.GetSegmentProfilesRelationshipsResponseCollection4XXError.CreateFromDiscriminatorValue },
+                { "5XX", global::Klaviyo.Models.GetSegmentProfilesRelationshipsResponseCollection5XXError.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Klaviyo.Models.GetSegmentRelationshipsResponseCollection>(requestInfo, global::Klaviyo.Models.GetSegmentRelationshipsResponseCollection.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Klaviyo.Models.GetSegmentProfilesRelationshipsResponseCollection>(requestInfo, global::Klaviyo.Models.GetSegmentProfilesRelationshipsResponseCollection.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get all profile membership [relationships](https://developers.klaviyo.com/en/reference/api_overview#relationships) for the given segment ID.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `75/s`&lt;br&gt;Steady: `700/m`**Scopes:**`profiles:read``segments:read`
@@ -74,7 +74,7 @@ namespace Klaviyo.Api.Segments.Item.Relationships.Profiles
 #endif
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
-            requestInfo.Headers.TryAdd("Accept", "application/json");
+            requestInfo.Headers.TryAdd("Accept", "application/vnd.api+json");
             return requestInfo;
         }
         /// <summary>
@@ -92,7 +92,7 @@ namespace Klaviyo.Api.Segments.Item.Relationships.Profiles
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
         public partial class ProfilesRequestBuilderGetQueryParameters 
         {
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-07-15/reference/api-overview#filtering&lt;br&gt;Allowed field(s)/operator(s):&lt;br&gt;`email`: `any`, `equals`&lt;br&gt;`phone_number`: `any`, `equals`&lt;br&gt;`push_token`: `any`, `equals`&lt;br&gt;`_kx`: `equals`&lt;br&gt;`joined_group_at`: `greater-or-equal`, `greater-than`, `less-or-equal`, `less-than`</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#filtering&lt;br&gt;Allowed field(s)/operator(s):&lt;br&gt;`email`: `any`, `equals`&lt;br&gt;`phone_number`: `any`, `equals`&lt;br&gt;`push_token`: `any`, `equals`&lt;br&gt;`_kx`: `equals`&lt;br&gt;`joined_group_at`: `greater-or-equal`, `greater-than`, `less-or-equal`, `less-than`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("filter")]
@@ -102,7 +102,7 @@ namespace Klaviyo.Api.Segments.Item.Relationships.Profiles
             [QueryParameter("filter")]
             public string Filter { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-07-15/reference/api-overview#pagination</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#pagination</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("page%5Bcursor%5D")]
@@ -112,10 +112,10 @@ namespace Klaviyo.Api.Segments.Item.Relationships.Profiles
             [QueryParameter("page%5Bcursor%5D")]
             public string Pagecursor { get; set; }
 #endif
-            /// <summary>Default: 20. Min: 1. Max: 1000.</summary>
+            /// <summary>Default: 20. Min: 1. Max: 100.</summary>
             [QueryParameter("page%5Bsize%5D")]
             public int? Pagesize { get; set; }
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-07-15/reference/api-overview#sorting</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sorting</summary>
             [Obsolete("This property is deprecated, use SortAsGetSortQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -126,7 +126,7 @@ namespace Klaviyo.Api.Segments.Item.Relationships.Profiles
             [QueryParameter("sort")]
             public string Sort { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-07-15/reference/api-overview#sorting</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sorting</summary>
             [QueryParameter("sort")]
             public global::Klaviyo.Api.Segments.Item.Relationships.Profiles.GetSortQueryParameterType? SortAsGetSortQueryParameterType { get; set; }
         }

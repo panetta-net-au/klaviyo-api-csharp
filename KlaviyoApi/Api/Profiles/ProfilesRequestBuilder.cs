@@ -47,7 +47,7 @@ namespace Klaviyo.Api.Profiles
         {
         }
         /// <summary>
-        /// Get all profiles in an account.Profiles can be sorted by the following fields in ascending and descending order: `id`, `created`, `updated`, `email`, `subscriptions.email.marketing.suppression.timestamp`, `subscriptions.email.marketing.list_suppressions.timestamp`&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `75/s`&lt;br&gt;Steady: `700/m`&lt;br&gt;&lt;br&gt;Rate limits when using the `additional-fields[profile]=predictive_analytics` parameter in your API request:&lt;br&gt;Burst: `10/s`&lt;br&gt;Steady: `150/m`&lt;br&gt;&lt;br&gt;To learn more about how the `additional-fields` parameter impacts rate limits, check out our [Rate limits, status codes, and errors](https://developers.klaviyo.com/en/v2024-07-15/docs/rate_limits_and_error_handling) guide.**Scopes:**`profiles:read`
+        /// Get all profiles in an account.Profiles can be sorted by the following fields in ascending and descending order: `id`, `created`, `updated`, `email`, `subscriptions.email.marketing.suppression.timestamp`, `subscriptions.email.marketing.list_suppressions.timestamp`Use the `additional-fields` parameter to include subscriptions and predictive analytics data in your response.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `75/s`&lt;br&gt;Steady: `700/m`&lt;br&gt;&lt;br&gt;Rate limits when using the `additional-fields[profile]=predictive_analytics` parameter in your API request:&lt;br&gt;Burst: `10/s`&lt;br&gt;Steady: `150/m`&lt;br&gt;&lt;br&gt;To learn more about how the `additional-fields` parameter impacts rate limits, check out our [Rate limits, status codes, and errors](https://developers.klaviyo.com/en/v2024-10-15/docs/rate_limits_and_error_handling) guide.**Scopes:**`profiles:read`
         /// </summary>
         /// <returns>A <see cref="global::Klaviyo.Models.GetProfileResponseCollectionCompoundDocument"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -72,7 +72,7 @@ namespace Klaviyo.Api.Profiles
             return await RequestAdapter.SendAsync<global::Klaviyo.Models.GetProfileResponseCollectionCompoundDocument>(requestInfo, global::Klaviyo.Models.GetProfileResponseCollectionCompoundDocument.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Create a new profile.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `75/s`&lt;br&gt;Steady: `700/m`**Scopes:**`profiles:write`
+        /// Create a new profile.Use the `additional-fields` parameter to include subscriptions and predictive analytics data in your response.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `75/s`&lt;br&gt;Steady: `700/m`**Scopes:**`profiles:write`
         /// </summary>
         /// <returns>A <see cref="global::Klaviyo.Models.PostProfileResponse"/></returns>
         /// <param name="body">The request body</param>
@@ -82,11 +82,11 @@ namespace Klaviyo.Api.Profiles
         /// <exception cref="global::Klaviyo.Models.PostProfileResponse5XXError">When receiving a 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Klaviyo.Models.PostProfileResponse?> PostAsync(global::Klaviyo.Models.ProfileCreateQuery body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Klaviyo.Models.PostProfileResponse?> PostAsync(global::Klaviyo.Models.ProfileCreateQuery body, Action<RequestConfiguration<global::Klaviyo.Api.Profiles.ProfilesRequestBuilder.ProfilesRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Klaviyo.Models.PostProfileResponse> PostAsync(global::Klaviyo.Models.ProfileCreateQuery body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Klaviyo.Models.PostProfileResponse> PostAsync(global::Klaviyo.Models.ProfileCreateQuery body, Action<RequestConfiguration<global::Klaviyo.Api.Profiles.ProfilesRequestBuilder.ProfilesRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -99,7 +99,7 @@ namespace Klaviyo.Api.Profiles
             return await RequestAdapter.SendAsync<global::Klaviyo.Models.PostProfileResponse>(requestInfo, global::Klaviyo.Models.PostProfileResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get all profiles in an account.Profiles can be sorted by the following fields in ascending and descending order: `id`, `created`, `updated`, `email`, `subscriptions.email.marketing.suppression.timestamp`, `subscriptions.email.marketing.list_suppressions.timestamp`&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `75/s`&lt;br&gt;Steady: `700/m`&lt;br&gt;&lt;br&gt;Rate limits when using the `additional-fields[profile]=predictive_analytics` parameter in your API request:&lt;br&gt;Burst: `10/s`&lt;br&gt;Steady: `150/m`&lt;br&gt;&lt;br&gt;To learn more about how the `additional-fields` parameter impacts rate limits, check out our [Rate limits, status codes, and errors](https://developers.klaviyo.com/en/v2024-07-15/docs/rate_limits_and_error_handling) guide.**Scopes:**`profiles:read`
+        /// Get all profiles in an account.Profiles can be sorted by the following fields in ascending and descending order: `id`, `created`, `updated`, `email`, `subscriptions.email.marketing.suppression.timestamp`, `subscriptions.email.marketing.list_suppressions.timestamp`Use the `additional-fields` parameter to include subscriptions and predictive analytics data in your response.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `75/s`&lt;br&gt;Steady: `700/m`&lt;br&gt;&lt;br&gt;Rate limits when using the `additional-fields[profile]=predictive_analytics` parameter in your API request:&lt;br&gt;Burst: `10/s`&lt;br&gt;Steady: `150/m`&lt;br&gt;&lt;br&gt;To learn more about how the `additional-fields` parameter impacts rate limits, check out our [Rate limits, status codes, and errors](https://developers.klaviyo.com/en/v2024-10-15/docs/rate_limits_and_error_handling) guide.**Scopes:**`profiles:read`
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -114,29 +114,29 @@ namespace Klaviyo.Api.Profiles
 #endif
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
-            requestInfo.Headers.TryAdd("Accept", "application/json");
+            requestInfo.Headers.TryAdd("Accept", "application/vnd.api+json");
             return requestInfo;
         }
         /// <summary>
-        /// Create a new profile.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `75/s`&lt;br&gt;Steady: `700/m`**Scopes:**`profiles:write`
+        /// Create a new profile.Use the `additional-fields` parameter to include subscriptions and predictive analytics data in your response.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `75/s`&lt;br&gt;Steady: `700/m`**Scopes:**`profiles:write`
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Klaviyo.Models.ProfileCreateQuery body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Klaviyo.Models.ProfileCreateQuery body, Action<RequestConfiguration<global::Klaviyo.Api.Profiles.ProfilesRequestBuilder.ProfilesRequestBuilderPostQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Klaviyo.Models.ProfileCreateQuery body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Klaviyo.Models.ProfileCreateQuery body, Action<RequestConfiguration<global::Klaviyo.Api.Profiles.ProfilesRequestBuilder.ProfilesRequestBuilderPostQueryParameters>> requestConfiguration = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
-            requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);
+            requestInfo.Headers.TryAdd("Accept", "application/vnd.api+json");
+            requestInfo.SetContentFromParsable(RequestAdapter, "application/vnd.api+json", body);
             return requestInfo;
         }
         /// <summary>
@@ -149,7 +149,7 @@ namespace Klaviyo.Api.Profiles
             return new global::Klaviyo.Api.Profiles.ProfilesRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Get all profiles in an account.Profiles can be sorted by the following fields in ascending and descending order: `id`, `created`, `updated`, `email`, `subscriptions.email.marketing.suppression.timestamp`, `subscriptions.email.marketing.list_suppressions.timestamp`&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `75/s`&lt;br&gt;Steady: `700/m`&lt;br&gt;&lt;br&gt;Rate limits when using the `additional-fields[profile]=predictive_analytics` parameter in your API request:&lt;br&gt;Burst: `10/s`&lt;br&gt;Steady: `150/m`&lt;br&gt;&lt;br&gt;To learn more about how the `additional-fields` parameter impacts rate limits, check out our [Rate limits, status codes, and errors](https://developers.klaviyo.com/en/v2024-07-15/docs/rate_limits_and_error_handling) guide.**Scopes:**`profiles:read`
+        /// Get all profiles in an account.Profiles can be sorted by the following fields in ascending and descending order: `id`, `created`, `updated`, `email`, `subscriptions.email.marketing.suppression.timestamp`, `subscriptions.email.marketing.list_suppressions.timestamp`Use the `additional-fields` parameter to include subscriptions and predictive analytics data in your response.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `75/s`&lt;br&gt;Steady: `700/m`&lt;br&gt;&lt;br&gt;Rate limits when using the `additional-fields[profile]=predictive_analytics` parameter in your API request:&lt;br&gt;Burst: `10/s`&lt;br&gt;Steady: `150/m`&lt;br&gt;&lt;br&gt;To learn more about how the `additional-fields` parameter impacts rate limits, check out our [Rate limits, status codes, and errors](https://developers.klaviyo.com/en/v2024-10-15/docs/rate_limits_and_error_handling) guide.**Scopes:**`profiles:read`
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
         public partial class ProfilesRequestBuilderGetQueryParameters 
@@ -175,7 +175,7 @@ namespace Klaviyo.Api.Profiles
             [QueryParameter("additional%2Dfields%5Bprofile%5D")]
             public global::Klaviyo.Api.Profiles.GetAdditionalFieldsProfileQueryParameterType[] AdditionalFieldsprofileAsGetAdditionalFieldsProfileQueryParameterType { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-07-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
             [Obsolete("This property is deprecated, use FieldsprofileAsGetFieldsProfileQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -186,7 +186,7 @@ namespace Klaviyo.Api.Profiles
             [QueryParameter("fields%5Bprofile%5D")]
             public string[] Fieldsprofile { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-07-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("fields%5Bprofile%5D")]
@@ -196,7 +196,7 @@ namespace Klaviyo.Api.Profiles
             [QueryParameter("fields%5Bprofile%5D")]
             public global::Klaviyo.Api.Profiles.GetFieldsProfileQueryParameterType[] FieldsprofileAsGetFieldsProfileQueryParameterType { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-07-15/reference/api-overview#filtering&lt;br&gt;Allowed field(s)/operator(s):&lt;br&gt;`id`: `any`, `equals`&lt;br&gt;`email`: `any`, `equals`&lt;br&gt;`phone_number`: `any`, `equals`&lt;br&gt;`external_id`: `any`, `equals`&lt;br&gt;`_kx`: `equals`&lt;br&gt;`created`: `greater-than`, `less-than`&lt;br&gt;`updated`: `greater-than`, `less-than`&lt;br&gt;`subscriptions.email.marketing.suppression.timestamp` : `greater-than`, `greater-or-equal`, `less-than`, `less-or-equal`&lt;br&gt;`subscriptions.email.marketing.suppression.reason` : `equals`&lt;br&gt;`subscriptions.email.marketing.list_suppressions.list_id` : `equals`&lt;br&gt;`subscriptions.email.marketing.list_suppressions.reason` : `equals`&lt;br&gt;`subscriptions.email.marketing.list_suppressions.timestamp` : `greater-than`, `greater-or-equal`, `less-than`, `less-or-equal`</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#filtering&lt;br&gt;Allowed field(s)/operator(s):&lt;br&gt;`id`: `any`, `equals`&lt;br&gt;`email`: `any`, `equals`&lt;br&gt;`phone_number`: `any`, `equals`&lt;br&gt;`external_id`: `any`, `equals`&lt;br&gt;`_kx`: `equals`&lt;br&gt;`created`: `greater-than`, `less-than`&lt;br&gt;`updated`: `greater-than`, `less-than`&lt;br&gt;`subscriptions.email.marketing.list_suppressions.reason`: `equals`&lt;br&gt;`subscriptions.email.marketing.list_suppressions.timestamp`: `greater-or-equal`, `greater-than`, `less-or-equal`, `less-than`&lt;br&gt;`subscriptions.email.marketing.list_suppressions.list_id`: `equals`&lt;br&gt;`subscriptions.email.marketing.suppression.reason`: `equals`&lt;br&gt;`subscriptions.email.marketing.suppression.timestamp`: `greater-or-equal`, `greater-than`, `less-or-equal`, `less-than`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("filter")]
@@ -206,7 +206,7 @@ namespace Klaviyo.Api.Profiles
             [QueryParameter("filter")]
             public string Filter { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-07-15/reference/api-overview#pagination</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#pagination</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("page%5Bcursor%5D")]
@@ -219,7 +219,7 @@ namespace Klaviyo.Api.Profiles
             /// <summary>Default: 20. Min: 1. Max: 100.</summary>
             [QueryParameter("page%5Bsize%5D")]
             public int? Pagesize { get; set; }
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-07-15/reference/api-overview#sorting</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sorting</summary>
             [Obsolete("This property is deprecated, use SortAsGetSortQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -230,7 +230,7 @@ namespace Klaviyo.Api.Profiles
             [QueryParameter("sort")]
             public string Sort { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-07-15/reference/api-overview#sorting</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sorting</summary>
             [QueryParameter("sort")]
             public global::Klaviyo.Api.Profiles.GetSortQueryParameterType? SortAsGetSortQueryParameterType { get; set; }
         }
@@ -243,11 +243,39 @@ namespace Klaviyo.Api.Profiles
         {
         }
         /// <summary>
+        /// Create a new profile.Use the `additional-fields` parameter to include subscriptions and predictive analytics data in your response.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `75/s`&lt;br&gt;Steady: `700/m`**Scopes:**`profiles:write`
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        public partial class ProfilesRequestBuilderPostQueryParameters 
+        {
+            /// <summary>Request additional fields not included by default in the response. Supported values: &apos;subscriptions&apos;, &apos;predictive_analytics&apos;</summary>
+            [Obsolete("This property is deprecated, use AdditionalFieldsprofileAsPostAdditionalFieldsProfileQueryParameterType instead")]
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("additional%2Dfields%5Bprofile%5D")]
+            public string[]? AdditionalFieldsprofile { get; set; }
+#nullable restore
+#else
+            [QueryParameter("additional%2Dfields%5Bprofile%5D")]
+            public string[] AdditionalFieldsprofile { get; set; }
+#endif
+            /// <summary>Request additional fields not included by default in the response. Supported values: &apos;subscriptions&apos;, &apos;predictive_analytics&apos;</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("additional%2Dfields%5Bprofile%5D")]
+            public global::Klaviyo.Api.Profiles.PostAdditionalFieldsProfileQueryParameterType[]? AdditionalFieldsprofileAsPostAdditionalFieldsProfileQueryParameterType { get; set; }
+#nullable restore
+#else
+            [QueryParameter("additional%2Dfields%5Bprofile%5D")]
+            public global::Klaviyo.Api.Profiles.PostAdditionalFieldsProfileQueryParameterType[] AdditionalFieldsprofileAsPostAdditionalFieldsProfileQueryParameterType { get; set; }
+#endif
+        }
+        /// <summary>
         /// Configuration for the request such as headers, query parameters, and middleware options.
         /// </summary>
         [Obsolete("This class is deprecated. Please use the generic RequestConfiguration class generated by the generator.")]
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
-        public partial class ProfilesRequestBuilderPostRequestConfiguration : RequestConfiguration<DefaultQueryParameters>
+        public partial class ProfilesRequestBuilderPostRequestConfiguration : RequestConfiguration<global::Klaviyo.Api.Profiles.ProfilesRequestBuilder.ProfilesRequestBuilderPostQueryParameters>
         {
         }
     }

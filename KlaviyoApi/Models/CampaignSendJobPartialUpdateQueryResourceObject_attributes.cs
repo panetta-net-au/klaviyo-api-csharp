@@ -13,13 +13,7 @@ namespace Klaviyo.Models
     #pragma warning restore CS1591
     {
         /// <summary>The action you would like to take with this send job from among &apos;cancel&apos; and &apos;revert&apos;</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Action { get; set; }
-#nullable restore
-#else
-        public string Action { get; set; }
-#endif
+        public global::Klaviyo.Models.CampaignSendJobPartialUpdateQueryResourceObject_attributes_action? Action { get; set; }
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>
@@ -47,7 +41,7 @@ namespace Klaviyo.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "action", n => { Action = n.GetStringValue(); } },
+                { "action", n => { Action = n.GetEnumValue<global::Klaviyo.Models.CampaignSendJobPartialUpdateQueryResourceObject_attributes_action>(); } },
             };
         }
         /// <summary>
@@ -57,7 +51,7 @@ namespace Klaviyo.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("action", Action);
+            writer.WriteEnumValue<global::Klaviyo.Models.CampaignSendJobPartialUpdateQueryResourceObject_attributes_action>("action", Action);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

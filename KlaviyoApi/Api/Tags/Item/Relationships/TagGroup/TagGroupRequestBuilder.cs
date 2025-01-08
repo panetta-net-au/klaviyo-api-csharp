@@ -36,27 +36,27 @@ namespace Klaviyo.Api.Tags.Item.Relationships.TagGroup
         /// <summary>
         /// Returns the id of the tag group related to the given tag.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `3/s`&lt;br&gt;Steady: `60/m`**Scopes:**`tags:read`
         /// </summary>
-        /// <returns>A <see cref="global::Klaviyo.Models.GetTagTagGroupRelationshipsResponse"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.GetTagGroupRelationshipResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Klaviyo.Models.GetTagTagGroupRelationshipsResponse4XXError">When receiving a 4XX status code</exception>
-        /// <exception cref="global::Klaviyo.Models.GetTagTagGroupRelationshipsResponse5XXError">When receiving a 5XX status code</exception>
+        /// <exception cref="global::Klaviyo.Models.GetTagGroupRelationshipResponse4XXError">When receiving a 4XX status code</exception>
+        /// <exception cref="global::Klaviyo.Models.GetTagGroupRelationshipResponse5XXError">When receiving a 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Klaviyo.Models.GetTagTagGroupRelationshipsResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Klaviyo.Models.GetTagGroupRelationshipResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Klaviyo.Models.GetTagTagGroupRelationshipsResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Klaviyo.Models.GetTagGroupRelationshipResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "4XX", global::Klaviyo.Models.GetTagTagGroupRelationshipsResponse4XXError.CreateFromDiscriminatorValue },
-                { "5XX", global::Klaviyo.Models.GetTagTagGroupRelationshipsResponse5XXError.CreateFromDiscriminatorValue },
+                { "4XX", global::Klaviyo.Models.GetTagGroupRelationshipResponse4XXError.CreateFromDiscriminatorValue },
+                { "5XX", global::Klaviyo.Models.GetTagGroupRelationshipResponse5XXError.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Klaviyo.Models.GetTagTagGroupRelationshipsResponse>(requestInfo, global::Klaviyo.Models.GetTagTagGroupRelationshipsResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Klaviyo.Models.GetTagGroupRelationshipResponse>(requestInfo, global::Klaviyo.Models.GetTagGroupRelationshipResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Returns the id of the tag group related to the given tag.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `3/s`&lt;br&gt;Steady: `60/m`**Scopes:**`tags:read`
@@ -74,7 +74,7 @@ namespace Klaviyo.Api.Tags.Item.Relationships.TagGroup
 #endif
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
-            requestInfo.Headers.TryAdd("Accept", "application/json");
+            requestInfo.Headers.TryAdd("Accept", "application/vnd.api+json");
             return requestInfo;
         }
         /// <summary>

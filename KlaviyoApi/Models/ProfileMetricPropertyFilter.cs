@@ -71,7 +71,7 @@ namespace Klaviyo.Models
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Klaviyo.Models.BooleanFilter"/>, <see cref="global::Klaviyo.Models.ListLengthFilter"/>, <see cref="global::Klaviyo.Models.ListSetFilter"/>, <see cref="global::Klaviyo.Models.ListSubstringFilter"/>, <see cref="global::Klaviyo.Models.NumericOperatorFilter"/>, <see cref="global::Klaviyo.Models.StringArrayOperatorFilter"/>, <see cref="global::Klaviyo.Models.StringOperatorFilter"/>
+        /// Composed type wrapper for classes <see cref="global::Klaviyo.Models.BooleanFilter"/>, <see cref="global::Klaviyo.Models.ExistenceOperatorFilter"/>, <see cref="global::Klaviyo.Models.ListLengthFilter"/>, <see cref="global::Klaviyo.Models.ListSetFilter"/>, <see cref="global::Klaviyo.Models.ListSubstringFilter"/>, <see cref="global::Klaviyo.Models.NumericOperatorFilter"/>, <see cref="global::Klaviyo.Models.StringArrayOperatorFilter"/>, <see cref="global::Klaviyo.Models.StringOperatorFilter"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
         public partial class ProfileMetricPropertyFilter_filter : IComposedTypeWrapper, IParsable
@@ -83,6 +83,14 @@ namespace Klaviyo.Models
 #nullable restore
 #else
             public global::Klaviyo.Models.BooleanFilter BooleanFilter { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.ExistenceOperatorFilter"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Klaviyo.Models.ExistenceOperatorFilter? ExistenceOperatorFilter { get; set; }
+#nullable restore
+#else
+            public global::Klaviyo.Models.ExistenceOperatorFilter ExistenceOperatorFilter { get; set; }
 #endif
             /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.ListLengthFilter"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -146,6 +154,10 @@ namespace Klaviyo.Models
                 {
                     result.BooleanFilter = new global::Klaviyo.Models.BooleanFilter();
                 }
+                else if("ExistenceOperatorFilter".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.ExistenceOperatorFilter = new global::Klaviyo.Models.ExistenceOperatorFilter();
+                }
                 else if("ListLengthFilter".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
                     result.ListLengthFilter = new global::Klaviyo.Models.ListLengthFilter();
@@ -181,6 +193,10 @@ namespace Klaviyo.Models
                 if(BooleanFilter != null)
                 {
                     return BooleanFilter.GetFieldDeserializers();
+                }
+                else if(ExistenceOperatorFilter != null)
+                {
+                    return ExistenceOperatorFilter.GetFieldDeserializers();
                 }
                 else if(ListLengthFilter != null)
                 {
@@ -218,6 +234,10 @@ namespace Klaviyo.Models
                 if(BooleanFilter != null)
                 {
                     writer.WriteObjectValue<global::Klaviyo.Models.BooleanFilter>(null, BooleanFilter);
+                }
+                else if(ExistenceOperatorFilter != null)
+                {
+                    writer.WriteObjectValue<global::Klaviyo.Models.ExistenceOperatorFilter>(null, ExistenceOperatorFilter);
                 }
                 else if(ListLengthFilter != null)
                 {

@@ -34,18 +34,18 @@ namespace Klaviyo.Client.Subscriptions
         {
         }
         /// <summary>
-        /// Creates a subscription and consent record for email and/or SMS channels based on the provided `email` and `phone_number` attributes, respectively. One of either `email` or `phone_number` must be provided.This endpoint is specifically designed to be called from publicly-browseable, client-side environments only and requires a [public API key (site ID)](https://www.klaviyo.com/settings/account/api-keys). Never use a private API key with our client-side endpoints.To subscribe profiles from server-side applications, please use [POST /api/profile-subscription-bulk-create-jobs](https://developers.klaviyo.com/en/reference/subscribe_profiles).To create a subscription and consent record for only 1 channel but still include the other channel as a profile property, the consent channel can be provided as a top-level attribute and the other channel can be included in the properties object.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `100/s`&lt;br&gt;Steady: `700/m`**Scopes:**`subscriptions:write`
+        /// *Rate limits*:&lt;br&gt;Burst: `100/s`&lt;br&gt;Steady: `700/m`**Scopes:**`subscriptions:write`
         /// </summary>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task PostAsync(global::Klaviyo.Models.OnsiteSubscriptionCreateQuery body, Action<RequestConfiguration<global::Klaviyo.Client.Subscriptions.SubscriptionsRequestBuilder.SubscriptionsRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task PostAsync(global::Klaviyo.Models.OnsiteSubscriptionCreateQueryDeprecatedOct24 body, Action<RequestConfiguration<global::Klaviyo.Client.Subscriptions.SubscriptionsRequestBuilder.SubscriptionsRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task PostAsync(global::Klaviyo.Models.OnsiteSubscriptionCreateQuery body, Action<RequestConfiguration<global::Klaviyo.Client.Subscriptions.SubscriptionsRequestBuilder.SubscriptionsRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task PostAsync(global::Klaviyo.Models.OnsiteSubscriptionCreateQueryDeprecatedOct24 body, Action<RequestConfiguration<global::Klaviyo.Client.Subscriptions.SubscriptionsRequestBuilder.SubscriptionsRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));
@@ -53,24 +53,24 @@ namespace Klaviyo.Client.Subscriptions
             await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Creates a subscription and consent record for email and/or SMS channels based on the provided `email` and `phone_number` attributes, respectively. One of either `email` or `phone_number` must be provided.This endpoint is specifically designed to be called from publicly-browseable, client-side environments only and requires a [public API key (site ID)](https://www.klaviyo.com/settings/account/api-keys). Never use a private API key with our client-side endpoints.To subscribe profiles from server-side applications, please use [POST /api/profile-subscription-bulk-create-jobs](https://developers.klaviyo.com/en/reference/subscribe_profiles).To create a subscription and consent record for only 1 channel but still include the other channel as a profile property, the consent channel can be provided as a top-level attribute and the other channel can be included in the properties object.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `100/s`&lt;br&gt;Steady: `700/m`**Scopes:**`subscriptions:write`
+        /// *Rate limits*:&lt;br&gt;Burst: `100/s`&lt;br&gt;Steady: `700/m`**Scopes:**`subscriptions:write`
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Klaviyo.Models.OnsiteSubscriptionCreateQuery body, Action<RequestConfiguration<global::Klaviyo.Client.Subscriptions.SubscriptionsRequestBuilder.SubscriptionsRequestBuilderPostQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Klaviyo.Models.OnsiteSubscriptionCreateQueryDeprecatedOct24 body, Action<RequestConfiguration<global::Klaviyo.Client.Subscriptions.SubscriptionsRequestBuilder.SubscriptionsRequestBuilderPostQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Klaviyo.Models.OnsiteSubscriptionCreateQuery body, Action<RequestConfiguration<global::Klaviyo.Client.Subscriptions.SubscriptionsRequestBuilder.SubscriptionsRequestBuilderPostQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Klaviyo.Models.OnsiteSubscriptionCreateQueryDeprecatedOct24 body, Action<RequestConfiguration<global::Klaviyo.Client.Subscriptions.SubscriptionsRequestBuilder.SubscriptionsRequestBuilderPostQueryParameters>> requestConfiguration = default)
         {
 #endif
             _ = body ?? throw new ArgumentNullException(nameof(body));
             var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);
+            requestInfo.SetContentFromParsable(RequestAdapter, "application/vnd.api+json", body);
             return requestInfo;
         }
         /// <summary>
@@ -83,7 +83,7 @@ namespace Klaviyo.Client.Subscriptions
             return new global::Klaviyo.Client.Subscriptions.SubscriptionsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Creates a subscription and consent record for email and/or SMS channels based on the provided `email` and `phone_number` attributes, respectively. One of either `email` or `phone_number` must be provided.This endpoint is specifically designed to be called from publicly-browseable, client-side environments only and requires a [public API key (site ID)](https://www.klaviyo.com/settings/account/api-keys). Never use a private API key with our client-side endpoints.To subscribe profiles from server-side applications, please use [POST /api/profile-subscription-bulk-create-jobs](https://developers.klaviyo.com/en/reference/subscribe_profiles).To create a subscription and consent record for only 1 channel but still include the other channel as a profile property, the consent channel can be provided as a top-level attribute and the other channel can be included in the properties object.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `100/s`&lt;br&gt;Steady: `700/m`**Scopes:**`subscriptions:write`
+        /// *Rate limits*:&lt;br&gt;Burst: `100/s`&lt;br&gt;Steady: `700/m`**Scopes:**`subscriptions:write`
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
         public partial class SubscriptionsRequestBuilderPostQueryParameters 

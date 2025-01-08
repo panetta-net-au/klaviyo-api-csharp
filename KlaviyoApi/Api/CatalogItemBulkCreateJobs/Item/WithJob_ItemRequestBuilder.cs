@@ -74,7 +74,7 @@ namespace Klaviyo.Api.CatalogItemBulkCreateJobs.Item
 #endif
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
-            requestInfo.Headers.TryAdd("Accept", "application/json");
+            requestInfo.Headers.TryAdd("Accept", "application/vnd.api+json");
             return requestInfo;
         }
         /// <summary>
@@ -92,7 +92,7 @@ namespace Klaviyo.Api.CatalogItemBulkCreateJobs.Item
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
         public partial class WithJob_ItemRequestBuilderGetQueryParameters 
         {
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-07-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
             [Obsolete("This property is deprecated, use FieldscatalogItemAsGetFieldsCatalogItemQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -103,7 +103,7 @@ namespace Klaviyo.Api.CatalogItemBulkCreateJobs.Item
             [QueryParameter("fields%5Bcatalog%2Ditem%5D")]
             public string[] FieldscatalogItem { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-07-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("fields%5Bcatalog%2Ditem%5D")]
@@ -113,7 +113,7 @@ namespace Klaviyo.Api.CatalogItemBulkCreateJobs.Item
             [QueryParameter("fields%5Bcatalog%2Ditem%5D")]
             public global::Klaviyo.Api.CatalogItemBulkCreateJobs.Item.GetFieldsCatalogItemQueryParameterType[] FieldscatalogItemAsGetFieldsCatalogItemQueryParameterType { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-07-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
             [Obsolete("This property is deprecated, use FieldscatalogItemBulkCreateJobAsGetFieldsCatalogItemBulkCreateJobQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -124,7 +124,7 @@ namespace Klaviyo.Api.CatalogItemBulkCreateJobs.Item
             [QueryParameter("fields%5Bcatalog%2Ditem%2Dbulk%2Dcreate%2Djob%5D")]
             public string[] FieldscatalogItemBulkCreateJob { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-07-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("fields%5Bcatalog%2Ditem%2Dbulk%2Dcreate%2Djob%5D")]
@@ -134,7 +134,7 @@ namespace Klaviyo.Api.CatalogItemBulkCreateJobs.Item
             [QueryParameter("fields%5Bcatalog%2Ditem%2Dbulk%2Dcreate%2Djob%5D")]
             public global::Klaviyo.Api.CatalogItemBulkCreateJobs.Item.GetFieldsCatalogItemBulkCreateJobQueryParameterType[] FieldscatalogItemBulkCreateJobAsGetFieldsCatalogItemBulkCreateJobQueryParameterType { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-07-15/reference/api-overview#relationships</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#relationships</summary>
             [Obsolete("This property is deprecated, use IncludeAsGetIncludeQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -145,7 +145,7 @@ namespace Klaviyo.Api.CatalogItemBulkCreateJobs.Item
             [QueryParameter("include")]
             public string[] Include { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-07-15/reference/api-overview#relationships</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#relationships</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("include")]

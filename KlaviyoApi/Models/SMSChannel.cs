@@ -22,6 +22,14 @@ namespace Klaviyo.Models
 #else
         public global::Klaviyo.Models.SMSMarketing Marketing { get; set; }
 #endif
+        /// <summary>The transactional property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Klaviyo.Models.SMSTransactional? Transactional { get; set; }
+#nullable restore
+#else
+        public global::Klaviyo.Models.SMSTransactional Transactional { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Klaviyo.Models.SMSChannel"/> and sets the default values.
         /// </summary>
@@ -48,6 +56,7 @@ namespace Klaviyo.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "marketing", n => { Marketing = n.GetObjectValue<global::Klaviyo.Models.SMSMarketing>(global::Klaviyo.Models.SMSMarketing.CreateFromDiscriminatorValue); } },
+                { "transactional", n => { Transactional = n.GetObjectValue<global::Klaviyo.Models.SMSTransactional>(global::Klaviyo.Models.SMSTransactional.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -58,6 +67,7 @@ namespace Klaviyo.Models
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Klaviyo.Models.SMSMarketing>("marketing", Marketing);
+            writer.WriteObjectValue<global::Klaviyo.Models.SMSTransactional>("transactional", Transactional);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

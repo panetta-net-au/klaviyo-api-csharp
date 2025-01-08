@@ -32,6 +32,22 @@ namespace Klaviyo.Api.Flows.Item
         #pragma warning disable CS1591
         Tracking_options,
         #pragma warning restore CS1591
+        [EnumMember(Value = "tracking_options.add_utm")]
+        #pragma warning disable CS1591
+        Tracking_optionsAdd_utm,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "tracking_options.utm_params")]
+        #pragma warning disable CS1591
+        Tracking_optionsUtm_params,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "tracking_options.is_tracking_opens")]
+        #pragma warning disable CS1591
+        Tracking_optionsIs_tracking_opens,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "tracking_options.is_tracking_clicks")]
+        #pragma warning disable CS1591
+        Tracking_optionsIs_tracking_clicks,
+        #pragma warning restore CS1591
         [EnumMember(Value = "send_options")]
         #pragma warning disable CS1591
         Send_options,

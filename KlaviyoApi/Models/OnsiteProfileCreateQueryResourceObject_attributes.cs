@@ -70,7 +70,7 @@ namespace Klaviyo.Models
 #else
         public string LastName { get; set; }
 #endif
-        /// <summary>The locale of the profile, in the IETF BCP 47 language tag format (language-extlang-script-region-variant-extension-privateuse)</summary>
+        /// <summary>The locale of the profile, in the IETF BCP 47 language tag format like (ISO 639-1/2)-(ISO 3166 alpha-2)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Locale { get; set; }

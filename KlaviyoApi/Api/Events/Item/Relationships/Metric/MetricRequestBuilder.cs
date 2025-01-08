@@ -36,27 +36,27 @@ namespace Klaviyo.Api.Events.Item.Relationships.Metric
         /// <summary>
         /// Get a list of related Metrics for an Event&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `350/s`&lt;br&gt;Steady: `3500/m`**Scopes:**`events:read``metrics:read`
         /// </summary>
-        /// <returns>A <see cref="global::Klaviyo.Models.GetEventMetricsRelationshipListResponse"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.GetEventMetricRelationshipResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Klaviyo.Models.GetEventMetricsRelationshipListResponse4XXError">When receiving a 4XX status code</exception>
-        /// <exception cref="global::Klaviyo.Models.GetEventMetricsRelationshipListResponse5XXError">When receiving a 5XX status code</exception>
+        /// <exception cref="global::Klaviyo.Models.GetEventMetricRelationshipResponse4XXError">When receiving a 4XX status code</exception>
+        /// <exception cref="global::Klaviyo.Models.GetEventMetricRelationshipResponse5XXError">When receiving a 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Klaviyo.Models.GetEventMetricsRelationshipListResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Klaviyo.Models.GetEventMetricRelationshipResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Klaviyo.Models.GetEventMetricsRelationshipListResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Klaviyo.Models.GetEventMetricRelationshipResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "4XX", global::Klaviyo.Models.GetEventMetricsRelationshipListResponse4XXError.CreateFromDiscriminatorValue },
-                { "5XX", global::Klaviyo.Models.GetEventMetricsRelationshipListResponse5XXError.CreateFromDiscriminatorValue },
+                { "4XX", global::Klaviyo.Models.GetEventMetricRelationshipResponse4XXError.CreateFromDiscriminatorValue },
+                { "5XX", global::Klaviyo.Models.GetEventMetricRelationshipResponse5XXError.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Klaviyo.Models.GetEventMetricsRelationshipListResponse>(requestInfo, global::Klaviyo.Models.GetEventMetricsRelationshipListResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Klaviyo.Models.GetEventMetricRelationshipResponse>(requestInfo, global::Klaviyo.Models.GetEventMetricRelationshipResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get a list of related Metrics for an Event&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `350/s`&lt;br&gt;Steady: `3500/m`**Scopes:**`events:read``metrics:read`
@@ -74,7 +74,7 @@ namespace Klaviyo.Api.Events.Item.Relationships.Metric
 #endif
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
-            requestInfo.Headers.TryAdd("Accept", "application/json");
+            requestInfo.Headers.TryAdd("Accept", "application/vnd.api+json");
             return requestInfo;
         }
         /// <summary>

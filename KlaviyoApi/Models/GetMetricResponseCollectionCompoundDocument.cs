@@ -22,6 +22,14 @@ namespace Klaviyo.Models
 #else
         public List<global::Klaviyo.Models.MetricResponseObjectResource> Data { get; set; }
 #endif
+        /// <summary>The included property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Klaviyo.Models.FlowResponseObjectResource>? Included { get; set; }
+#nullable restore
+#else
+        public List<global::Klaviyo.Models.FlowResponseObjectResource> Included { get; set; }
+#endif
         /// <summary>The links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -56,6 +64,7 @@ namespace Klaviyo.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "data", n => { Data = n.GetCollectionOfObjectValues<global::Klaviyo.Models.MetricResponseObjectResource>(global::Klaviyo.Models.MetricResponseObjectResource.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "included", n => { Included = n.GetCollectionOfObjectValues<global::Klaviyo.Models.FlowResponseObjectResource>(global::Klaviyo.Models.FlowResponseObjectResource.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "links", n => { Links = n.GetObjectValue<global::Klaviyo.Models.CollectionLinks>(global::Klaviyo.Models.CollectionLinks.CreateFromDiscriminatorValue); } },
             };
         }
@@ -67,6 +76,7 @@ namespace Klaviyo.Models
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Klaviyo.Models.MetricResponseObjectResource>("data", Data);
+            writer.WriteCollectionOfObjectValues<global::Klaviyo.Models.FlowResponseObjectResource>("included", Included);
             writer.WriteObjectValue<global::Klaviyo.Models.CollectionLinks>("links", Links);
             writer.WriteAdditionalData(AdditionalData);
         }

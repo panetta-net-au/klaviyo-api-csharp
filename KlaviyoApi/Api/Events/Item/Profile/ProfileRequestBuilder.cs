@@ -36,27 +36,27 @@ namespace Klaviyo.Api.Events.Item.Profile
         /// <summary>
         /// Get the profile associated with an event with the given event ID.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `350/s`&lt;br&gt;Steady: `3500/m`**Scopes:**`events:read``profiles:read`
         /// </summary>
-        /// <returns>A <see cref="global::Klaviyo.Models.GetProfileResponseCollection"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.GetProfileResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Klaviyo.Models.GetProfileResponseCollection4XXError">When receiving a 4XX status code</exception>
-        /// <exception cref="global::Klaviyo.Models.GetProfileResponseCollection5XXError">When receiving a 5XX status code</exception>
+        /// <exception cref="global::Klaviyo.Models.GetProfileResponse4XXError">When receiving a 4XX status code</exception>
+        /// <exception cref="global::Klaviyo.Models.GetProfileResponse5XXError">When receiving a 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Klaviyo.Models.GetProfileResponseCollection?> GetAsync(Action<RequestConfiguration<global::Klaviyo.Api.Events.Item.Profile.ProfileRequestBuilder.ProfileRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Klaviyo.Models.GetProfileResponse?> GetAsync(Action<RequestConfiguration<global::Klaviyo.Api.Events.Item.Profile.ProfileRequestBuilder.ProfileRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Klaviyo.Models.GetProfileResponseCollection> GetAsync(Action<RequestConfiguration<global::Klaviyo.Api.Events.Item.Profile.ProfileRequestBuilder.ProfileRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Klaviyo.Models.GetProfileResponse> GetAsync(Action<RequestConfiguration<global::Klaviyo.Api.Events.Item.Profile.ProfileRequestBuilder.ProfileRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "4XX", global::Klaviyo.Models.GetProfileResponseCollection4XXError.CreateFromDiscriminatorValue },
-                { "5XX", global::Klaviyo.Models.GetProfileResponseCollection5XXError.CreateFromDiscriminatorValue },
+                { "4XX", global::Klaviyo.Models.GetProfileResponse4XXError.CreateFromDiscriminatorValue },
+                { "5XX", global::Klaviyo.Models.GetProfileResponse5XXError.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Klaviyo.Models.GetProfileResponseCollection>(requestInfo, global::Klaviyo.Models.GetProfileResponseCollection.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Klaviyo.Models.GetProfileResponse>(requestInfo, global::Klaviyo.Models.GetProfileResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get the profile associated with an event with the given event ID.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `350/s`&lt;br&gt;Steady: `3500/m`**Scopes:**`events:read``profiles:read`
@@ -74,7 +74,7 @@ namespace Klaviyo.Api.Events.Item.Profile
 #endif
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
-            requestInfo.Headers.TryAdd("Accept", "application/json");
+            requestInfo.Headers.TryAdd("Accept", "application/vnd.api+json");
             return requestInfo;
         }
         /// <summary>
@@ -113,7 +113,7 @@ namespace Klaviyo.Api.Events.Item.Profile
             [QueryParameter("additional%2Dfields%5Bprofile%5D")]
             public global::Klaviyo.Api.Events.Item.Profile.GetAdditionalFieldsProfileQueryParameterType[] AdditionalFieldsprofileAsGetAdditionalFieldsProfileQueryParameterType { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-07-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
             [Obsolete("This property is deprecated, use FieldsprofileAsGetFieldsProfileQueryParameterType instead")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -124,7 +124,7 @@ namespace Klaviyo.Api.Events.Item.Profile
             [QueryParameter("fields%5Bprofile%5D")]
             public string[] Fieldsprofile { get; set; }
 #endif
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-07-15/reference/api-overview#sparse-fieldsets</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#sparse-fieldsets</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("fields%5Bprofile%5D")]

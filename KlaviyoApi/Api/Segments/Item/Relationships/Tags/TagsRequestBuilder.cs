@@ -36,27 +36,27 @@ namespace Klaviyo.Api.Segments.Item.Relationships.Tags
         /// <summary>
         /// If `related_resource` is `tags`, returns the tag IDs of all tags associated with the given segment ID.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `3/s`&lt;br&gt;Steady: `60/m`**Scopes:**`segments:read``tags:read`
         /// </summary>
-        /// <returns>A <see cref="global::Klaviyo.Models.GetSegmentTagRelationshipListResponseCollection"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.GetSegmentTagsRelationshipsResponseCollection"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Klaviyo.Models.GetSegmentTagRelationshipListResponseCollection4XXError">When receiving a 4XX status code</exception>
-        /// <exception cref="global::Klaviyo.Models.GetSegmentTagRelationshipListResponseCollection5XXError">When receiving a 5XX status code</exception>
+        /// <exception cref="global::Klaviyo.Models.GetSegmentTagsRelationshipsResponseCollection4XXError">When receiving a 4XX status code</exception>
+        /// <exception cref="global::Klaviyo.Models.GetSegmentTagsRelationshipsResponseCollection5XXError">When receiving a 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Klaviyo.Models.GetSegmentTagRelationshipListResponseCollection?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Klaviyo.Models.GetSegmentTagsRelationshipsResponseCollection?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Klaviyo.Models.GetSegmentTagRelationshipListResponseCollection> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Klaviyo.Models.GetSegmentTagsRelationshipsResponseCollection> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "4XX", global::Klaviyo.Models.GetSegmentTagRelationshipListResponseCollection4XXError.CreateFromDiscriminatorValue },
-                { "5XX", global::Klaviyo.Models.GetSegmentTagRelationshipListResponseCollection5XXError.CreateFromDiscriminatorValue },
+                { "4XX", global::Klaviyo.Models.GetSegmentTagsRelationshipsResponseCollection4XXError.CreateFromDiscriminatorValue },
+                { "5XX", global::Klaviyo.Models.GetSegmentTagsRelationshipsResponseCollection5XXError.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Klaviyo.Models.GetSegmentTagRelationshipListResponseCollection>(requestInfo, global::Klaviyo.Models.GetSegmentTagRelationshipListResponseCollection.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Klaviyo.Models.GetSegmentTagsRelationshipsResponseCollection>(requestInfo, global::Klaviyo.Models.GetSegmentTagsRelationshipsResponseCollection.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// If `related_resource` is `tags`, returns the tag IDs of all tags associated with the given segment ID.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `3/s`&lt;br&gt;Steady: `60/m`**Scopes:**`segments:read``tags:read`
@@ -74,7 +74,7 @@ namespace Klaviyo.Api.Segments.Item.Relationships.Tags
 #endif
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
-            requestInfo.Headers.TryAdd("Accept", "application/json");
+            requestInfo.Headers.TryAdd("Accept", "application/vnd.api+json");
             return requestInfo;
         }
         /// <summary>

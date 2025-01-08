@@ -36,9 +36,29 @@ namespace Klaviyo.Api.Campaigns.Item
         #pragma warning disable CS1591
         Send_options,
         #pragma warning restore CS1591
+        [EnumMember(Value = "send_options.use_smart_sending")]
+        #pragma warning disable CS1591
+        Send_optionsUse_smart_sending,
+        #pragma warning restore CS1591
         [EnumMember(Value = "tracking_options")]
         #pragma warning disable CS1591
         Tracking_options,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "tracking_options.add_tracking_params")]
+        #pragma warning disable CS1591
+        Tracking_optionsAdd_tracking_params,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "tracking_options.custom_tracking_params")]
+        #pragma warning disable CS1591
+        Tracking_optionsCustom_tracking_params,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "tracking_options.is_tracking_clicks")]
+        #pragma warning disable CS1591
+        Tracking_optionsIs_tracking_clicks,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "tracking_options.is_tracking_opens")]
+        #pragma warning disable CS1591
+        Tracking_optionsIs_tracking_opens,
         #pragma warning restore CS1591
         [EnumMember(Value = "send_strategy")]
         #pragma warning disable CS1591

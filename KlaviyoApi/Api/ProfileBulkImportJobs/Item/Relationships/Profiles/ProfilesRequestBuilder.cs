@@ -36,27 +36,27 @@ namespace Klaviyo.Api.ProfileBulkImportJobs.Item.Relationships.Profiles
         /// <summary>
         /// Get profile relationships for the bulk profile import job with the given ID.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `10/s`&lt;br&gt;Steady: `150/m`**Scopes:**`profiles:read`
         /// </summary>
-        /// <returns>A <see cref="global::Klaviyo.Models.GetProfileImportJobProfileRelationshipsResponseCollection"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.GetProfileBulkImportJobProfilesRelationshipsResponseCollection"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Klaviyo.Models.GetProfileImportJobProfileRelationshipsResponseCollection4XXError">When receiving a 4XX status code</exception>
-        /// <exception cref="global::Klaviyo.Models.GetProfileImportJobProfileRelationshipsResponseCollection5XXError">When receiving a 5XX status code</exception>
+        /// <exception cref="global::Klaviyo.Models.GetProfileBulkImportJobProfilesRelationshipsResponseCollection4XXError">When receiving a 4XX status code</exception>
+        /// <exception cref="global::Klaviyo.Models.GetProfileBulkImportJobProfilesRelationshipsResponseCollection5XXError">When receiving a 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Klaviyo.Models.GetProfileImportJobProfileRelationshipsResponseCollection?> GetAsync(Action<RequestConfiguration<global::Klaviyo.Api.ProfileBulkImportJobs.Item.Relationships.Profiles.ProfilesRequestBuilder.ProfilesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Klaviyo.Models.GetProfileBulkImportJobProfilesRelationshipsResponseCollection?> GetAsync(Action<RequestConfiguration<global::Klaviyo.Api.ProfileBulkImportJobs.Item.Relationships.Profiles.ProfilesRequestBuilder.ProfilesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Klaviyo.Models.GetProfileImportJobProfileRelationshipsResponseCollection> GetAsync(Action<RequestConfiguration<global::Klaviyo.Api.ProfileBulkImportJobs.Item.Relationships.Profiles.ProfilesRequestBuilder.ProfilesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Klaviyo.Models.GetProfileBulkImportJobProfilesRelationshipsResponseCollection> GetAsync(Action<RequestConfiguration<global::Klaviyo.Api.ProfileBulkImportJobs.Item.Relationships.Profiles.ProfilesRequestBuilder.ProfilesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "4XX", global::Klaviyo.Models.GetProfileImportJobProfileRelationshipsResponseCollection4XXError.CreateFromDiscriminatorValue },
-                { "5XX", global::Klaviyo.Models.GetProfileImportJobProfileRelationshipsResponseCollection5XXError.CreateFromDiscriminatorValue },
+                { "4XX", global::Klaviyo.Models.GetProfileBulkImportJobProfilesRelationshipsResponseCollection4XXError.CreateFromDiscriminatorValue },
+                { "5XX", global::Klaviyo.Models.GetProfileBulkImportJobProfilesRelationshipsResponseCollection5XXError.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Klaviyo.Models.GetProfileImportJobProfileRelationshipsResponseCollection>(requestInfo, global::Klaviyo.Models.GetProfileImportJobProfileRelationshipsResponseCollection.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Klaviyo.Models.GetProfileBulkImportJobProfilesRelationshipsResponseCollection>(requestInfo, global::Klaviyo.Models.GetProfileBulkImportJobProfilesRelationshipsResponseCollection.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get profile relationships for the bulk profile import job with the given ID.&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `10/s`&lt;br&gt;Steady: `150/m`**Scopes:**`profiles:read`
@@ -74,7 +74,7 @@ namespace Klaviyo.Api.ProfileBulkImportJobs.Item.Relationships.Profiles
 #endif
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
-            requestInfo.Headers.TryAdd("Accept", "application/json");
+            requestInfo.Headers.TryAdd("Accept", "application/vnd.api+json");
             return requestInfo;
         }
         /// <summary>
@@ -92,7 +92,7 @@ namespace Klaviyo.Api.ProfileBulkImportJobs.Item.Relationships.Profiles
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
         public partial class ProfilesRequestBuilderGetQueryParameters 
         {
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-07-15/reference/api-overview#pagination</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#pagination</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("page%5Bcursor%5D")]

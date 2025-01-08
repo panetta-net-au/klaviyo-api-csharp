@@ -36,27 +36,27 @@ namespace Klaviyo.Api.CouponCodes.Item.Relationships.Coupon
         /// <summary>
         /// Gets the coupon relationship associated with the given coupon code id&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `75/s`&lt;br&gt;Steady: `700/m`**Scopes:**`coupons:read`
         /// </summary>
-        /// <returns>A <see cref="global::Klaviyo.Models.GetCouponCodeRelationshipCouponResponse"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.GetCouponCodeCouponRelationshipResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Klaviyo.Models.GetCouponCodeRelationshipCouponResponse4XXError">When receiving a 4XX status code</exception>
-        /// <exception cref="global::Klaviyo.Models.GetCouponCodeRelationshipCouponResponse5XXError">When receiving a 5XX status code</exception>
+        /// <exception cref="global::Klaviyo.Models.GetCouponCodeCouponRelationshipResponse4XXError">When receiving a 4XX status code</exception>
+        /// <exception cref="global::Klaviyo.Models.GetCouponCodeCouponRelationshipResponse5XXError">When receiving a 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Klaviyo.Models.GetCouponCodeRelationshipCouponResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Klaviyo.Models.GetCouponCodeCouponRelationshipResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Klaviyo.Models.GetCouponCodeRelationshipCouponResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Klaviyo.Models.GetCouponCodeCouponRelationshipResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "4XX", global::Klaviyo.Models.GetCouponCodeRelationshipCouponResponse4XXError.CreateFromDiscriminatorValue },
-                { "5XX", global::Klaviyo.Models.GetCouponCodeRelationshipCouponResponse5XXError.CreateFromDiscriminatorValue },
+                { "4XX", global::Klaviyo.Models.GetCouponCodeCouponRelationshipResponse4XXError.CreateFromDiscriminatorValue },
+                { "5XX", global::Klaviyo.Models.GetCouponCodeCouponRelationshipResponse5XXError.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Klaviyo.Models.GetCouponCodeRelationshipCouponResponse>(requestInfo, global::Klaviyo.Models.GetCouponCodeRelationshipCouponResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Klaviyo.Models.GetCouponCodeCouponRelationshipResponse>(requestInfo, global::Klaviyo.Models.GetCouponCodeCouponRelationshipResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Gets the coupon relationship associated with the given coupon code id&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `75/s`&lt;br&gt;Steady: `700/m`**Scopes:**`coupons:read`
@@ -74,7 +74,7 @@ namespace Klaviyo.Api.CouponCodes.Item.Relationships.Coupon
 #endif
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
-            requestInfo.Headers.TryAdd("Accept", "application/json");
+            requestInfo.Headers.TryAdd("Accept", "application/vnd.api+json");
             return requestInfo;
         }
         /// <summary>

@@ -22,7 +22,7 @@ namespace Klaviyo.Api.Coupons.Item.Relationships.CouponCodes
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CouponCodesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/coupons/{id}/relationships/coupon-codes{?page%5Bcursor%5D*}", pathParameters)
+        public CouponCodesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/coupons/{id}/relationships/coupon-codes{?filter*,page%5Bcursor%5D*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,33 +30,33 @@ namespace Klaviyo.Api.Coupons.Item.Relationships.CouponCodes
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CouponCodesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/coupons/{id}/relationships/coupon-codes{?page%5Bcursor%5D*}", rawUrl)
+        public CouponCodesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/coupons/{id}/relationships/coupon-codes{?filter*,page%5Bcursor%5D*}", rawUrl)
         {
         }
         /// <summary>
         /// Gets a list of coupon code relationships associated with the given coupon id&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `75/s`&lt;br&gt;Steady: `700/m`**Scopes:**`coupon-codes:read`
         /// </summary>
-        /// <returns>A <see cref="global::Klaviyo.Models.GetCouponRelationshipCouponCodesListResponseCollection"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.GetCouponCodesRelationshipsResponseCollection"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Klaviyo.Models.GetCouponRelationshipCouponCodesListResponseCollection4XXError">When receiving a 4XX status code</exception>
-        /// <exception cref="global::Klaviyo.Models.GetCouponRelationshipCouponCodesListResponseCollection5XXError">When receiving a 5XX status code</exception>
+        /// <exception cref="global::Klaviyo.Models.GetCouponCodesRelationshipsResponseCollection4XXError">When receiving a 4XX status code</exception>
+        /// <exception cref="global::Klaviyo.Models.GetCouponCodesRelationshipsResponseCollection5XXError">When receiving a 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Klaviyo.Models.GetCouponRelationshipCouponCodesListResponseCollection?> GetAsync(Action<RequestConfiguration<global::Klaviyo.Api.Coupons.Item.Relationships.CouponCodes.CouponCodesRequestBuilder.CouponCodesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Klaviyo.Models.GetCouponCodesRelationshipsResponseCollection?> GetAsync(Action<RequestConfiguration<global::Klaviyo.Api.Coupons.Item.Relationships.CouponCodes.CouponCodesRequestBuilder.CouponCodesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Klaviyo.Models.GetCouponRelationshipCouponCodesListResponseCollection> GetAsync(Action<RequestConfiguration<global::Klaviyo.Api.Coupons.Item.Relationships.CouponCodes.CouponCodesRequestBuilder.CouponCodesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Klaviyo.Models.GetCouponCodesRelationshipsResponseCollection> GetAsync(Action<RequestConfiguration<global::Klaviyo.Api.Coupons.Item.Relationships.CouponCodes.CouponCodesRequestBuilder.CouponCodesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "4XX", global::Klaviyo.Models.GetCouponRelationshipCouponCodesListResponseCollection4XXError.CreateFromDiscriminatorValue },
-                { "5XX", global::Klaviyo.Models.GetCouponRelationshipCouponCodesListResponseCollection5XXError.CreateFromDiscriminatorValue },
+                { "4XX", global::Klaviyo.Models.GetCouponCodesRelationshipsResponseCollection4XXError.CreateFromDiscriminatorValue },
+                { "5XX", global::Klaviyo.Models.GetCouponCodesRelationshipsResponseCollection5XXError.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Klaviyo.Models.GetCouponRelationshipCouponCodesListResponseCollection>(requestInfo, global::Klaviyo.Models.GetCouponRelationshipCouponCodesListResponseCollection.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Klaviyo.Models.GetCouponCodesRelationshipsResponseCollection>(requestInfo, global::Klaviyo.Models.GetCouponCodesRelationshipsResponseCollection.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Gets a list of coupon code relationships associated with the given coupon id&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `75/s`&lt;br&gt;Steady: `700/m`**Scopes:**`coupon-codes:read`
@@ -74,7 +74,7 @@ namespace Klaviyo.Api.Coupons.Item.Relationships.CouponCodes
 #endif
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
-            requestInfo.Headers.TryAdd("Accept", "application/json");
+            requestInfo.Headers.TryAdd("Accept", "application/vnd.api+json");
             return requestInfo;
         }
         /// <summary>
@@ -92,7 +92,17 @@ namespace Klaviyo.Api.Coupons.Item.Relationships.CouponCodes
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
         public partial class CouponCodesRequestBuilderGetQueryParameters 
         {
-            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-07-15/reference/api-overview#pagination</summary>
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#filtering&lt;br&gt;Allowed field(s)/operator(s):&lt;br&gt;`expires_at`: `greater-or-equal`, `greater-than`, `less-or-equal`, `less-than`&lt;br&gt;`status`: `equals`&lt;br&gt;`coupon.id`: `any`, `equals`&lt;br&gt;`profile.id`: `any`, `equals`</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("filter")]
+            public string? Filter { get; set; }
+#nullable restore
+#else
+            [QueryParameter("filter")]
+            public string Filter { get; set; }
+#endif
+            /// <summary>For more information please visit https://developers.klaviyo.com/en/v2024-10-15/reference/api-overview#pagination</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("page%5Bcursor%5D")]

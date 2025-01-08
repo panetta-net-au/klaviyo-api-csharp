@@ -188,6 +188,34 @@ namespace Klaviyo.Api.ProfileBulkImportJobs.Item.Profiles
         #pragma warning disable CS1591
         SubscriptionsSmsMarketingLast_updated,
         #pragma warning restore CS1591
+        [EnumMember(Value = "subscriptions.sms.transactional")]
+        #pragma warning disable CS1591
+        SubscriptionsSmsTransactional,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "subscriptions.sms.transactional.can_receive_sms_transactional")]
+        #pragma warning disable CS1591
+        SubscriptionsSmsTransactionalCan_receive_sms_transactional,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "subscriptions.sms.transactional.consent")]
+        #pragma warning disable CS1591
+        SubscriptionsSmsTransactionalConsent,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "subscriptions.sms.transactional.consent_timestamp")]
+        #pragma warning disable CS1591
+        SubscriptionsSmsTransactionalConsent_timestamp,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "subscriptions.sms.transactional.method")]
+        #pragma warning disable CS1591
+        SubscriptionsSmsTransactionalMethod,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "subscriptions.sms.transactional.method_detail")]
+        #pragma warning disable CS1591
+        SubscriptionsSmsTransactionalMethod_detail,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "subscriptions.sms.transactional.last_updated")]
+        #pragma warning disable CS1591
+        SubscriptionsSmsTransactionalLast_updated,
+        #pragma warning restore CS1591
         [EnumMember(Value = "subscriptions.mobile_push")]
         #pragma warning disable CS1591
         SubscriptionsMobile_push,

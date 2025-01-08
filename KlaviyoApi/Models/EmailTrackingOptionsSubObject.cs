@@ -14,20 +14,20 @@ namespace Klaviyo.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Whether the campaign needs UTM parameters. If set to False, UTM params will not be used.</summary>
-        public bool? IsAddUtm { get; set; }
+        /// <summary>Whether the campaign needs custom tracking parameters. If set to False, tracking params will not be used.</summary>
+        public bool? AddTrackingParams { get; set; }
+        /// <summary>A list of custom tracking parameters. If an empty list is given and add_tracking_params is True, uses company defaults.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Klaviyo.Models.EmailTrackingOptionsSubObject.EmailTrackingOptionsSubObject_custom_tracking_params>? CustomTrackingParams { get; set; }
+#nullable restore
+#else
+        public List<global::Klaviyo.Models.EmailTrackingOptionsSubObject.EmailTrackingOptionsSubObject_custom_tracking_params> CustomTrackingParams { get; set; }
+#endif
         /// <summary>Whether the campaign is tracking click events. If not specified, uses company defaults.</summary>
         public bool? IsTrackingClicks { get; set; }
         /// <summary>Whether the campaign is tracking open events. If not specified, uses company defaults.</summary>
         public bool? IsTrackingOpens { get; set; }
-        /// <summary>A list of UTM parameters. If an empty list is given and is_add_utm is True, uses company defaults.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public List<global::Klaviyo.Models.UTMParamsSubObject>? UtmParams { get; set; }
-#nullable restore
-#else
-        public List<global::Klaviyo.Models.UTMParamsSubObject> UtmParams { get; set; }
-#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Klaviyo.Models.EmailTrackingOptionsSubObject"/> and sets the default values.
         /// </summary>
@@ -53,10 +53,10 @@ namespace Klaviyo.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "is_add_utm", n => { IsAddUtm = n.GetBoolValue(); } },
+                { "add_tracking_params", n => { AddTrackingParams = n.GetBoolValue(); } },
+                { "custom_tracking_params", n => { CustomTrackingParams = n.GetCollectionOfObjectValues<global::Klaviyo.Models.EmailTrackingOptionsSubObject.EmailTrackingOptionsSubObject_custom_tracking_params>(global::Klaviyo.Models.EmailTrackingOptionsSubObject.EmailTrackingOptionsSubObject_custom_tracking_params.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "is_tracking_clicks", n => { IsTrackingClicks = n.GetBoolValue(); } },
                 { "is_tracking_opens", n => { IsTrackingOpens = n.GetBoolValue(); } },
-                { "utm_params", n => { UtmParams = n.GetCollectionOfObjectValues<global::Klaviyo.Models.UTMParamsSubObject>(global::Klaviyo.Models.UTMParamsSubObject.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -66,11 +66,86 @@ namespace Klaviyo.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
-            writer.WriteBoolValue("is_add_utm", IsAddUtm);
+            writer.WriteBoolValue("add_tracking_params", AddTrackingParams);
+            writer.WriteCollectionOfObjectValues<global::Klaviyo.Models.EmailTrackingOptionsSubObject.EmailTrackingOptionsSubObject_custom_tracking_params>("custom_tracking_params", CustomTrackingParams);
             writer.WriteBoolValue("is_tracking_clicks", IsTrackingClicks);
             writer.WriteBoolValue("is_tracking_opens", IsTrackingOpens);
-            writer.WriteCollectionOfObjectValues<global::Klaviyo.Models.UTMParamsSubObject>("utm_params", UtmParams);
             writer.WriteAdditionalData(AdditionalData);
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="global::Klaviyo.Models.DynamicTrackingParam"/>, <see cref="global::Klaviyo.Models.StaticTrackingParam"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.18.0")]
+        public partial class EmailTrackingOptionsSubObject_custom_tracking_params : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.DynamicTrackingParam"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Klaviyo.Models.DynamicTrackingParam? DynamicTrackingParam { get; set; }
+#nullable restore
+#else
+            public global::Klaviyo.Models.DynamicTrackingParam DynamicTrackingParam { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Klaviyo.Models.StaticTrackingParam"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Klaviyo.Models.StaticTrackingParam? StaticTrackingParam { get; set; }
+#nullable restore
+#else
+            public global::Klaviyo.Models.StaticTrackingParam StaticTrackingParam { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Klaviyo.Models.EmailTrackingOptionsSubObject.EmailTrackingOptionsSubObject_custom_tracking_params"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Klaviyo.Models.EmailTrackingOptionsSubObject.EmailTrackingOptionsSubObject_custom_tracking_params CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                _ = parseNode ?? throw new ArgumentNullException(nameof(parseNode));
+                var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+                var result = new global::Klaviyo.Models.EmailTrackingOptionsSubObject.EmailTrackingOptionsSubObject_custom_tracking_params();
+                if("DynamicTrackingParam".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.DynamicTrackingParam = new global::Klaviyo.Models.DynamicTrackingParam();
+                }
+                else if("StaticTrackingParam".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.StaticTrackingParam = new global::Klaviyo.Models.StaticTrackingParam();
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                if(DynamicTrackingParam != null)
+                {
+                    return DynamicTrackingParam.GetFieldDeserializers();
+                }
+                else if(StaticTrackingParam != null)
+                {
+                    return StaticTrackingParam.GetFieldDeserializers();
+                }
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                _ = writer ?? throw new ArgumentNullException(nameof(writer));
+                if(DynamicTrackingParam != null)
+                {
+                    writer.WriteObjectValue<global::Klaviyo.Models.DynamicTrackingParam>(null, DynamicTrackingParam);
+                }
+                else if(StaticTrackingParam != null)
+                {
+                    writer.WriteObjectValue<global::Klaviyo.Models.StaticTrackingParam>(null, StaticTrackingParam);
+                }
+            }
         }
     }
 }

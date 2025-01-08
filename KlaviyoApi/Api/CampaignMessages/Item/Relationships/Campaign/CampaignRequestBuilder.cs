@@ -36,27 +36,27 @@ namespace Klaviyo.Api.CampaignMessages.Item.Relationships.Campaign
         /// <summary>
         /// Returns the ID of the related campaign&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `10/s`&lt;br&gt;Steady: `150/m`**Scopes:**`campaigns:read`
         /// </summary>
-        /// <returns>A <see cref="global::Klaviyo.Models.GetCampaignMessageCampaignRelationshipListResponse"/></returns>
+        /// <returns>A <see cref="global::Klaviyo.Models.GetCampaignMessageCampaignRelationshipResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Klaviyo.Models.GetCampaignMessageCampaignRelationshipListResponse4XXError">When receiving a 4XX status code</exception>
-        /// <exception cref="global::Klaviyo.Models.GetCampaignMessageCampaignRelationshipListResponse5XXError">When receiving a 5XX status code</exception>
+        /// <exception cref="global::Klaviyo.Models.GetCampaignMessageCampaignRelationshipResponse4XXError">When receiving a 4XX status code</exception>
+        /// <exception cref="global::Klaviyo.Models.GetCampaignMessageCampaignRelationshipResponse5XXError">When receiving a 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Klaviyo.Models.GetCampaignMessageCampaignRelationshipListResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Klaviyo.Models.GetCampaignMessageCampaignRelationshipResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Klaviyo.Models.GetCampaignMessageCampaignRelationshipListResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Klaviyo.Models.GetCampaignMessageCampaignRelationshipResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "4XX", global::Klaviyo.Models.GetCampaignMessageCampaignRelationshipListResponse4XXError.CreateFromDiscriminatorValue },
-                { "5XX", global::Klaviyo.Models.GetCampaignMessageCampaignRelationshipListResponse5XXError.CreateFromDiscriminatorValue },
+                { "4XX", global::Klaviyo.Models.GetCampaignMessageCampaignRelationshipResponse4XXError.CreateFromDiscriminatorValue },
+                { "5XX", global::Klaviyo.Models.GetCampaignMessageCampaignRelationshipResponse5XXError.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Klaviyo.Models.GetCampaignMessageCampaignRelationshipListResponse>(requestInfo, global::Klaviyo.Models.GetCampaignMessageCampaignRelationshipListResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Klaviyo.Models.GetCampaignMessageCampaignRelationshipResponse>(requestInfo, global::Klaviyo.Models.GetCampaignMessageCampaignRelationshipResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Returns the ID of the related campaign&lt;br&gt;&lt;br&gt;*Rate limits*:&lt;br&gt;Burst: `10/s`&lt;br&gt;Steady: `150/m`**Scopes:**`campaigns:read`
@@ -74,7 +74,7 @@ namespace Klaviyo.Api.CampaignMessages.Item.Relationships.Campaign
 #endif
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
-            requestInfo.Headers.TryAdd("Accept", "application/json");
+            requestInfo.Headers.TryAdd("Accept", "application/vnd.api+json");
             return requestInfo;
         }
         /// <summary>

@@ -8,6 +8,10 @@ namespace Klaviyo.Api.Segments
     public enum GetIncludeQueryParameterType
     #pragma warning restore CS1591
     {
+        [EnumMember(Value = "flow-triggers")]
+        #pragma warning disable CS1591
+        FlowTriggers,
+        #pragma warning restore CS1591
         [EnumMember(Value = "tags")]
         #pragma warning disable CS1591
         Tags,

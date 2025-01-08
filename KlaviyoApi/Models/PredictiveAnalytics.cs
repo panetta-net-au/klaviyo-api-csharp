@@ -25,7 +25,7 @@ namespace Klaviyo.Models
         /// <summary>Total value of all historically placed orders</summary>
         public double? HistoricClv { get; set; }
         /// <summary>Number of already placed orders</summary>
-        public int? HistoricNumberOfOrders { get; set; }
+        public double? HistoricNumberOfOrders { get; set; }
         /// <summary>Predicted value of all placed orders in the next 365 days</summary>
         public double? PredictedClv { get; set; }
         /// <summary>Predicted number of placed orders in the next 365 days</summary>
@@ -62,7 +62,7 @@ namespace Klaviyo.Models
                 { "churn_probability", n => { ChurnProbability = n.GetDoubleValue(); } },
                 { "expected_date_of_next_order", n => { ExpectedDateOfNextOrder = n.GetDateTimeOffsetValue(); } },
                 { "historic_clv", n => { HistoricClv = n.GetDoubleValue(); } },
-                { "historic_number_of_orders", n => { HistoricNumberOfOrders = n.GetIntValue(); } },
+                { "historic_number_of_orders", n => { HistoricNumberOfOrders = n.GetDoubleValue(); } },
                 { "predicted_clv", n => { PredictedClv = n.GetDoubleValue(); } },
                 { "predicted_number_of_orders", n => { PredictedNumberOfOrders = n.GetDoubleValue(); } },
                 { "total_clv", n => { TotalClv = n.GetDoubleValue(); } },
@@ -80,7 +80,7 @@ namespace Klaviyo.Models
             writer.WriteDoubleValue("churn_probability", ChurnProbability);
             writer.WriteDateTimeOffsetValue("expected_date_of_next_order", ExpectedDateOfNextOrder);
             writer.WriteDoubleValue("historic_clv", HistoricClv);
-            writer.WriteIntValue("historic_number_of_orders", HistoricNumberOfOrders);
+            writer.WriteDoubleValue("historic_number_of_orders", HistoricNumberOfOrders);
             writer.WriteDoubleValue("predicted_clv", PredictedClv);
             writer.WriteDoubleValue("predicted_number_of_orders", PredictedNumberOfOrders);
             writer.WriteDoubleValue("total_clv", TotalClv);
